@@ -82,9 +82,10 @@ module.exports = function(grunt) {
           },
           templates: { // copy all assets into templates source dir
               src: [
-                  'css/app.css'
+                  'css/app.css',
+                  'images/**/*',
               ],
-              dest: '<%= jekyll.templates.options.src %>/assets/'
+              dest: '<%= jekyll.templates.options.src %>/'
           }
       },
   });

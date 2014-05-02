@@ -13,7 +13,7 @@
 		<meta name="viewport" content="width=device-width" initial-scale="1" />
 
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="assets/css/app.css">
+		<link rel="stylesheet" href="css/app.css">
 
 		<!-- Modernizr -->
 		<script src="bower_components/modernizr/modernizr.js"></script>
@@ -33,21 +33,40 @@
 <div id="page">
 <header class="banner  ">
 	<div class="row">
-		<div class="banner-brand">
+		<div class="medium-4 columns">
+			<div class="banner-brand">
     <a class="site-logo" href="/" title="" rel="home">
-        <img src="/assets/images/site-logo.png" alt="" />
+        <img src="/images/site-logo.png" alt="" />
     </a>    
 </div> 
+		</div>
+
 		
-		
+
 		
 
 
 
 		
-		<div class="row collapse">
+		<div class="medium-4 columns">
 			
-			<nav id="menu-primary" class="menu-primary menu-primary--banner">
+			
+		<form method="get" class="site-search search-form" action="#" role="search">
+	<div class="row collapse">
+		<div class="small-9 medium-8 columns">
+			<label for="s" class="search-form__label hide">Search</label>
+			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search the website...">
+		</div>
+		<div class="small-3 medium-4 columns">
+			<button type="submit" class="search-form__submit button postfix" name="submit" value="Search">Search</button>
+		</div>
+	</div>
+</form>
+	
+		</div>
+	</div>
+
+	<nav id="menu-primary" class="menu-primary menu-primary--banner">
 				<ul class="nav-primary nav-primary--banner">
 
 					  
@@ -78,26 +97,11 @@
 
 				</ul>
 			</nav>
-			<div class="medium-6 medium-offset-6 columns">
-			<form method="get" class="site-search search-form" action="#" role="search">
-	<div class="row collapse">
-		<div class="small-10 columns">
-			<label for="s" class="search-form__label hide">Search</label>
-			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search the website...">
-		</div>
-		<div class="small-2 columns">
-			<button type="submit" class="search-form__submit button postfix" name="submit" value="Search">Search</button>
-		</div>
-	</div>
-</form>
-			</div>
-		</div>
-	</div>
 </header>
 
 
 <div class="site-content row layout-2c-l">
-	<main class="main">
+	<main class="main large-8 columns">
 	<header>
 		<h1 class="">Blog Article Title of variable length so this text is long enough to test it's limitations</h1>
 	</header>
@@ -155,8 +159,14 @@
 
 </main>
 
-<div class="sub">
-	PANELS
+<div class="sub large-4 columns">
+	<h3>In this section</h3>
+	<ul class="side-nav">
+	  <li><a href="#">Link 1</a></li>
+	  <li><a href="#">Link 2</a></li>
+	  <li><a href="#">Link 3</a></li>
+	  <li><a href="#">Link 4</a></li>
+	</ul>
 </div>
 
 
@@ -171,8 +181,9 @@
 
 
 <aside class="row">
-	<h5 class="vh">Social Media Accounts</h5>
-	<ul class="social-icons-list">
+	<div class="columns">
+		<h5 class="vh">Social Media Accounts</h5>
+		<ul class="social-icons-list">
 	<li class="social-icons-list__item social-icons-list__item--facebook">
 		<a href="#" class="social-icons-list__link">
 			<i class="icon icon-facebook social-icon social-icon--facebook social-icons-list__icon" aria-hidden="true"></i>
@@ -216,17 +227,18 @@
 	</li>
 </ul>
 
+	</div>
 </aside>
 
 <footer id="colophon" class="site-footer clear" role="contentinfo">
 	<div class="row">
+		
 
-
-		<p class="site-colophon site-colophon--copyright">
+		<p class="site-colophon site-colophon--copyright columns medium-6">
 			Copyright &copy; 2014 Example Co. Ltd
 		</p>
 
-		<p class="site-colophon site-colophon--develop-credit">
+		<p class="site-colophon site-colophon--develop-credit columns medium-6 medium-text-right">
 			Designed &amp; Developed by <a class="site-credit site-credit--dark" target="_blank" href="http://burfieldcreative.co.uk" title="Digital Agency Bristol">Burfield<span class="vh"> - a Digital Agency in Bristol</span></a>
 		</p>
 
