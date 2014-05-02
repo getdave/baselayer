@@ -1,0 +1,31 @@
+<header class="banner {{ include.classnames }} ">
+	<div class="row">
+		{% include logo.html %} 
+		
+		{% comment %}
+		# Remove the "comment" blocks to include
+		{% include toggle-menu-primary.html %}
+		{% endcomment %}
+		
+
+
+
+		
+		<div class="row collapse">
+			
+			<nav id="menu-primary" class="menu-primary menu-primary--banner">
+				<ul class="nav-primary nav-primary--banner">
+
+					  {% assign pages_list = site.pages %}
+					  {% assign group = 'navigation' %}
+					  {% include pages_list.html %}
+
+				</ul>
+			</nav>
+			<div class="medium-6 medium-offset-6 columns">
+			{% include search.html %}
+			</div>
+		</div>
+	</div>
+</header>
+
