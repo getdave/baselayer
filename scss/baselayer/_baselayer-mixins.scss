@@ -1,0 +1,303 @@
+// ==========================================================================
+// MIXINS
+//
+// Description: global mixins and functions
+//
+// ==========================================================================
+
+
+
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
+
+// HEADINGS
+// Easily create and apply styles to multiple heading levels
+// ==========================================================================
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}, .h#{$i}, %h#{$i} {
+        @content
+      }
+    }
+}
+
+// FONTFACE REGISTRATION
+// creates an @font-face rule based on provided arguments
+// ==========================================================================
+@mixin register-font( $font-name, $font-path :"../fonts" ) {
+    @font-face{
+        font-family: $font-name;
+        src:url('#{$font-path}/#{$font-name}.eot');
+        src:url('#{$font-path}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}/#{$font-name}.woff') format('woff'),
+            url('#{$font-path}/#{$font-name}.ttf') format('truetype'),
+            url('#{$font-path}/#{$font-name}.svg##{$font-name}') format('svg');
+        font-weight:normal;
+        font-style:normal;
+    }
+}
+
+
+
+// ==========================================================================
+// LAYOUT
+// ==========================================================================
+
+// CLEARFIX
+// ==========================================================================
+@mixin clearfix {
+    zoom: 1;
+
+    &:before {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// LIST RESET
+// resets a list removing all styling and box model attributes
+// ==========================================================================
+@mixin list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+// INLINE BLOCK
+// Bourbon is deprecating but we still need it!
+// ==========================================================================
+@mixin inline-block {
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+}
+
+
+// ==========================================================================
+// COLOUR
+// ==========================================================================
+
+@function black($opacity){
+    @return rgba(0,0,0,$opacity)
+}
+
+@function white($opacity){
+    @return rgba(255,255,255,$opacity)
+}
+
+
+
+// ==========================================================================
+// RESPONSIVE
+// ==========================================================================
+
+// Deprecated - prefer "min-screen()"
+@mixin respond-to($res) {
+  @if ($is-oldie == true or $isFixed == true) {
+      // Check if we're IE. If so then just return the content sans-media query
+      @if $fix-mqs >= $res {
+          @content;
+      }
+  } @else {
+    @media screen and (min-width: $res)
+    {
+      @content;
+    }
+  }
+}
+
+
+
+// ==========================================================================
+// TEXTURE
+// ==========================================================================
+
+// ARROWS
+// outputs a pure CSS arrows (@include arrow(top, #000, 50px);)
+// ==========================================================================
+@mixin arrow($direction, $color, $size){
+    display: block;
+    height: 0;
+    width: 0;
+
+    @if $direction == 'top' {
+        border-left: $size solid transparent;
+    	border-right: $size solid transparent;
+    	border-bottom: $size solid $color;
+    } @else if $direction == 'right' {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+    	border-left: $size solid $color;
+    } @else if $direction == 'bottom' {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+    } @else if $direction == 'left' {
+        border-top: $size solid transparent;
+    	border-right: $size solid $color;
+    	border-bottom: $size solid transparent;
+    } @else if $direction == 'top-left' {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+    } @else if $direction == 'top-right' {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+    } @else if $direction == 'bottom-left' {
+        border-bottom: $size solid $color;
+        border-right: $size solid transparent;
+    } @else if $direction == 'bottom-right' {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+    }
+}
+
+
+
+// ==========================================================================
+// UTILITIES
+// ==========================================================================
+
+// PARSEINT
+// parses an integer from an input
+// ==========================================================================
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+// GCF
+// Find the greatest common factor of two integers
+// ==========================================================================
+@function gcf($a, $b) {
+    @if $b == 0 { @return $a; }
+    @else { @return gcf($b, $a % $b) }
+}
+
+// CONTAINS
+// Check if a list contains a given value
+// ==========================================================================
+@function contains($list, $value) {
+    @if type-of($list) == list { @return not not index($list, $value); }
+    @else { @return $list == $value; }
+}
+
+
+
+// ==========================================================================
+// UNITS
+// ==========================================================================
+
+// REMS
+// outputs property with standard rem unit + fallback for older browsers
+// ==========================================================================
+@mixin rem($property, $values) {
+  @warn "rem mixin is deprecated and no longer supported. Please use Foundation rem-calc()";
+}
+
+// RSIZE
+// outputs em unit (only!) when provided with pixel input
+// ==========================================================================
+@function rsize($pxval, $baseline : $baseFontSize) {
+    @warn "rsize mixin is deprecated and no longer supported. Please use Foundation rem-calc()";
+}
+
+// Alias of "rsize()"
+@function em($pxval, $baseline : $baseFontSize) {
+    @warn "em mixin is deprecated and no longer supported. Please use Foundation rem-calc()";
+}
+
+
+
+// ==========================================================================
+// ANIMATION
+// ==========================================================================
+
+@mixin animate($name: fadeIn, $duration: 1s, $delay: 0.2s, $function: ease, $mode: both) {
+    @warn "animate mixin is deprecated and no longer supported. Please use Bourbon's Animation helpers";
+}
+
+@mixin keyframe ($animation-name){
+    @warn "keyframe mixin is deprecated and no longer supported. Please use Bourbon's Animation helpers";
+}
+
+
+
+// ==========================================================================
+// CSS
+// ==========================================================================
+
+// SELECTION
+// Mixin for selection markup
+// ==========================================================================
+@mixin selection($background, $color, $element:false) {
+    @if($element) {
+        &::-moz-selection{ background:$background; color:$color; text-shadow:none; }
+        &::selection { background:$background; color:$color; text-shadow:none; }
+    } @else {
+        ::-moz-selection{ background:$background; color:$color; text-shadow:none; }
+        ::selection { background:$background; color:$color; text-shadow:none; }
+    }
+}
+
+// PLACEHOLDER
+// Mixin for placeholder styling
+// ==========================================================================
+@mixin placeHolder($color) {
+    &::-webkit-input-placeholder { color:$color; }
+    &:-moz-placeholder { color:$color; }
+}
+
+// TAB FOCUS
+// Webkit-style focus
+// ==========================================================================
+@mixin tab-focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+// VENDOR
+// ==========================================================================
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+
+// POINTER EVENTS
+// The CSS property pointer-events allows authors to control under what
+// circumstances (if any) a particular graphic element can become the target of
+// mouse events.
+// @see https://developer.mozilla.org/en/CSS/pointer-events
+// ==========================================================================
+@mixin pointer-events($type: none) {
+    $type: unquote($type);
+    @include experimental(pointer-events, $type,
+        -moz, -webkit, not -o, not -ms, -khtml, official
+    );
+}
+
+
+
+// OPACITY
+// ==========================================================================
+
+@mixin opacity($trans) {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+    -moz-opacity: $trans;
+    -khtml-opacity: $trans;
+    opacity: $trans;
+}
+

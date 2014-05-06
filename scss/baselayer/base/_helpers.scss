@@ -1,0 +1,114 @@
+// ==========================================================================
+// HELPERS
+//
+// Description: aliases any legacy Tanlinell framework variables
+// ==========================================================================
+
+
+// CLEARING
+.clear {
+	clear: both;
+}
+
+.clear-l {
+	clear: left;
+}
+
+.clear-r {
+	clear: right;
+}
+
+
+
+// IMAGES
+
+// Image Positioning
+.img-left,
+.img-l,
+.alignleft {
+	float: left;
+	margin: 0 $baseLineHeight $baseLineHeight 0;
+}
+
+.img-right,
+.img-r,
+.alignright {
+	float: right;
+	margin: 0 0 $baseLineHeight $baseLineHeight;
+}
+
+.img-center,
+.aligncenter {
+	float: none;
+	margin: 0 auto $baseLineHeight auto;
+	display: block;
+}
+
+// Image Replacement 
+.ir,
+.img-replace {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    line-height: 0; // http://adriandalvarez.tumblr.com/post/6731022156/html5-boilerplate-image-replacement-helper-class-ie7
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before,
+.img-replace:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+
+// HIDING & VISIBILITY
+
+// Hide: Visually For Browsers 
+// Hide only visually, but have it available for screenreaders: by Jon Neal. */
+// www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+
+.vh,
+.v-hidden,
+.screen-reader-text,
+.assistive-text {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.vh.focusable:active,
+.vh.focusable:focus
+.v-hidden.focusable:active,
+.v-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+// ###Hide: Visually From All + Maintain Layout */
+// Hide visually and from screenreaders, but maintain layout  */
+
+.invisible {
+	visibility:hidden;
+}
+
+
+
+
+
+
+
+
+
+

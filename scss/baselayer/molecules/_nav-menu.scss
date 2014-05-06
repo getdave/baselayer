@@ -1,0 +1,91 @@
+// ==========================================================================
+
+// NAV MENU
+
+// Description: mixins to create various styles of navigation. Typically
+// useful for creating primary navigation that needs to vary in layout
+// depending on breakpoint.
+//
+// 1) Base menu styles
+// 2) "Stacked" menu style
+// 3) "Horiztonal" menu style
+//
+
+// ==========================================================================
+
+
+// ==========================================================================
+// MIXINS
+// ==========================================================================
+
+@mixin bl-nav-menu() {
+	position: relative;
+	@include list-reset;
+
+	// ALL ANCHORS
+	// ==========================================================================
+	a {
+		display: block;
+		padding: rem-calc(10px 20px);
+		text-decoration: none;
+	}
+
+	// TOP LEVEL ITEMS
+	// ==========================================================================
+	> li {
+		position: relative;
+	}
+}
+
+
+@mixin bl-nav-menu--stacked() {
+	li {
+		clear: both;
+		float: none;
+	}
+
+	a {
+		text-align: left;
+	}
+}
+
+
+
+
+@mixin bl-nav-menu--inline() {
+
+	// ALL ANCHORS
+	// ==========================================================================
+	a {
+		text-align: center;
+	}
+
+	// TOP LEVEL ITEMS
+	// ==========================================================================
+	> li {
+		float: left;
+		clear: none;
+	}
+}
+
+// ==========================================================================
+// SELECTORS
+// ==========================================================================
+
+// BASE
+.bl-nav-menu,
+%bl-nav-menu {
+	@include bl-nav-menu;
+}
+
+// STACKED
+.bl-nav-menu--stacked,
+%bl-nav-menu--stacked {
+	@include bl-nav-menu--stacked;
+}
+
+// INLINE
+.bl-nav-menu--inline,
+%bl-nav-menu--inline {
+	@include bl-nav-menu--inline;
+}

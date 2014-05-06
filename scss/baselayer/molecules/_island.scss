@@ -1,0 +1,32 @@
+// ==========================================================================
+// ISLAND
+//
+// Description: simple, boxed off content, as per: 
+// csswizardry.com/2011/10/the-island-object
+// ==========================================================================
+
+
+.island,
+.islet{
+    display: block;
+    @extend .clearfix;
+}
+
+// ISLAND
+// ==========================================================================
+.island {
+    padding: $base-line-height;
+}
+
+.island > :last-child,
+.islet > :last-child {
+    margin-bottom: 0;
+}
+
+
+// ISLET
+// ==========================================================================
+.islet {
+    padding: $base-line-height/2;
+}
+

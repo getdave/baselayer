@@ -1,0 +1,42 @@
+// ==========================================================================
+// BASELAYER SETTINGS
+//
+// Description: settings for the baselayer framework
+// ==========================================================================
+
+
+// ==========================================================================
+// ICONS
+// ==========================================================================
+
+// Name of the default Icon font being used
+$icon-font-family: "icomoon" !default;
+$iconFontFamily: $icon-font-family;
+
+// Include default Icon font character glyphs?
+$include-icon-default-chars: true;
+$bIconDefaultChars: $include-icon-default-chars;
+
+
+// ==========================================================================
+// LAYOUT
+// ==========================================================================
+
+// PRIMARY NAVIGATION
+// ==========================================================================
+
+$nav-break-1: $medium-range;
+
+
+
+// ==========================================================================
+// STACKING
+// bird's eye view of components dependent on the z-axis
+// ==========================================================================
+
+$zindex-tier-1:        			1000 !default;
+$zindex-tier-2:         		2000 !default;
+$zindex-tier-3:         		3000 !default;
+$zindex-tier-4:     			4000 !default;
+$zindex-tier-5:   				5000 !default;
+$zindex-tier-6:           		6000 !default;

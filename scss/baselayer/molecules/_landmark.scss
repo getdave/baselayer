@@ -1,0 +1,27 @@
+// ==========================================================================
+// LANDMARK
+//
+// Description: used to provide consistent margins between major components
+// on a page/template.
+// ==========================================================================
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+%landmark,
+.landmark {
+	margin-bottom: $base-line-height*2;
+}
+
+%landmark--minor,
+.landmark--minor {
+	margin-bottom: $base-line-height;
+}
+
+%landmark--major,
+.landmark--major {
+	margin-bottom: $base-line-height*3;
+}
+
+

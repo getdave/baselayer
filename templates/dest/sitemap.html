@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="css/app.css">
 
 		<!-- Modernizr -->
-		<script src="bower_components/modernizr/modernizr.js"></script>
+		<script src="js/modernizr.min.js"></script>
 		
 		<script>
 		    // Do not integrate this code into the CMS.
@@ -29,32 +29,30 @@
 	</head>
 
 	<body>
+		<div class="off-canvas-wrap" data-offcanvas>
+ 			<div class="inner-wrap">
 
 <div id="page">
 <header class="banner  ">
+	<a href="#menu-primary" class="nav-primary__toggle right-off-canvas-toggle toggle toggle--menu toggle--closeable">
+		<i class="toggle__icon" aria-hidden="true"></i>
+		<span class="toggle__text">Skip to Primary Navigation</span> 
+	</a>
+
 	<div class="row">
 		<div class="medium-4 columns">
 			<div class="banner-brand">
     <a class="site-logo" href="/" title="" rel="home">
         <img src="/images/site-logo.png" alt="" />
     </a>    
-</div> 
+</div>
 		</div>
 
-		
-
-		
-
-
-
-		
 		<div class="medium-4 columns">
-			
-			
-		<form method="get" class="site-search search-form" action="#" role="search">
+			<form method="get" class="site-search search-form" action="#" role="search">
 	<div class="row collapse">
 		<div class="small-9 medium-8 columns">
-			<label for="s" class="search-form__label hide">Search</label>
+			<label for="s" class="search-form__label vh">Search</label>
 			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search the website...">
 		</div>
 		<div class="small-3 medium-4 columns">
@@ -62,16 +60,14 @@
 		</div>
 	</div>
 </form>
-	
 		</div>
 	</div>
-
-	<nav id="menu-primary" class="menu-primary menu-primary--banner">
-				<ul class="nav-primary nav-primary--banner">
-
-					  
-					  
-					  
+	<nav id="menu-primary" class="menu-primary menu-primary--banner row">
+		<div class="columns">
+			<ul class="nav-primary nav-primary--banner">
+				
+				
+				
 
 
   
@@ -94,10 +90,12 @@
 
 
 
-
-				</ul>
-			</nav>
+			</ul>
+		</div>
+	</nav>
 </header>
+
+
 
 
 <div class="site-content row layout-1c">
@@ -214,13 +212,50 @@
 
 
 
+			
+
+		    <!-- Off Canvas Menu -->
+		    <aside class="right-off-canvas-menu">
+				<!-- whatever you want goes here -->
+				<ul class="off-canvas-list">
+					
+					
+					
+
+
+  
+    
+      <li><a href="/blog-archive.html">Blog</a></li>
+    
+  
+
+  
+
+  
+    
+      <li><a href="/index.html">Home</a></li>
+    
+  
+
+  
+
+  
+
+
+
+				</ul>
+		    </aside>
+
 		
-		
-		
+ 			</div> <!-- /inner-wrap -->
+		</div> <!-- /off-canvas-wrap -->
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/fastclick.min.js"></script>
+		<script src="js/foundation.min.js"></script>
+		<script src="js/app.js"></script>
 
-		<script src="assets/js/site.min.js"></script>
+		<!--<script src="assets/js/site.min.js"></script>-->
 		<!--
 		<script type='text/javascript'>
 		(function (d, t) {

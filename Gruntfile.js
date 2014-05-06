@@ -17,19 +17,6 @@ module.exports = function(grunt) {
         fwFilename: '<%= pkg.name %>',
     },
 
-    sass: {
-      options: {
-        includePaths: ['bower_components/foundation/scss']
-      },
-      dist: {
-        options: {
-          outputStyle: 'compressed'
-        },
-        files: {
-          'css/app.css': 'scss/app.scss'
-        }
-      }
-    },
 
     watch: {
       options: {
@@ -43,12 +30,67 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
 
+      js: {
+        files: 'js/**/*.js',
+        tasks: ['uglify']
+      },
+
       templates: {
           files: ['<%= jekyll.templates.options.src %>/**/*.html'],
           tasks: ['copy:templates', 'jekyll:templates']
       },
     },
+    sass: {
+      options: {
+        includePaths: [
+          'bower_components/foundation/scss',
+          'scss/baselayer'
+        ]
+      },
+      dist: {
+        options: {
+          outputStyle: 'expanded'
+        },
+        files: {
+          'css/app.css': 'scss/app.scss'
+        }
+      }
+    },
+    uglify: {
+      options: {
+        //preserveComments: 'some'
+      },
+      dist: {
+        files: {
+          'js/modernizr.min.js': ['bower_components/modernizr/modernizr.js'],
+          'js/fastclick.min.js': ['bower_components/fastclick/lib/fastclick.js'],
+          'js/foundation.min.js': [
+            'bower_components/foundation/js/foundation/foundation.js',
 
+            // Include all or...
+            //'bower_components/foundation/js/foundation/*.js'
+
+            // Selectively include
+            'bower_components/foundation/js/foundation/foundation.abide.js',
+            'bower_components/foundation/js/foundation/foundation.clearing.js',
+            'bower_components/foundation/js/foundation/foundation.interchange.js',
+            'bower_components/foundation/js/foundation/foundation.magellan.js',
+            'bower_components/foundation/js/foundation/foundation.reveal.js',
+            'bower_components/foundation/js/foundation/foundation.tooltip.js',
+            'bower_components/foundation/js/foundation/foundation.accordion.js',
+            'bower_components/foundation/js/foundation/foundation.dropdown.js',
+            'bower_components/foundation/js/foundation/foundation.joyride.js',
+            'bower_components/foundation/js/foundation/foundation.offcanvas.js',
+            'bower_components/foundation/js/foundation/foundation.slider.js',
+            'bower_components/foundation/js/foundation/foundation.topbar.js',
+            'bower_components/foundation/js/foundation/foundation.alert.js',
+            'bower_components/foundation/js/foundation/foundation.equalizer.js',
+            'bower_components/foundation/js/foundation/foundation.orbit.js',
+            'bower_components/foundation/js/foundation/foundation.tab.js'
+          ],
+        }
+      },
+    },
     jekyll: {
       options: {
         //bundleExec: true,
@@ -83,7 +125,9 @@ module.exports = function(grunt) {
           templates: { // copy all assets into templates source dir
               src: [
                   'css/app.css',
+                  'js/**/*.js',
                   'images/**/*',
+                  'fonts/**/*',
               ],
               dest: '<%= jekyll.templates.options.src %>/'
           }
@@ -91,7 +135,7 @@ module.exports = function(grunt) {
   });
 
 
-  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('build', ['sass','uglify']);
   grunt.registerTask('default', ['build','watch']);
 
   grunt.registerTask('templates', [
