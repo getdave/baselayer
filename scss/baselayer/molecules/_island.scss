@@ -15,7 +15,7 @@
 // ISLAND
 // ==========================================================================
 .island {
-    padding: $base-line-height;
+    padding: rem-calc(30px);
 }
 
 .island > :last-child,
@@ -27,6 +27,6 @@
 // ISLET
 // ==========================================================================
 .islet {
-    padding: $base-line-height/2;
+    padding: rem-calc(15px);
 }
 

@@ -4869,7 +4869,7 @@ th.hide-for-touch {
   width: 0;
   height: 150%; }
 
-.vh, .nav-primary__toggle .toggle__text, .v-hidden, .screen-reader-text, .assistive-text {
+.vh, .nav-primary__toggle .toggle__text, .nav-primary--offcanvas .nav-primary__close .toggle__text, .social-icons-list--no-text .social-icons-list__name, .v-hidden, .screen-reader-text, .assistive-text {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -4879,7 +4879,7 @@ th.hide-for-touch {
   position: absolute;
   width: 1px; }
 
-.vh.focusable:active, .nav-primary__toggle .focusable.toggle__text:active, .vh.focusable:focus .v-hidden.focusable:active, .vh.focusable:focus .nav-primary__toggle .focusable.toggle__text:focus, .nav-primary__toggle .vh.focusable:focus .focusable.toggle__text:focus, .v-hidden.focusable:focus {
+.vh.focusable:active, .nav-primary__toggle .focusable.toggle__text:active, .nav-primary--offcanvas .nav-primary__close .focusable.toggle__text:active, .social-icons-list--no-text .focusable.social-icons-list__name:active, .vh.focusable:focus .v-hidden.focusable:active, .vh.focusable:focus .nav-primary__toggle .focusable.toggle__text:focus, .nav-primary__toggle .vh.focusable:focus .focusable.toggle__text:focus, .vh.focusable:focus .nav-primary--offcanvas .nav-primary__close .focusable.toggle__text:focus, .nav-primary--offcanvas .nav-primary__close .vh.focusable:focus .focusable.toggle__text:focus, .vh.focusable:focus .social-icons-list--no-text .focusable.social-icons-list__name:focus, .social-icons-list--no-text .vh.focusable:focus .focusable.social-icons-list__name:focus, .v-hidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -4903,13 +4903,13 @@ th.hide-for-touch {
   display: block; }
 
 .island {
-  padding: 150%; }
+  padding: 1.875rem; }
 
 .island > :last-child, .islet > :last-child {
   margin-bottom: 0; }
 
 .islet {
-  padding: 75%; }
+  padding: 0.9375rem; }
 
 @font-face {
   font-family: "icomoon";
@@ -5032,22 +5032,22 @@ ADDED BY afontgarde.js:
 .icon-cross:before, .toggle--close i:before, .toggle--closeable.toggle--active i:before {
   content: "\e608"; }
 
-.nav-primary, .nav-primary--banner, .nav-primary--offcanvas {
+.nav-primary, .nav-primary--banner {
   position: relative;
   list-style: none;
   margin: 0;
   padding: 0; }
-  .nav-primary a, .nav-primary--banner a, .nav-primary--offcanvas a {
+  .nav-primary a, .nav-primary--banner a {
     display: block;
     padding: 0.625rem 1.25rem;
     text-decoration: none; }
-  .nav-primary > li, .nav-primary--banner > li, .nav-primary--offcanvas > li {
+  .nav-primary > li, .nav-primary--banner > li {
     position: relative; }
 
-.nav-primary--banner li, .nav-primary--offcanvas li {
+.nav-primary--banner li {
   clear: both;
   float: none; }
-.nav-primary--banner a, .nav-primary--offcanvas a {
+.nav-primary--banner a {
   text-align: left; }
 
 .bl-nav-menu--inline a {
@@ -5077,8 +5077,6 @@ ADDED BY afontgarde.js:
   font-size: 1.875rem; }
 
 
-/* ============================================================ */
-/* ============================================================ */
 
 .nav-primary a {
   text-decoration: none; }
@@ -5091,7 +5089,7 @@ ADDED BY afontgarde.js:
   .nav-primary--banner > li {
     float: left;
     clear: none; } }
-@media only screen and (max-width: 64em) {
+@media only screen and (max-width: 40em) {
   .js .nav-primary--banner {
     display: none; } }
 
@@ -5101,3 +5099,75 @@ ADDED BY afontgarde.js:
   top: 1.375rem;
   right: 0.9375rem;
   z-index: 4000; }
+
+.nav-primary--offcanvas .nav-primary__close {
+  position: static; }
+
+.social-icons-list {
+  margin: 0 auto 1.0625rem auto;
+  margin-left: -1.375rem;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden; }
+  .social-icons-list > li {
+    list-style: none;
+    float: left;
+    margin-left: 1.375rem;
+    display: block; }
+    .social-icons-list > li > * {
+      display: block; }
+
+.social-icons-list > .social-icons-list__item {
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  vertical-align: top;
+  float: none; }
+
+.social-icons-list__item {
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.3125rem; }
+  .social-icons-list__item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+
+.social-icons-list__link {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+  text-decoration: none; }
+
+.social-icons-list__icon, .social-icons-list__name {
+  letter-spacing: normal;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin-bottom: 0.3125rem; }
+
+.social-icons-list__icon {
+  font-size: 2rem;
+  margin-right: 0.3125rem; }
+
+.social-icons-list__icon--small {
+  font-size: 1rem; }
+
+.social-icons-list__name {
+  text-decoration: none; }
+
+.social-icons-list--inline .social-icons-list__item {
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin-right: 1.5625rem;
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.social-icons-list--no-text .social-icons-list__icon {
+  margin-right: 0; }

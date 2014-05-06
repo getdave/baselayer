@@ -48,14 +48,14 @@
 </div>
 		</div>
 
-		<div class="medium-4 columns">
+		<div class="medium-4 columns hide-for-small-only">
 			<form method="get" class="site-search search-form" action="#" role="search">
 	<div class="row collapse">
-		<div class="small-9 medium-8 columns">
+		<div class="small-8 columns">
 			<label for="s" class="search-form__label vh">Search</label>
-			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search the website...">
+			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search...">
 		</div>
-		<div class="small-3 medium-4 columns">
+		<div class="small-4 columns">
 			<button type="submit" class="search-form__submit button postfix" name="submit" value="Search">Search</button>
 		</div>
 	</div>
@@ -116,9 +116,9 @@
 
 
 <aside class="row">
-	<div class="columns">
+	<div class="columns medium-7 medium-offset-5 medium-text-right">
 		<h5 class="vh">Social Media Accounts</h5>
-		<ul class="social-icons-list">
+		<ul class="social-icons-list social-icons-list--no-text">
 	<li class="social-icons-list__item social-icons-list__item--facebook">
 		<a href="#" class="social-icons-list__link">
 			<i class="icon icon-facebook social-icon social-icon--facebook social-icons-list__icon" aria-hidden="true"></i>
@@ -167,8 +167,6 @@
 
 <footer id="colophon" class="site-footer clear" role="contentinfo">
 	<div class="row">
-		
-
 		<p class="site-colophon site-colophon--copyright columns medium-6">
 			Copyright &copy; 2014 Example Co. Ltd
 		</p>
@@ -186,8 +184,12 @@
 			
 
 		    <!-- Off Canvas Menu -->
-		    <aside class="right-off-canvas-menu">
-				<!-- whatever you want goes here -->
+		    <aside class="nav-primary--offcanvas right-off-canvas-menu">
+				<!-- close the off-canvas menu -->
+				<a class="nav-primary__close exit-off-canvas toggle toggle--close">
+					<i class="toggle__icon"></i>
+					<span class="toggle__text">Close menu</span>
+				</a>
 				<ul class="off-canvas-list">
 					
 					
@@ -215,6 +217,24 @@
 
 
 				</ul>
+
+				<div class="divider"></div>
+				
+				<div class="off-canvas-list">
+					<div class="islet">
+					<form method="get" class="site-search search-form" action="#" role="search">
+	<div class="row collapse">
+		<div class="small-8 columns">
+			<label for="s" class="search-form__label vh">Search</label>
+			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search...">
+		</div>
+		<div class="small-4 columns">
+			<button type="submit" class="search-form__submit button postfix" name="submit" value="Search">Search</button>
+		</div>
+	</div>
+</form>
+					</div>
+				</div>
 		    </aside>
 
 		

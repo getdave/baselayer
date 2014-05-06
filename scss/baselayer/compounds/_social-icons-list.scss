@@ -1,0 +1,104 @@
+// ==========================================================================
+//
+// SOCIAL ICONS LIST
+//
+// Description: list component for icon font-based Social Icons
+//
+// ==========================================================================
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+
+.social-icons-list {
+	@include inline-list;
+}
+
+// ITEM
+// ==========================================================================
+
+.social-icons-list > .social-icons-list__item {
+		@include inline-block;
+		vertical-align: top;
+	float: none;
+}
+
+.social-icons-list__item {
+
+	margin-bottom: rem-calc(10px);
+	padding-bottom: rem-calc(5px); // not "40px" cos we deduct 10px because icon and "name" have a 10px bottom margin
+
+	&:last-child {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+// ANCHOR/LINK
+// ==========================================================================
+.social-icons-list__link {
+	overflow:hidden;
+	*overflow:visible;
+	zoom:1;
+	text-decoration: none;
+}
+
+.social-icons-list__icon,
+.social-icons-list__name {
+	letter-spacing: normal;
+	@include inline-block;
+	margin-bottom: rem-calc(5px); // space the icon from the text if the text wraps
+}
+
+
+// ICON
+// ==========================================================================
+.social-icons-list__icon {
+	font-size: rem-calc(32px);
+	margin-right: rem-calc(5px);
+}
+
+.social-icons-list__icon--small {
+	font-size: rem-calc(16px);
+}
+
+// NAME
+// ==========================================================================
+.social-icons-list__name {
+	text-decoration: none;
+}
+
+
+
+
+// ==========================================================================
+// MODIFIER: INLINE
+// ==========================================================================
+
+.social-icons-list--inline {
+	.social-icons-list__item {
+		@include inline-block;
+		margin-right: rem-calc(25px);
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+
+// ==========================================================================
+// MODIFIER: NO TEXT
+// ==========================================================================
+
+.social-icons-list--no-text {
+	.social-icons-list__icon {
+		margin-right: 0;
+	}
+
+	.social-icons-list__name {
+		@extend .vh;
+	}
+}
+
+

@@ -56,8 +56,8 @@
 .toggle--close,
 %toggle--close {
 	i {
-		font-size: rem-calc(30px);
 		@extend .icon-cross;
+		font-size: rem-calc(30px);
 	}
 }
 

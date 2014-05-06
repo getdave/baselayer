@@ -3,13 +3,25 @@
 			
 
 		    <!-- Off Canvas Menu -->
-		    <aside class="right-off-canvas-menu">
-				<!-- whatever you want goes here -->
+		    <aside class="nav-primary--offcanvas right-off-canvas-menu">
+				<!-- close the off-canvas menu -->
+				<a class="nav-primary__close exit-off-canvas toggle toggle--close">
+					<i class="toggle__icon"></i>
+					<span class="toggle__text">Close menu</span>
+				</a>
 				<ul class="off-canvas-list">
 					{% assign pages_list = site.pages %}
 					{% assign group = 'navigation' %}
 					{% include pages_list.html %}
 				</ul>
+
+				<div class="divider"></div>
+				
+				<div class="off-canvas-list">
+					<div class="islet">
+					{% include search.html %}
+					</div>
+				</div>
 		    </aside>
 
 		
