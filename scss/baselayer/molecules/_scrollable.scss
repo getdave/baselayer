@@ -16,6 +16,7 @@
 .scrollable {
 	position: relative;
 	overflow: hidden;
+  	margin-bottom: $table-margin-bottom;
 
 	&:after {
 		position: absolute;
@@ -46,3 +47,10 @@
     background:#ccc;
 }
 
+.scrollable table {
+	margin-bottom: 0;
+}
+
+.scrollable thead th {
+	white-space: nowrap;
+}

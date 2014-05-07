@@ -69,7 +69,7 @@
 
 
 	<body>
-	  	<div class="row">
+
 		  <header class="row">
 	<h1 class="page-title">Baselayer Documentation</h1>
 </header>
@@ -80,15 +80,31 @@
 <dl class="sub-nav">
   <dt>Skip to:</dt>
   
-  <dd><a href="#pattern-1">Panel Authors</a></dd>
+  <dd><a href="#pattern-1">Block List</a></dd>
   
-  <dd><a href="#pattern-2">Social Icons</a></dd>
+  <dd><a href="#pattern-2">Byline</a></dd>
   
-  <dd><a href="#pattern-3">Social Share Bar</a></dd>
+  <dd><a href="#pattern-3">Complex Link</a></dd>
   
-  <dd><a href="#pattern-4">Testimonial Block</a></dd>
+  <dd><a href="#pattern-4">Images</a></dd>
   
-  <dd><a href="#pattern-5">Text</a></dd>
+  <dd><a href="#pattern-5">Island</a></dd>
+  
+  <dd><a href="#pattern-6">Landmark</a></dd>
+  
+  <dd><a href="#pattern-7">Panel Authors</a></dd>
+  
+  <dd><a href="#pattern-8">Scrollable</a></dd>
+  
+  <dd><a href="#pattern-9">Social Icons</a></dd>
+  
+  <dd><a href="#pattern-10">Social Share Bar</a></dd>
+  
+  <dd><a href="#pattern-11">Testimonial Block</a></dd>
+  
+  <dd><a href="#pattern-12">Text</a></dd>
+  
+  <dd><a href="#pattern-13">Toggle</a></dd>
   
 </dl>
 	
@@ -102,11 +118,331 @@
 
 
 
+<div class="row">
 <div class="patterns">
 	
 	<div id="pattern-1" class="pattern">
-		<h2 class="pattern-title h4">Panel Authors</h2>
+		<h2 class="pattern-title h4">Block List</h2>
+		
+		
 		<div class="display">
+			<h5>Example</h5>
+			<ul class="block-list">
+    
+    <li>
+        <a href="#">Block Link 1</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link 2</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link 3</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link 4</a>
+    </li>
+    
+</ul>
+
+<br><br>
+
+<ul class="block-list block-list--padded">
+    
+    <li>
+        <a href="#">Block Link Padded</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link Padded</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link Padded</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link Padded</a>
+    </li>
+    
+</ul>
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;ul class=&quot;block-list&quot;&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link 1&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link 2&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link 3&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link 4&lt;/a&gt;
+    &lt;/li&gt;
+    
+&lt;/ul&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;ul class=&quot;block-list block-list--padded&quot;&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link Padded&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link Padded&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link Padded&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link Padded&lt;/a&gt;
+    &lt;/li&gt;
+    
+&lt;/ul&gt;
+
+</textarea>
+			<p><a href="/patterns/block-list.html">Block List</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-2" class="pattern">
+		<h2 class="pattern-title h4">Byline</h2>
+		
+		<p><p>Bylines are used to display meta information and come with a de-emphasised style. Typically used on entry-like content (eg: Blog posts)</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<footer class="byline">
+	<span class="byline__section">Posted in <a href="#">Category X</a></span>
+	<span class="byline__section">on 19/02/14</span>
+	<span class="byline__section">by <a href="#">Mr Chips</a></span>
+</footer>
+
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;footer class=&quot;byline&quot;&gt;
+	&lt;span class=&quot;byline__section&quot;&gt;Posted in &lt;a href=&quot;#&quot;&gt;Category X&lt;/a&gt;&lt;/span&gt;
+	&lt;span class=&quot;byline__section&quot;&gt;on 19/02/14&lt;/span&gt;
+	&lt;span class=&quot;byline__section&quot;&gt;by &lt;a href=&quot;#&quot;&gt;Mr Chips&lt;/a&gt;&lt;/span&gt;
+&lt;/footer&gt;
+
+
+
+
+
+</textarea>
+			<p><a href="/patterns/byline.html">Byline</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-3" class="pattern">
+		<h2 class="pattern-title h4">Complex Link</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<a href="#" class="complex-link">
+   <i class="icon icon--inline icon-twitter"></i>
+   <span class="complex-link__target">Log in with Twitter</span>
+</a>
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;a href=&quot;#&quot; class=&quot;complex-link&quot;&gt;
+   &lt;i class=&quot;icon icon--inline icon-twitter&quot;&gt;&lt;/i&gt;
+   &lt;span class=&quot;complex-link__target&quot;&gt;Log in with Twitter&lt;/span&gt;
+&lt;/a&gt;
+
+
+</textarea>
+			<p><a href="/patterns/complex-link.html">Complex Link</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-4" class="pattern">
+		<h2 class="pattern-title h4">Images</h2>
+		
+		<p><p>Baselayer provides predefined rules for common image styling. Mix and match as necessary to achieve the required effect.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<img src="http://www.placehold.it/160x160&text=Rounded" alt="" class="img-rounded">
+<br><br>
+<img src="http://www.placehold.it/160x160&text=Radius" alt="" class="img-radius">
+<br><br>
+<img src="http://www.placehold.it/160x160&text=Polaroid" alt="" class="img-polaroid">
+<br><br>
+<img src="http://www.placehold.it/160x160&text=Combo!" alt="" class="img-rounded img-polaroid">
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Rounded&quot; alt=&quot;&quot; class=&quot;img-rounded&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Radius&quot; alt=&quot;&quot; class=&quot;img-radius&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Polaroid&quot; alt=&quot;&quot; class=&quot;img-polaroid&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Combo!&quot; alt=&quot;&quot; class=&quot;img-rounded img-polaroid&quot;&gt;
+
+
+</textarea>
+			<p><a href="/patterns/images.html">Images</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-5" class="pattern">
+		<h2 class="pattern-title h4">Island</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="island" style="background-color: #eee">
+    Islands are simple, boxed off content. Islands come unstyled. We've added a background colour here for illustrative purposes only.
+</div>
+<br><br>
+<div class="islet" style="background-color: #eee">
+    There's also a smaller version called Islet which has a smaller amount of padding. Islets also come unstyled. We've added a background colour here for illustrative purposes only.
+</div>
+
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;island&quot; style=&quot;background-color: #eee&quot;&gt;
+    Islands are simple, boxed off content. Islands come unstyled. We&#39;ve added a background colour here for illustrative purposes only.
+&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class=&quot;islet&quot; style=&quot;background-color: #eee&quot;&gt;
+    There&#39;s also a smaller version called Islet which has a smaller amount of padding. Islets also come unstyled. We&#39;ve added a background colour here for illustrative purposes only.
+&lt;/div&gt;
+
+
+
+
+
+</textarea>
+			<p><a href="/patterns/island.html">Island</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-6" class="pattern">
+		<h2 class="pattern-title h4">Landmark</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="landmark">
+    <div class="panel mbn">
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a default landmark
+    </div>
+</div>
+
+<div class="landmark landmark--giant">
+    <div class="panel mbn">
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a giant landmark
+    </div>
+</div>
+
+<div class="landmark landmark--major">
+    <div class="panel mbn">
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a major landmark
+    </div>
+</div>
+
+<div class="landmark landmark--minor">
+    <div class="panel mbn">
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a minor landmark
+    </div>
+</div>
+
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;landmark&quot;&gt;
+    &lt;div class=&quot;panel mbn&quot;&gt;
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a default landmark
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;landmark landmark--giant&quot;&gt;
+    &lt;div class=&quot;panel mbn&quot;&gt;
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a giant landmark
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;landmark landmark--major&quot;&gt;
+    &lt;div class=&quot;panel mbn&quot;&gt;
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a major landmark
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;landmark landmark--minor&quot;&gt;
+    &lt;div class=&quot;panel mbn&quot;&gt;
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a minor landmark
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+</textarea>
+			<p><a href="/patterns/landmark.html">Landmark</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-7" class="pattern">
+		<h2 class="pattern-title h4">Panel Authors</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
 			<div class="panel">
     <h3 class="panel__heading">Authors</h3>
 
@@ -166,7 +502,9 @@
 
 
 		</div>
+		
 		<div class="source">
+			<h5>Source</h5>
 			<textarea rows="6" cols="30">&lt;div class=&quot;panel&quot;&gt;
     &lt;h3 class=&quot;panel__heading&quot;&gt;Authors&lt;/h3&gt;
 
@@ -229,9 +567,127 @@
 		</div>
 	</div>
 	
-	<div id="pattern-2" class="pattern">
-		<h2 class="pattern-title h4">Social Icons</h2>
+	<div id="pattern-8" class="pattern">
+		<h2 class="pattern-title h4">Scrollable</h2>
+		
+		<p><p>Scrollable allows HTML content that does not wrap well to be scrolled horiztonally using build-in browser scrolling. Typically used to make HTML <code>&lt;table&gt;</code> elements work in a Responsive context.</p>
+</p>
+		
+		
 		<div class="display">
+			<h5>Example</h5>
+			<div class="scrollable">
+	<div>
+		<table>
+		  <thead>
+		    <tr>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Content Goes Here</td>
+		      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		    </tr>
+		    <tr>
+		      <td>Content Goes Here</td>
+		      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		    </tr>
+		    <tr>
+		      <td>Content Goes Here</td>
+		      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</div>
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;scrollable&quot;&gt;
+	&lt;div&gt;
+		&lt;table&gt;
+		  &lt;thead&gt;
+		    &lt;tr&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		    &lt;/tr&gt;
+		  &lt;/thead&gt;
+		  &lt;tbody&gt;
+		    &lt;tr&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;This is longer content Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		    &lt;/tr&gt;
+		    &lt;tr&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		    &lt;/tr&gt;
+		    &lt;tr&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		    &lt;/tr&gt;
+		  &lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+</textarea>
+			<p><a href="/patterns/scrollable.html">Scrollable</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-9" class="pattern">
+		<h2 class="pattern-title h4">Social Icons</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
 			<span class="icon-fallback-text">
     <i class="icon icon-twitter social-icon social-icon--twitter" aria-hidden="true"></i>
     <span class="text">Twitter</span>
@@ -269,7 +725,9 @@
     <span class="text">YouTube</span>
 </span>
 		</div>
+		
 		<div class="source">
+			<h5>Source</h5>
 			<textarea rows="6" cols="30">&lt;span class=&quot;icon-fallback-text&quot;&gt;
     &lt;i class=&quot;icon icon-twitter social-icon social-icon--twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
     &lt;span class=&quot;text&quot;&gt;Twitter&lt;/span&gt;
@@ -310,9 +768,12 @@
 		</div>
 	</div>
 	
-	<div id="pattern-3" class="pattern">
+	<div id="pattern-10" class="pattern">
 		<h2 class="pattern-title h4">Social Share Bar</h2>
+		
+		
 		<div class="display">
+			<h5>Example</h5>
 			<aside class="social-share-bar">
 	<h4 class="social-share-bar__heading">Share this article</h4>
 	<div class="social-share-bar__body">
@@ -338,7 +799,9 @@
 	</div>
 </aside>
 		</div>
+		
 		<div class="source">
+			<h5>Source</h5>
 			<textarea rows="6" cols="30">&lt;aside class=&quot;social-share-bar&quot;&gt;
 	&lt;h4 class=&quot;social-share-bar__heading&quot;&gt;Share this article&lt;/h4&gt;
 	&lt;div class=&quot;social-share-bar__body&quot;&gt;
@@ -367,9 +830,12 @@
 		</div>
 	</div>
 	
-	<div id="pattern-4" class="pattern">
+	<div id="pattern-11" class="pattern">
 		<h2 class="pattern-title h4">Testimonial Block</h2>
+		
+		
 		<div class="display">
+			<h5>Example</h5>
 			<aside class="testimonial-block">
 	<h3 class="vh">Customer Testimonial</h3>
 
@@ -392,7 +858,9 @@
 
 
 		</div>
+		
 		<div class="source">
+			<h5>Source</h5>
 			<textarea rows="6" cols="30">&lt;aside class=&quot;testimonial-block&quot;&gt;
 	&lt;h3 class=&quot;vh&quot;&gt;Customer Testimonial&lt;/h3&gt;
 
@@ -418,9 +886,12 @@
 		</div>
 	</div>
 	
-	<div id="pattern-5" class="pattern">
+	<div id="pattern-12" class="pattern">
 		<h2 class="pattern-title h4">Text</h2>
+		
+		
 		<div class="display">
+			<h5>Example</h5>
 			<div class="text-module">
 	<h1>Header Level 1 testing to force line wrapping</h1>
 		       
@@ -469,7 +940,9 @@
 	</p>
 </div>
 		</div>
+		
 		<div class="source">
+			<h5>Source</h5>
 			<textarea rows="6" cols="30">&lt;div class=&quot;text-module&quot;&gt;
 	&lt;h1&gt;Header Level 1 testing to force line wrapping&lt;/h1&gt;
 		       
@@ -521,10 +994,54 @@
 		</div>
 	</div>
 	
-</div>
+	<div id="pattern-13" class="pattern">
+		<h2 class="pattern-title h4">Toggle</h2>
+		
+		<p><p>Create a simple Toggle switches using the built in icon font (matching Icon glyphs must be included). When ommitting the <code>close</code> or <code>menu</code> classes you must provided your own icon.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<a href="#" class="toggle toggle--menu">
+	<i class="toggle__icon" aria-hidden="true"></i>
+	<span class="toggle__text">Toggle Text</span> 
+</a>
+
+<br><br>
+
+<a href="#" class="toggle toggle--close">
+	<i class="toggle__icon" aria-hidden="true"></i>
+	<span class="toggle__text">Close</span> 
+</a>
 
 
 		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;a href=&quot;#&quot; class=&quot;toggle toggle--menu&quot;&gt;
+	&lt;i class=&quot;toggle__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;toggle__text&quot;&gt;Toggle Text&lt;/span&gt; 
+&lt;/a&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;a href=&quot;#&quot; class=&quot;toggle toggle--close&quot;&gt;
+	&lt;i class=&quot;toggle__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;toggle__text&quot;&gt;Close&lt;/span&gt; 
+&lt;/a&gt;
+
+</textarea>
+			<p><a href="/patterns/toggle.html">Toggle</a></p>
+		</div>
+	</div>
+	
+</div>
+</div>
+
+
+	
 
 
 		

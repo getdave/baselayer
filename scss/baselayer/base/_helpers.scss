@@ -73,6 +73,7 @@
 // www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
 
 .vh,
+%vh,
 .v-hidden,
 .screen-reader-text,
 .assistive-text {
@@ -87,7 +88,7 @@
 }
 
 .vh.focusable:active,
-.vh.focusable:focus
+.vh.focusable:focus,
 .v-hidden.focusable:active,
 .v-hidden.focusable:focus {
     clip: auto;

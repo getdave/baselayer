@@ -3830,7 +3830,7 @@ td, th {
     width: 0;
     height: 150%; }
 
-.vh, .social-icons-list--no-text .social-icons-list__name, .primary-offcanvas__toggle .toggle__text, .primary-offcanvas .primary-offcanvas__close .toggle__text, .v-hidden, .screen-reader-text, .assistive-text {
+.toggle__text--hidden, .toggle--menu .toggle__text {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -3840,7 +3840,7 @@ td, th {
   position: absolute;
   width: 1px; }
 
-.vh.focusable:active, .social-icons-list--no-text .focusable.social-icons-list__name:active, .primary-offcanvas__toggle .focusable.toggle__text:active, .primary-offcanvas .primary-offcanvas__close .focusable.toggle__text:active, .vh.focusable:focus .v-hidden.focusable:active, .vh.focusable:focus .social-icons-list--no-text .focusable.social-icons-list__name:focus, .social-icons-list--no-text .vh.focusable:focus .focusable.social-icons-list__name:focus, .vh.focusable:focus .primary-offcanvas__toggle .focusable.toggle__text:focus, .primary-offcanvas__toggle .vh.focusable:focus .focusable.toggle__text:focus, .vh.focusable:focus .primary-offcanvas .primary-offcanvas__close .focusable.toggle__text:focus, .primary-offcanvas .primary-offcanvas__close .vh.focusable:focus .focusable.toggle__text:focus, .v-hidden.focusable:focus {
+.vh.focusable:active, .social-icons-list--no-text .focusable.social-icons-list__name:active, .primary-offcanvas__toggle .focusable.toggle__text:active, .primary-offcanvas .primary-offcanvas__close .focusable.toggle__text:active, .vh.focusable:focus, .social-icons-list--no-text .focusable.social-icons-list__name:focus, .primary-offcanvas__toggle .focusable.toggle__text:focus, .primary-offcanvas .primary-offcanvas__close .focusable.toggle__text:focus, .v-hidden.focusable:active, .v-hidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -4145,6 +4145,7 @@ ADDED BY afontgarde.js:
   *vertical-align: auto;
   font-size: 100%; }
 
+
 .toggle--menu i {
   font-size: 1.875rem; }
 
@@ -4210,7 +4211,8 @@ ADDED BY afontgarde.js:
 
 .scrollable {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 1.25rem; }
   .scrollable:after {
     position: absolute;
     top: 0;
@@ -4234,6 +4236,41 @@ ADDED BY afontgarde.js:
 .scrollable > div::-webkit-scrollbar-thumb {
   border-radius: 6px;
   background: #ccc; }
+
+.scrollable table {
+  margin-bottom: 0; }
+
+.scrollable thead th {
+  white-space: nowrap; }
+
+.img-rounded, .img-circle {
+  border-radius: 1000px; }
+
+.img-radius {
+  border-radius: 3px; }
+
+.img-polaroid {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+
+.img-thumb {
+  margin-bottom: 1.875rem; }
+
+.img-ratio {
+  height: 0;
+  overflow: hidden; }
+
+.img-ratio--1-1 {
+  padding-bottom: 100%; }
+
+.img-ratio--4-3 {
+  padding-bottom: 75%; }
+
+.img-ratio--16-9 {
+  padding-bottom: 56.25%; }
 
 
 .nav-primary {
