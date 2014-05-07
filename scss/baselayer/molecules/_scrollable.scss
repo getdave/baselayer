@@ -1,0 +1,48 @@
+// ==========================================================================
+//
+// SCROLLABLE
+//
+// Description: styles to allow HTML content to be "scrolled" horiztonally
+// using build-in browser scrolling. Typically used to make HTML <table>
+// elements work in a Responsive context.
+//
+// ==========================================================================
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.scrollable {
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 50px;
+		height: 100%;
+		border-radius: 10px 0 0 10px / 50% 0 0 50%;
+		box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
+		content: '';
+	}
+}
+
+// Critical - must have this nested inner div
+.scrollable	> div {
+	overflow-x: auto;
+}
+
+.scrollable > div::-webkit-scrollbar {
+    height:12px;
+}
+.scrollable > div::-webkit-scrollbar-track {
+    box-shadow:0 0 2px rgba(0,0,0,0.15) inset;
+    background:#f0f0f0;
+}
+.scrollable > div::-webkit-scrollbar-thumb {
+    border-radius:6px;
+    background:#ccc;
+}
+

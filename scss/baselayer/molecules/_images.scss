@@ -1,0 +1,89 @@
+// ==========================================================================
+//
+// IMAGES
+//
+// Description: Common styling patterns for images to be applied to
+// `<img` elements. Please note that `.img-rounded` and `.img-circle` do
+// not work in IE7-8.
+//
+// ==========================================================================
+
+
+// ==========================================================================
+// ROUNDED
+// ==========================================================================
+
+.img-rounded,
+%img-rounded,
+.img-circle,
+%img-circle {
+    border-radius: $global-rounded;
+}
+
+// ==========================================================================
+// RADIUS
+// creates a fully circular image
+// ==========================================================================
+
+.img-radius,
+%img-radius {
+    border-radius: $global-radius;
+}
+
+
+// ==========================================================================
+// POLAROID
+// applies neat border and subtle shadow
+// ==========================================================================
+
+.img-polaroid,
+%img-polaroid {
+    padding: rem-calc(4px);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid black(.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+// ==========================================================================
+// THUMB
+// applies a standard bottom margin
+// ==========================================================================
+
+.img-thumb,
+%img-thumb {
+    margin-bottom: $spacing-unit;
+}
+
+// ==========================================================================
+// RATIO
+// base on Uncle Dave's 'ole padded box technique
+// http://daverupert.com/2012/04/uncle-daves-ol-padded-box/
+// ==========================================================================
+
+// BASE
+// ==========================================================================
+
+.img-ratio,
+%img-ratio {
+    height: 0;
+    overflow: hidden;
+}
+
+// RATIOS
+// ==========================================================================
+.img-ratio--1-1,
+%img-ratio--1-1 {
+    padding-bottom: 100%;
+}
+
+.img-ratio--4-3,
+%img-ratio--4-3 {
+    padding-bottom: 75%;
+}
+
+.img-ratio--16-9,
+%img-ratio--16-9 {
+    padding-bottom: 56.25%;
+}
