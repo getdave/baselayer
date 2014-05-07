@@ -5172,11 +5172,14 @@ ADDED BY afontgarde.js:
 html, body {
   height: 100%; }
 
-.off-canvas-wrap, .off-canvas-wrap {
-  height: 100%; }
-  .off-canvas-wrap .inner-wrap, .off-canvas-wrap .inner-wrap {
-    height: 100%; }
+/* .off-canvas-wrap,
+.off-canvas-wrap {
+    height: 100%; 
 
+    .inner-wrap {
+        height: 100%; 
+    }
+} */
 
 .primary-offcanvas__panel {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
@@ -5191,3 +5194,68 @@ html, body {
   box-shadow: none; }
   .primary-offcanvas .primary-offcanvas__close:hover, .primary-offcanvas .primary-offcanvas__close:focus {
     color: #aaa; }
+
+/* <div class="pagination">
+	<ul class="page-numbers">
+		<li>
+			<a class="prev page-numbers" href="http://www.mxvice.com/category/features/page/2/">&lt;</a>
+		</li>
+		<li>
+			<span class="page-numbers current">1</span>
+		</li>
+		<li>
+			<a class="page-numbers" href="http://www.mxvice.com/category/features/page/2/">2</a>
+		</li>
+		<li>
+			<span class="page-numbers dots">…</span>
+		</li>
+		<li>
+			<a class="page-numbers" href="http://www.mxvice.com/category/features/page/190/">190</a>
+		</li>
+		<li>
+			<a class="next page-numbers" href="http://www.mxvice.com/category/features/page/2/">&gt;</a>
+		</li>
+	</ul>
+</div> */
+.pagination {
+  display: block;
+  height: 1.5rem;
+  margin-left: -0.3125rem; }
+  .pagination li {
+    height: 1.5rem;
+    color: #222;
+    font-size: 0.875rem;
+    margin-left: 0.3125rem; }
+    .pagination li a {
+      display: block;
+      padding: 0.0625rem 0.625rem 0.0625rem;
+      color: #999;
+      border-radius: 3px; }
+    .pagination li:hover a, .pagination li a:focus {
+      background: #e6e6e6; }
+    .pagination li.unavailable a {
+      cursor: default;
+      color: #999; }
+    .pagination li.unavailable:hover a, .pagination li.unavailable a:focus {
+      background: transparent; }
+    .pagination li.current a {
+      background: #008CBA;
+      color: #fff;
+      font-weight: bold;
+      cursor: default; }
+      .pagination li.current a:hover, .pagination li.current a:focus {
+        background: #008CBA; }
+  .pagination li {
+    float: left;
+    display: block; }
+  .pagination .current {
+    display: block;
+    height: auto;
+    padding: 0.0625rem 0.625rem 0.0625rem;
+    background: #008CBA;
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+    border-radius: 3px; }
+    .pagination .current:hover, .pagination .current:focus {
+      background: #008CBA; }
