@@ -1,0 +1,54 @@
+// ==========================================================================
+//
+// ITEM LIST
+//
+// Description: styles for standard lists of "entries". Typically used
+// for Blog archive layouts...etc
+//
+// ==========================================================================
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.item-list {
+	@include list-reset;
+	@include clearfix;
+
+	> li,
+	.list-item {
+		margin-bottom: $spacing-unit;
+		padding-bottom: $spacing-unit;
+		@include clearfix;
+	}
+}
+
+
+// ==========================================================================
+// MODIFIER: CONTRACTED
+// ==========================================================================
+
+.item-list--contracted {
+
+	> li,
+	.list-item {
+		margin-bottom: $half-spacing-unit;
+		padding-bottom: $half-spacing-unit;
+	}
+}
+
+
+// ==========================================================================
+// MODIFIER: EXPANDED
+// ==========================================================================
+
+.item-list--expanded {
+
+	> li,
+	.list-item {
+		margin-bottom: $double-spacing-unit;
+		padding-bottom: $double-spacing-unit;
+	}
+}
+

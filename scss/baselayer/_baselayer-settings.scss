@@ -6,6 +6,29 @@
 
 
 // ==========================================================================
+// HACKS & OVERIDES
+// ==========================================================================
+
+// This is a flag which is set to "true" by master-ie.scss
+// This allows us to target specifically IE within Sass files
+$is-oldie: 						false !default;
+
+// Highlights any potential markup/accessibility problems
+$debug-mode:					false !default;
+
+
+// ==========================================================================
+// ASSET PATHS
+// ==========================================================================
+
+$css_dir: 						"../css" !default;
+$sass_dir: 						"../sass" !default;
+$images_dir: 					"../images" !default;
+$js_dir: 						"../js" !default;
+$fonts_dir: 					"../fonts" !default;
+
+
+// ==========================================================================
 // ICONS
 // ==========================================================================
 

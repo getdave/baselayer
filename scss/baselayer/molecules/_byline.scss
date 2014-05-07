@@ -1,0 +1,19 @@
+// ==========================================================================
+//
+// BYLINE
+//
+// Description: styles of subheader-like or "meta" content. Typically follows
+// a primary header and provides ancillary information about the content
+// that follows (eg: Blog category, posted by...etc)
+//
+// ==========================================================================
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.byline {
+	@extend .subheader;
+	font-size: 0.9em;
+}

@@ -2783,7 +2783,7 @@ ul.pagination {
   .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
     line-height: 1;
     margin-bottom: 0.625rem; }
-    .panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
+    .panel h1.subheader, .panel h1.byline, .panel h2.subheader, .panel h2.byline, .panel h3.subheader, .panel h3.byline, .panel h4.subheader, .panel h4.byline, .panel h5.subheader, .panel h5.byline, .panel h6.subheader, .panel h6.byline {
       line-height: 1.4; }
   .panel.callout {
     border-style: solid;
@@ -2801,7 +2801,7 @@ ul.pagination {
     .panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 {
       line-height: 1;
       margin-bottom: 0.625rem; }
-      .panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
+      .panel.callout h1.subheader, .panel.callout h1.byline, .panel.callout h2.subheader, .panel.callout h2.byline, .panel.callout h3.subheader, .panel.callout h3.byline, .panel.callout h4.subheader, .panel.callout h4.byline, .panel.callout h5.subheader, .panel.callout h5.byline, .panel.callout h6.subheader, .panel.callout h6.byline {
         line-height: 1.4; }
     .panel.callout a:not(.button) {
       color: #008CBA; }
@@ -4125,7 +4125,7 @@ h5 {
 h6 {
   font-size: 1rem; }
 
-.subheader {
+.subheader, .byline {
   line-height: 1.4;
   color: #6f6f6f;
   font-weight: normal;
@@ -4737,101 +4737,315 @@ th.hide-for-touch {
 .touch th.show-for-touch {
   display: table-cell !important; }
 
-.ptn, .pvn, .pan {
-  padding-top: 0px !important; }
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
 
-.pts, .pvs, .pas {
-  padding-top: 5px !important; }
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
 
-.ptm, .pvm, .pam {
-  padding-top: 10px !important; }
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
 
-.ptl, .pvl, .pal {
-  padding-top: 20px !important; }
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio, canvas, progress, video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
 
-.prn, .phn, .pan {
-  padding-right: 0px !important; }
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
 
-.prs, .phs, .pas {
-  padding-right: 5px !important; }
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden], template {
+  display: none; }
 
-.prm, .phm, .pam {
-  padding-right: 10px !important; }
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
 
-.prl, .phl, .pal {
-  padding-right: 20px !important; }
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active, a:hover {
+  outline: 0; }
 
-.pbn, .pvn, .pan {
-  padding-bottom: 0px !important; }
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
 
-.pbs, .pvs, .pas {
-  padding-bottom: 5px !important; }
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b, strong {
+  font-weight: bold; }
 
-.pbm, .pvm, .pam {
-  padding-bottom: 10px !important; }
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
 
-.pbl, .pvl, .pal {
-  padding-bottom: 20px !important; }
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+} */
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
 
-.pln, .phn, .pan {
-  padding-left: 0px !important; }
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
 
-.pls, .phs, .pas {
-  padding-left: 5px !important; }
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
 
-.plm, .phm, .pam {
-  padding-left: 10px !important; }
+sup {
+  top: -0.5em; }
 
-.pll, .phl, .pal {
-  padding-left: 20px !important; }
+sub {
+  bottom: -0.25em; }
 
-.mtn, .mvn, .man {
-  margin-top: 0px !important; }
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
 
-.mts, .mvs, .mas {
-  margin-top: 5px !important; }
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
 
-.mtm, .mvm, .mam {
-  margin-top: 10px !important; }
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 0; }
 
-.mtl, .mvl, .mal {
-  margin-top: 20px !important; }
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
 
-.mrn, .mhn, .man {
-  margin-right: 0px !important; }
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
 
-.mrs, .mhs, .mas {
-  margin-right: 5px !important; }
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
 
-.mrm, .mhm, .mam {
-  margin-right: 10px !important; }
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
 
-.mrl, .mhl, .mal {
-  margin-right: 20px !important; }
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
 
-.mbn, .mvn, .man {
-  margin-bottom: 0px !important; }
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button, select {
+  text-transform: none; }
 
-.mbs, .mvs, .mas {
-  margin-bottom: 5px !important; }
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
 
-.mbm, .mvm, .mam {
-  margin-bottom: 10px !important; }
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled], html input[disabled] {
+  cursor: default; }
 
-.mbl, .mvl, .mal {
-  margin-bottom: 20px !important; }
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
 
-.mln, .mhn, .man {
-  margin-left: 0px !important; }
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
 
-.mls, .mhs, .mas {
-  margin-left: 5px !important; }
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"], input[type="radio"] {
+  padding: 0;
+  /* 2 */ }
 
-.mlm, .mhm, .mam {
-  margin-left: 10px !important; }
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
 
-.mll, .mhl, .mal {
-  margin-left: 20px !important; }
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
 
 .clear {
   clear: both; }
@@ -4855,7 +5069,7 @@ th.hide-for-touch {
   margin: 0 auto 1.875rem auto;
   display: block; }
 
-.ir, .img-replace {
+.site-credit {
   background-color: transparent;
   border: 0;
   overflow: hidden;
@@ -5077,6 +5291,46 @@ ADDED BY afontgarde.js:
   font-size: 1.875rem; }
 
 
+.item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  zoom: 1; }
+  .item-list:before {
+    content: "";
+    display: table; }
+  .item-list:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .item-list > li, .item-list .list-item {
+    margin-bottom: 1.875rem;
+    padding-bottom: 1.875rem;
+    zoom: 1; }
+    .item-list > li:before, .item-list .list-item:before {
+      content: "";
+      display: table; }
+    .item-list > li:after, .item-list .list-item:after {
+      content: "";
+      display: table;
+      clear: both; }
+
+.item-list--contracted > li, .item-list--contracted .list-item {
+  margin-bottom: 0.9375rem;
+  padding-bottom: 0.9375rem; }
+
+.item-list--expanded > li, .item-list--expanded .list-item {
+  margin-bottom: 3.75rem;
+  padding-bottom: 3.75rem; }
+
+.complex-link, .complex-link:hover, .complex-link:focus {
+  text-decoration: none; }
+  .complex-link .complex-link__target, .complex-link .link-target, .complex-link:hover .complex-link__target, .complex-link:hover .link-target, .complex-link:focus .complex-link__target, .complex-link:focus .link-target {
+    text-decoration: underline; }
+
+.byline {
+  font-size: 0.9em; }
+
 
 .nav-primary a {
   text-decoration: none; }
@@ -5198,8 +5452,6 @@ html, body {
 /* ==========================================================================
    COLUMNS
    ========================================================================== */
-/* BASE
-   ========================================================================== */
 .column-container {
   width: 100%;
   margin-left: auto;
@@ -5223,15 +5475,36 @@ html, body {
   float: left;
   margin-bottom: 3.75rem; }
 
-/* 2 Column [Sub] Right (Default)
-   ========================================================================== */
 
 
-/* 2 Column [Sub] Left
-   ========================================================================== */
 .layout-2c-l .main {
   float: right; }
 
+
+.site-credit {
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  position: relative;
+  top: -3px;
+  vertical-align: middle;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 84px;
+  height: 12px;
+  margin-left: 2px;
+  background-image: url("../images/framework/site-credit.svg"); }
+  .no-svg .site-credit {
+    background-image: url("../images/framework/site-credit.png");
+    height: 20px;
+    top: auto; }
+
+.site-credit--dark {
+  background-image: url("../images/framework/site-credit--dark.svg"); }
+  .no-svg .site-credit--dark {
+    background-image: url("../images/framework/site-credit--dark.png"); }
 
 /* <div class="pagination">
 	<ul class="page-numbers">
