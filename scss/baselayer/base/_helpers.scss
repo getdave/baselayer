@@ -54,15 +54,16 @@
     line-height: 0; // http://adriandalvarez.tumblr.com/post/6731022156/html5-boilerplate-image-replacement-helper-class-ie7
     /* IE 6/7 fallback */
     *text-indent: -9999px;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
 }
 
-.ir:before,
-.img-replace:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
+
 
 
 // HIDING & VISIBILITY

@@ -5,15 +5,18 @@
 // also includes custom components
 //
 
+// LIBRARIES
+@import "bower_components/bourbon/dist/bourbon"; // note we're using Bourbon 3.2 because Bourbon 4.0 requires features of Sass which libsass doesn't implement (yet!)
+
 // SETTINGS
 @import "_baselayer-settings.scss";
 @import "_baselayer-mixins.scss";
 
 // BASE
 @import "base/_aliases.scss";
-@import "base/_aliases.scss";
 @import "base/_normalize.scss";
 @import "base/_helpers.scss";
+@import "base/_spacing.scss";
 
 
 // MOLECULES
@@ -25,7 +28,7 @@
 @import "molecules/_item-list.scss";
 @import "molecules/_complex-link.scss";
 @import "molecules/_byline.scss";
-
+@import "molecules/_block-list.scss";
 
 // COMPOUNDS
 @import "compounds/_primary-nav.scss";
@@ -33,6 +36,11 @@
 @import "compounds/_primary-offcanvas.scss";
 @import "compounds/_page-layouts.scss";
 @import "compounds/_site-credit.scss";
+@import "compounds/_site-logo.scss";
 
 // ADAPTERS
 @import "adapters/wordpress/_pagination.scss";
+
+
+// FIXES
+@import "base/_fixes.scss";

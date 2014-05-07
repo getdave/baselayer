@@ -141,7 +141,7 @@ module.exports = function(grunt) {
                   'images/**/*',
                   'fonts/**/*',
               ],
-              dest: '<%= jekyll.templates.options.src %>/'
+              dest: '<%= jekyll.templates.options.src %>/assets/'
           }
       },
   });

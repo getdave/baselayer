@@ -1,0 +1,43 @@
+// ==========================================================================
+//
+// SITE LOGO
+//
+// Description: standard layout rules for a website logo.
+//
+// ==========================================================================
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.site-logo {
+	@include inline-block;
+	width: $logo-width;
+	height: $logo-height;
+	border: 0;
+	padding: 0;
+	margin: $spacing-unit 0;
+	vertical-align: bottom;
+	text-indent: -999em; 
+	text-align:left;
+	direction:ltr;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-image: url(#{$images_dir}/#{$logo});
+	background-size: 100%;
+
+	&:hover,
+	&:focus {
+		@include opacity(0.8);	
+		@include transition(opacity 0.5s ease);
+	}
+
+
+
+	@include hidpi() {
+		background-image: image-url($logo-retina);
+	}
+}
+
+

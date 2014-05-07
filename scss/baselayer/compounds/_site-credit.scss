@@ -16,27 +16,27 @@
     @extend %ir;
     @include inline-block;
     position: relative;
-    top: -3px;
+    top: -0.1em;
     vertical-align: middle;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     width: 84px;
     height: 12px;
-    margin-left: 2px;
+    margin-left: 0.1em;
 
-    background-image: url("#{$images_dir}/framework/site-credit.svg");
+    background-image: url("#{$images_dir}/site-credit.svg");
 
     .no-svg & {
-        background-image: url("#{$images_dir}/framework/site-credit.png");
+        background-image: url("#{$images_dir}/site-credit.png");
         height: 20px;
         top: auto;
     }
 }
 
 .site-credit--dark {
-    background-image: url("#{$images_dir}/framework/site-credit--dark.svg");
+    background-image: url("#{$images_dir}/site-credit--dark.svg");
 
     .no-svg & {
-        background-image: url("#{$images_dir}/framework/site-credit--dark.png");
+        background-image: url("#{$images_dir}/site-credit--dark.png");
     }
 }
