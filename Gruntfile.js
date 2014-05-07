@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['sass']
+        tasks: ['sass','pixrem']
       },
 
       js: {
@@ -54,6 +54,15 @@ module.exports = function(grunt) {
         files: {
           'css/app.css': 'scss/app.scss'
         }
+      }
+    },
+    pixrem: {
+      options: {
+        //rootvalue: '16px'
+      },
+      dist: {
+        src: 'css/app.css',
+        dest: 'css/app.css'
       }
     },
     uglify: {
@@ -135,7 +144,7 @@ module.exports = function(grunt) {
   });
 
 
-  grunt.registerTask('build', ['sass','uglify']);
+  grunt.registerTask('build', ['sass','pixrem','uglify']);
   grunt.registerTask('default', ['build','watch']);
 
   grunt.registerTask('templates', [

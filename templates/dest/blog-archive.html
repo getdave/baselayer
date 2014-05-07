@@ -35,39 +35,24 @@
 <div id="page">
 <header class="banner  ">
 	<a href="#menu-primary" class="nav-primary__toggle right-off-canvas-toggle toggle toggle--menu toggle--closeable">
-		<i class="toggle__icon" aria-hidden="true"></i>
-		<span class="toggle__text">Skip to Primary Navigation</span> 
-	</a>
+	<i class="toggle__icon" aria-hidden="true"></i>
+	<span class="toggle__text">Skip to Primary Navigation</span> 
+</a>
 
 	<div class="row">
-		<div class="medium-4 columns">
+		<div class="medium-3 columns">
 			<div class="banner-brand">
     <a class="site-logo" href="/" title="" rel="home">
         <img src="/images/site-logo.png" alt="" />
     </a>    
 </div>
 		</div>
-
-		<div class="medium-4 columns hide-for-small-only">
-			<form method="get" class="site-search search-form" action="#" role="search">
-	<div class="row collapse">
-		<div class="small-8 columns">
-			<label for="s" class="search-form__label vh">Search</label>
-			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search...">
-		</div>
-		<div class="small-4 columns">
-			<button type="submit" class="search-form__submit button postfix" name="submit" value="Search">Search</button>
-		</div>
-	</div>
-</form>
-		</div>
-	</div>
-	<nav id="menu-primary" class="menu-primary menu-primary--banner row">
-		<div class="columns">
-			<ul class="nav-primary nav-primary--banner">
-				
-				
-				
+		<nav id="menu-primary" class="menu-primary menu-primary--banner medium-9 columns">
+			<div class="columns">
+				<ul class="nav-primary nav-primary--banner">
+					
+					
+					
 
 
   
@@ -90,9 +75,10 @@
 
 
 
-			</ul>
-		</div>
-	</nav>
+				</ul>
+			</div>
+		</nav>		
+	</div>
 </header>
 
 
@@ -573,16 +559,32 @@
 			
 
 		    <!-- Off Canvas Menu -->
-		    <aside class="nav-primary--offcanvas right-off-canvas-menu">
-				<!-- close the off-canvas menu -->
-				<a class="nav-primary__close exit-off-canvas toggle toggle--close">
-					<i class="toggle__icon"></i>
-					<span class="toggle__text">Close menu</span>
-				</a>
-				<ul class="off-canvas-list">
-					
-					
-					
+<aside class="nav-primary--offcanvas right-off-canvas-menu">
+	<!-- close the off-canvas menu -->
+	<a class="nav-primary__close exit-off-canvas toggle toggle--close">
+		<i class="toggle__icon"></i>
+		<span class="toggle__text">Close menu</span>
+	</a>
+	<div class="off-canvas-list">
+		<div class="islet">
+		<form method="get" class="site-search search-form" action="#" role="search">
+	<div class="row collapse">
+		<div class="small-8 columns">
+			<label for="s" class="search-form__label vh">Search</label>
+			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search...">
+		</div>
+		<div class="small-4 columns">
+			<button type="submit" class="search-form__submit button postfix" name="submit" value="Search">Search</button>
+		</div>
+	</div>
+</form>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<ul class="off-canvas-list">
+		
+		
+		
 
 
   
@@ -605,26 +607,10 @@
 
 
 
-				</ul>
+	</ul>
 
-				<div class="divider"></div>
-				
-				<div class="off-canvas-list">
-					<div class="islet">
-					<form method="get" class="site-search search-form" action="#" role="search">
-	<div class="row collapse">
-		<div class="small-8 columns">
-			<label for="s" class="search-form__label vh">Search</label>
-			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search...">
-		</div>
-		<div class="small-4 columns">
-			<button type="submit" class="search-form__submit button postfix" name="submit" value="Search">Search</button>
-		</div>
-	</div>
-</form>
-					</div>
-				</div>
-		    </aside>
+	
+</aside>
 
 		
  			</div> <!-- /inner-wrap -->

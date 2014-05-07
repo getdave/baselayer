@@ -11,22 +11,26 @@
 
 // Name of the default Icon font being used
 $icon-font-family: "icomoon" !default;
-$iconFontFamily: $icon-font-family;
 
 // Include default Icon font character glyphs?
+// if set to false then you should include a SASS partial which contains
+// the glyph chars contained in your Icon font as defined in $icon-font-family
 $include-icon-default-chars: true;
-$bIconDefaultChars: $include-icon-default-chars;
 
 
 // ==========================================================================
 // LAYOUT
 // ==========================================================================
 
-// PRIMARY NAVIGATION
+// NAV BREAKPOINTS
+// determines the breakpoints for when the navigation adjusts it's layout
 // ==========================================================================
 
-$nav-break-1: $medium-range;
+$nav-break-1-val: rem-calc(600px);
+$nav-break-2-val: rem-calc(920px);
 
+$nav-break-1: "#{$screen} and (min-width:#{$nav-break-1-val})";
+$nav-break-2: "#{$screen} and (min-width:#{$nav-break-2-val})";
 
 
 // ==========================================================================

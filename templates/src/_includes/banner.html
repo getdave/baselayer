@@ -1,27 +1,20 @@
 <header class="banner {{ include.classnames }} ">
-	<a href="#menu-primary" class="nav-primary__toggle right-off-canvas-toggle toggle toggle--menu toggle--closeable">
-		<i class="toggle__icon" aria-hidden="true"></i>
-		<span class="toggle__text">Skip to Primary Navigation</span> 
-	</a>
+	{% include primary-nav-toggle.html %}
 
 	<div class="row">
-		<div class="medium-4 columns">
+		<div class="medium-3 columns">
 			{% include logo.html %}
 		</div>
-
-		<div class="medium-4 columns hide-for-small-only">
-			{% include search.html %}
-		</div>
+		<nav id="menu-primary" class="menu-primary menu-primary--banner medium-9 columns">
+			<div class="columns">
+				<ul class="nav-primary nav-primary--banner">
+					{% assign pages_list = site.pages %}
+					{% assign group = 'navigation' %}
+					{% include pages_list.html %}
+				</ul>
+			</div>
+		</nav>		
 	</div>
-	<nav id="menu-primary" class="menu-primary menu-primary--banner row">
-		<div class="columns">
-			<ul class="nav-primary nav-primary--banner">
-				{% assign pages_list = site.pages %}
-				{% assign group = 'navigation' %}
-				{% include pages_list.html %}
-			</ul>
-		</div>
-	</nav>
 </header>
 
 
