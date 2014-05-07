@@ -1,3 +1,15 @@
 *, *:before, *:after {
     *behavior: url(/boxsizing.htc);
 }
+
+
+.row--ib {
+	letter-spacing: rem-calc(-5px);
+
+	.columns {
+		float: none !important;
+		@include inline-block;
+		letter-spacing: normal;
+	}
+}
+

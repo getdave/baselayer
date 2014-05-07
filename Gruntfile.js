@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       },
 
       js: {
-        files: 'js/**/*.js',
+        files: ['js/baselayer.js','js/site.js'],
         tasks: ['uglify']
       },
 
@@ -55,7 +55,8 @@ module.exports = function(grunt) {
           outputStyle: 'expanded'
         },
         files: {
-          'css/app.css': 'scss/app.scss'
+          'css/site.css': 'scss/site.scss',
+          //'css/site-ie.css': 'scss/site-ie.scss'
         }
       }
     },
@@ -64,42 +65,48 @@ module.exports = function(grunt) {
         //rootvalue: '16px'
       },
       dist: {
-        src: 'css/app.css',
-        dest: 'css/app.css'
+        src: 'css/site.css',
+        dest: 'css/site-ie.css'
       }
     },
     uglify: {
       options: {
-        //preserveComments: 'some'
+        
       },
       dist: {
         files: {
-          'js/modernizr.min.js': ['bower_components/modernizr/modernizr.js'],
-          'js/fastclick.min.js': ['bower_components/fastclick/lib/fastclick.js'],
-          'js/foundation.min.js': [
+          'js/conditional/superfish.min.js': [
+            'bower_components/superfish/dist/js/hoverIntent.js',
+            'bower_components/superfish/dist/js/superfish.js'
+          ],
+
+          'js/vendor/modernizr.min.js': ['bower_components/modernizr/modernizr.js'],
+          'js/vendor/foundation.min.js': [
+            'bower_components/fastclick/lib/fastclick.js',
             'bower_components/foundation/js/foundation/foundation.js',
 
             // Include all or...
             //'bower_components/foundation/js/foundation/*.js'
 
             // Selectively include
-            'bower_components/foundation/js/foundation/foundation.abide.js',
-            'bower_components/foundation/js/foundation/foundation.clearing.js',
-            'bower_components/foundation/js/foundation/foundation.interchange.js',
-            'bower_components/foundation/js/foundation/foundation.magellan.js',
-            'bower_components/foundation/js/foundation/foundation.reveal.js',
-            'bower_components/foundation/js/foundation/foundation.tooltip.js',
-            'bower_components/foundation/js/foundation/foundation.accordion.js',
-            'bower_components/foundation/js/foundation/foundation.dropdown.js',
-            'bower_components/foundation/js/foundation/foundation.joyride.js',
+            //'bower_components/foundation/js/foundation/foundation.abide.js',
+            //'bower_components/foundation/js/foundation/foundation.clearing.js',
+            //'bower_components/foundation/js/foundation/foundation.interchange.js',
+            //'bower_components/foundation/js/foundation/foundation.magellan.js',
+            //'bower_components/foundation/js/foundation/foundation.reveal.js',
+            //'bower_components/foundation/js/foundation/foundation.tooltip.js',
+            //'bower_components/foundation/js/foundation/foundation.accordion.js',
+            //'bower_components/foundation/js/foundation/foundation.dropdown.js',
+            //'bower_components/foundation/js/foundation/foundation.joyride.js',
             'bower_components/foundation/js/foundation/foundation.offcanvas.js',
-            'bower_components/foundation/js/foundation/foundation.slider.js',
-            'bower_components/foundation/js/foundation/foundation.topbar.js',
+            //'bower_components/foundation/js/foundation/foundation.slider.js',
+            //'bower_components/foundation/js/foundation/foundation.topbar.js',
             'bower_components/foundation/js/foundation/foundation.alert.js',
-            'bower_components/foundation/js/foundation/foundation.equalizer.js',
-            'bower_components/foundation/js/foundation/foundation.orbit.js',
-            'bower_components/foundation/js/foundation/foundation.tab.js'
+            //'bower_components/foundation/js/foundation/foundation.equalizer.js',
+            //'bower_components/foundation/js/foundation/foundation.orbit.js',
+            //'bower_components/foundation/js/foundation/foundation.tab.js'
           ],
+          'js/baselayer.min.js': ['js/baselayer.js'],
         }
       },
     },
@@ -132,11 +139,11 @@ module.exports = function(grunt) {
 
     copy: {
           options: {
-              flatten: true
+              flatten: false
           },
           templates: { // copy all assets into templates source dir
               src: [
-                  'css/app.css',
+                  'css/*.css',
                   'js/**/*.js',
                   'images/**/*',
                   'fonts/**/*',

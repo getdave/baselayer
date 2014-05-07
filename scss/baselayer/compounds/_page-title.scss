@@ -1,16 +1,19 @@
 // ==========================================================================
-// ALIASING
 //
-// Description: aliases any legacy Tanlinell framework variables
+// PAGE TITLE
+//
+// Description: standard styles for a Page's title
+//
 // ==========================================================================
 
 
 // ==========================================================================
-// BUTTONS
-// extend Foundation class for backwards compatibility
+// BASE
 // ==========================================================================
-.btn {
-	@extend .button;
+
+.page-title {
+	line-height: 1.2;
+	margin-top: 0;
 }
 
 

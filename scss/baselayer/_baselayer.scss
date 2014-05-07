@@ -9,7 +9,6 @@
 @import "bower_components/bourbon/dist/bourbon"; // note we're using Bourbon 3.2 because Bourbon 4.0 requires features of Sass which libsass doesn't implement (yet!)
 
 // SETTINGS
-@import "_baselayer-settings.scss";
 @import "_baselayer-mixins.scss";
 
 // BASE
@@ -37,6 +36,7 @@
 @import "compounds/_page-layouts.scss";
 @import "compounds/_site-credit.scss";
 @import "compounds/_site-logo.scss";
+@import "compounds/_page-title.scss";
 
 // ADAPTERS
 @import "adapters/wordpress/_pagination.scss";

@@ -25,6 +25,7 @@
 
 .nav-primary {
     @extend %bl-nav-menu;
+    background-color: $primary-nav-bg;
 
 	// Global anchors
 	a {
@@ -74,6 +75,27 @@
     }
 }
 
+.nav-primary--banner li:hover {
+    .sub-menu {
+        left: auto;
+    }
+}
+
+
+.nav-primary--banner .sub-menu {
+    display: none;
+    @include dropdown-container($content: list, $triangle: false, $max-width: none);
+    width: auto;
+
+    @media #{$medium-up} {
+        display: block;
+    }
+
+    li, a {
+        white-space: nowrap;
+    }
+}
+
 
 
 
@@ -92,18 +114,5 @@
     @extend %bl-nav-menu--stacked;
 }
 
-// TOGGLE
-// ==========================================================================
 
-.nav-primary__toggle {
-    @extend .hide-for-medium-up;
-    position: absolute;
-    top: rem-calc(22px);
-    right: rem-calc(15px);
-    z-index: $zindex-tier-4;
-
-    .toggle__text {
-        @extend .vh;
-    }
-}
 

@@ -2,6 +2,7 @@
   "name": "foundation-libsass-template",
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "bourbon": "~3.2"
+    "bourbon": "~3.2",
+    "superfish": "~1.7.4"
   }
 }

@@ -20,7 +20,8 @@
 @mixin bl-nav-menu() {
 	position: relative;
 	@include list-reset;
-
+	@include clearfix;
+	
 	// ALL ANCHORS
 	// ==========================================================================
 	a {

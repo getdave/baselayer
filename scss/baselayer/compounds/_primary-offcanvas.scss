@@ -39,6 +39,25 @@ html,body {
     border-bottom: 1px solid white(.1);
 }
 
+// TOGGLE
+// ==========================================================================
+
+.primary-offcanvas__toggle {
+    @extend .hide-for-medium-up;
+    position: absolute;
+    top: rem-calc(30px);
+    right: rem-calc(15px);
+    z-index: $zindex-tier-4;
+
+    .toggle__icon {
+        font-size: rem-calc(40px);
+    }
+
+    .toggle__text {
+        @extend .vh;
+    }
+}
+
 
 // CLOSE
 // ==========================================================================

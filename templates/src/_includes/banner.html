@@ -1,19 +1,15 @@
 <header class="banner {{ include.classnames }} ">
 	{% include primary-nav-toggle.html %}
 
-	<div class="row">
-		<div class="medium-3 columns">
+	<div class="row row--ib">
+		<div class="banner__brand large-3 columns">
 			{% include logo.html %}
 		</div>
-		<nav id="menu-primary" class="menu-primary menu-primary--banner medium-9 columns">
-			<div class="columns">
-				<ul class="nav-primary nav-primary--banner">
-					{% assign pages_list = site.pages %}
-					{% assign group = 'navigation' %}
-					{% include pages_list.html %}
-				</ul>
-			</div>
-		</nav>		
+		<nav id="menu-primary" class="banner__navigation menu-primary menu-primary--banner large-9 columns">
+			<ul class="nav-primary nav-primary--banner">
+				{% include test-primary-nav-items.html %}
+			</ul>
+		</nav>
 	</div>
 </header>
 

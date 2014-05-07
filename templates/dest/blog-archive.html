@@ -13,10 +13,10 @@
 		<meta name="viewport" content="width=device-width" initial-scale="1" />
 
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="assets/css/app.css">
+		<link rel="stylesheet" href="assets/css/site.css">
 
 		<!-- Modernizr -->
-		<script src="assets/js/modernizr.min.js"></script>
+		<script src="assets/js/vendor/modernizr.min.js"></script>
 		
 		<script>
 		    // Do not integrate this code into the CMS.
@@ -34,50 +34,61 @@
 
 <div id="page">
 <header class="banner  ">
-	<a href="#menu-primary" class="nav-primary__toggle right-off-canvas-toggle toggle toggle--menu toggle--closeable">
+	<a href="#menu-primary" class="primary-offcanvas__toggle right-off-canvas-toggle toggle toggle--menu toggle--closeable">
 	<i class="toggle__icon" aria-hidden="true"></i>
 	<span class="toggle__text">Skip to Primary Navigation</span> 
 </a>
 
-	<div class="row">
-		<div class="medium-3 columns">
-			<div class="banner-brand">
-    <a class="site-logo" href="/" title="" rel="home">
-        <img src="/assets/images/site-logo.png" alt="" />
-    </a>    
-</div>
+	<div class="row row--ib">
+		<div class="banner__brand large-3 columns">
+			<a class="site-logo" href="/" title="" rel="home">
+    <img src="/assets/images/site-logo.png" alt="" />
+</a>    
+
 		</div>
-		<nav id="menu-primary" class="menu-primary menu-primary--banner medium-9 columns">
-			<div class="columns">
-				<ul class="nav-primary nav-primary--banner">
-					
-					
-					
+		<nav id="menu-primary" class="banner__navigation menu-primary menu-primary--banner large-9 columns">
+			<ul class="nav-primary nav-primary--banner">
+				<li>
+	<a href="#">Nav Item</a>
+</li>
+
+<li>
+	<a href="#">Nav Item</a>
+</li>
+
+<li>
+	<a href="#">Nav Item</a>
+
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page ">
+			<a href="#">Sub Nav Item #1</a>
+		</li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page ">
+			<a href="#">Sub Nav Item #2</a>
+		</li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page ">
+			<a href="#">Sub Nav Item #3</a>
+		</li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page ">
+			<a href="#">Sub Nav Item #4</a>
+		</li>
+	</ul>
+</li>
+
+<li>
+	<a href="#">Nav Item</a>
+</li>
+
+<li>
+	<a href="#">Nav Item</a>
+</li>
 
 
-  
-    
-      <li class="active"><a href="/blog-archive.html" class="active">Blog</a></li>
-    
-  
-
-  
-
-  
-    
-      <li><a href="/index.html">Home</a></li>
-    
-  
-
-  
-
-  
-
-
-
-				</ul>
-			</div>
-		</nav>		
+<li>
+	<a href="#">Nav Item</a>
+</li>
+			</ul>
+		</nav>
 	</div>
 </header>
 
@@ -95,7 +106,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -112,7 +123,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -120,7 +131,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -131,7 +142,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -148,7 +159,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -156,7 +167,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -167,7 +178,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -184,7 +195,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -192,7 +203,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -203,7 +214,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -220,7 +231,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -228,7 +239,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -239,7 +250,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -256,7 +267,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -264,7 +275,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -275,7 +286,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -292,7 +303,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -300,7 +311,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -311,7 +322,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -328,7 +339,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -336,7 +347,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -347,7 +358,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -364,7 +375,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -372,7 +383,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -383,7 +394,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -400,7 +411,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -408,7 +419,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -419,7 +430,7 @@
 				<div class="archive-post__author media--circle">
 					<img src="http://www.placehold.it/120x120" alt="">
 				</div>
-				
+
 				<div class="archive-post__body">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
@@ -436,7 +447,7 @@
 					<figure class="archive-post__featured-media">
 						<img src="http://www.placehold.it/540x304" alt="">
 					</figure>
-					
+
 					<div class="archive-post__excerpt">
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia, odio, quam, dolore impedit non ducimus dolorem rem corrupti cupiditate nisi minima incidunt dolor nobis exercitationem quisquam esse. Aliquam, quaerat.
@@ -444,7 +455,7 @@
 					</div>
 
 					<p>
-						<a href="blog-single.html">Continue Reading &gt;</a>
+						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
 					</p>
 				</div>
 			</article>
@@ -485,7 +496,7 @@
 			<input type="search" class="search-form__query mbn" name="s" value="" id="s" placeholder="Search...">
 		</div>
 		<div class="small-4 columns">
-			<button type="submit" class="search-form__submit button postfix mbn" name="submit" value="Search">Search</button>
+			<button type="submit" class="search-form__submit button postfix radius mbn" name="submit" value="Search">Search</button>
 		</div>
 	</div>
 </form>
@@ -642,7 +653,7 @@
 			<input type="search" class="search-form__query mbn" name="s" value="" id="s" placeholder="Search...">
 		</div>
 		<div class="small-4 columns">
-			<button type="submit" class="search-form__submit button postfix mbn" name="submit" value="Search">Search</button>
+			<button type="submit" class="search-form__submit button postfix radius mbn" name="submit" value="Search">Search</button>
 		</div>
 	</div>
 </form>
@@ -683,12 +694,11 @@
  			</div> <!-- /inner-wrap -->
 		</div> <!-- /off-canvas-wrap -->
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="assets/js/fastclick.min.js"></script>
-		<script src="assets/js/foundation.min.js"></script>
-		<script src="assets/js/app.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script src="assets/js/vendor/foundation.min.js"></script>
+		<script src="assets/js/baselayer.min.js"></script>
+		<script src="assets/js/site.js"></script>
 
-		<!--<script src="assets/js/site.min.js"></script>-->
 		<!--
 		<script type='text/javascript'>
 		(function (d, t) {

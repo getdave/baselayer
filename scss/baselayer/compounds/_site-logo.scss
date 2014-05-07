@@ -17,7 +17,7 @@
 	height: $logo-height;
 	border: 0;
 	padding: 0;
-	margin: $spacing-unit 0;
+	margin: $half-spacing-unit 0;
 	vertical-align: bottom;
 	text-indent: -999em; 
 	text-align:left;
@@ -33,10 +33,13 @@
 		@include transition(opacity 0.5s ease);
 	}
 
-
-
 	@include hidpi() {
 		background-image: image-url($logo-retina);
+	}
+
+	@media #{$large-up} {
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
 	}
 }
 
