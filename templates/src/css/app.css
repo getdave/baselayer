@@ -685,7 +685,7 @@ select {
     width: 8.33333%; }
   .large-2 {
     width: 16.66667%; }
-  .large-3 {
+  .large-3, .layout-2c-r .sub, .layout-default .sub, .layout-2c-l .sub {
     width: 25%; }
   .large-4 {
     width: 33.33333%; }
@@ -697,7 +697,7 @@ select {
     width: 58.33333%; }
   .large-8 {
     width: 66.66667%; }
-  .large-9 {
+  .large-9, .layout-2c-r .main, .layout-default, .layout-2c-l .main {
     width: 75%; }
   .large-10 {
     width: 83.33333%; }
@@ -4844,15 +4844,15 @@ th.hide-for-touch {
 
 .img-left, .img-l, .alignleft {
   float: left;
-  margin: 0 1.5em 1.5em 0; }
+  margin: 0 1.875rem 1.875rem 0; }
 
 .img-right, .img-r, .alignright {
   float: right;
-  margin: 0 0 1.5em 1.5em; }
+  margin: 0 0 1.875rem 1.875rem; }
 
 .img-center, .aligncenter {
   float: none;
-  margin: 0 auto 1.5em auto;
+  margin: 0 auto 1.875rem auto;
   display: block; }
 
 .ir, .img-replace {
@@ -4891,13 +4891,13 @@ th.hide-for-touch {
   visibility: hidden; }
 
 .landmark {
-  margin-bottom: 300%; }
+  margin-bottom: 3.75rem; }
 
 .landmark--minor {
-  margin-bottom: 150%; }
+  margin-bottom: 1.875rem; }
 
 .landmark--major {
-  margin-bottom: 450%; }
+  margin-bottom: 5.625rem; }
 
 .island, .islet, .primary-offcanvas__panel {
   display: block; }
@@ -5194,6 +5194,44 @@ html, body {
   box-shadow: none; }
   .primary-offcanvas .primary-offcanvas__close:hover, .primary-offcanvas .primary-offcanvas__close:focus {
     color: #aaa; }
+
+/* ==========================================================================
+   COLUMNS
+   ========================================================================== */
+/* BASE
+   ========================================================================== */
+.column-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  zoom: 1; }
+  .column-container:before {
+    content: "";
+    display: table; }
+  .column-container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.main, .sub {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+  margin-bottom: 3.75rem; }
+
+/* 2 Column [Sub] Right (Default)
+   ========================================================================== */
+
+
+/* 2 Column [Sub] Left
+   ========================================================================== */
+.layout-2c-l .main {
+  float: right; }
+
 
 /* <div class="pagination">
 	<ul class="page-numbers">

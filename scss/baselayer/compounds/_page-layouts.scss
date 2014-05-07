@@ -1,0 +1,82 @@
+// ==========================================================================
+//
+// PAGE LAYOUTS
+//
+// Description: standardised out of the box "columular" layouts for
+// controlling page/template layout. Typically used for main/sub column
+// approaches to page layout. Fully responsive
+//
+// ==========================================================================
+
+/* ==========================================================================
+   COLUMNS
+   ========================================================================== */
+
+
+// ==========================================================================
+// COLUMN CONTAINER
+// wraps main and sub columns to provide "grid" context
+// ==========================================================================
+
+.column-container {
+    @include grid-row();
+}
+
+// ==========================================================================
+// COLUMNS
+// base rules for main and sub columns
+// ==========================================================================
+
+.main,
+.sub {
+    @include grid-column(12);
+    margin-bottom: $double-spacing-unit;
+}
+
+
+// ==========================================================================
+// LAYOUTS
+// ==========================================================================
+
+// 2 COLUMN [SUB] RIGHT (DEFAULT)
+// ==========================================================================
+
+.layout-2c-r .main,
+.layout-default {
+    @extend .large-9;
+}
+
+.layout-2c-r .sub,
+.layout-default .sub {
+    @extend .large-3;
+}
+
+
+// 2 COLUMN [SUB] LEFT
+// ==========================================================================
+
+
+.layout-2c-l {
+	.main {
+        @extend .large-9;
+        float: right;
+	}
+
+    .sub {
+        @extend .large-3;
+    }
+}
+
+// 1 COLUMM
+// ==========================================================================
+
+.layout-1c {
+    .main,
+    .sub {
+        // inherits from base rules for .main and .sub
+    }
+}
+
+
+
+

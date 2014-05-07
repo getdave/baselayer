@@ -84,8 +84,9 @@
 
 
 
-<div class="site-content row layout-2c-l">
-	<main class="main large-8 columns">
+<div class="site-content layout-2c-r">
+	<div class="column-container">
+		<main class="main">
 	<h1 class="vh">Blog Archive</h1>
 	<ul class="article-list item-list">
 		
@@ -475,8 +476,18 @@
 </div>
 </main>
 
-<div class="sub large-4 columns">
-	Sub Panels
+<div class="sub">
+	<form method="get" class="site-search search-form" action="#" role="search">
+	<div class="row collapse">
+		<div class="small-8 columns">
+			<label for="s" class="search-form__label vh">Search</label>
+			<input type="search" class="search-form__query mbn" name="s" value="" id="s" placeholder="Search...">
+		</div>
+		<div class="small-4 columns">
+			<button type="submit" class="search-form__submit button postfix mbn" name="submit" value="Search">Search</button>
+		</div>
+	</div>
+</form>
 </div>
 
 
@@ -484,6 +495,7 @@
 
 
 
+	</div>
 </div>
 
 

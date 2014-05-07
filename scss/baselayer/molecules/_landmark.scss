@@ -11,17 +11,17 @@
 
 %landmark,
 .landmark {
-	margin-bottom: $base-line-height*2;
+	margin-bottom: $double-spacing-unit;
 }
 
 %landmark--minor,
 .landmark--minor {
-	margin-bottom: $base-line-height;
+	margin-bottom: $spacing-unit;
 }
 
 %landmark--major,
 .landmark--major {
-	margin-bottom: $base-line-height*3;
+	margin-bottom: $spacing-unit*3;
 }
 
 

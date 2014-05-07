@@ -1,10 +1,10 @@
 ---
-layout: 2col
+layout: 2c-r
 title: Blog
 group: "navigation"
 ---
 
-<main class="main large-8 columns">
+<main class="main">
 	<h1 class="vh">Blog Archive</h1>
 	<ul class="article-list item-list">
 		{% for i in (1..10) %}
@@ -45,8 +45,8 @@ group: "navigation"
 	{% include pagination.html %}
 </main>
 
-<div class="sub large-4 columns">
-	Sub Panels
+<div class="sub">
+	{% include search.html %}
 </div>
 
 

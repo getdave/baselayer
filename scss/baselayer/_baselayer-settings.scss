@@ -32,6 +32,12 @@ $nav-break-2-val: rem-calc(920px);
 $nav-break-1: "#{$screen} and (min-width:#{$nav-break-1-val})";
 $nav-break-2: "#{$screen} and (min-width:#{$nav-break-2-val})";
 
+// SPACING
+// ==========================================================================
+
+$spacing-unit: rem-calc(30px);
+$half-spacing-unit: $spacing-unit/2;
+$double-spacing-unit: $spacing-unit*2;
 
 // ==========================================================================
 // STACKING
