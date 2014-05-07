@@ -1,21 +1,21 @@
-<!-- Off Canvas Menu -->
-<aside class="nav-primary--offcanvas right-off-canvas-menu">
+
+<aside class="primary-offcanvas right-off-canvas-menu">
 	<!-- close the off-canvas menu -->
-	<a class="nav-primary__close exit-off-canvas toggle toggle--close">
+	<a class="primary-offcanvas__close exit-off-canvas toggle toggle--close">
 		<i class="toggle__icon"></i>
 		<span class="toggle__text">Close menu</span>
 	</a>
-	<div class="off-canvas-list">
-		<div class="islet">
-		{% include search.html %}
-		</div>
-	</div>
-	<div class="divider"></div>
-	<ul class="off-canvas-list">
-		{% assign pages_list = site.pages %}
-		{% assign group = 'navigation' %}
-		{% include pages_list.html %}
-	</ul>
+	<!-- -->
 
-	
+	<div class="primary-offcanvas__panel">
+		{% include search.html %}
+	</div>
+
+	<nav class="menu-primary--offcanvas primary-offcanvas__panel">
+		<ul class="nav-primary--offcanvas">
+			{% assign pages_list = site.pages %}
+			{% assign group = 'navigation' %}
+			{% include pages_list.html %}
+		</ul>
+	</nav>
 </aside>

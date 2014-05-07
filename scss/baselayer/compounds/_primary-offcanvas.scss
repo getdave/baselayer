@@ -1,0 +1,63 @@
+// ==========================================================================
+//
+// PRIMARY OFFCANVAS
+//
+// Description: styles for the site's primary offcanvas menu component
+//
+// ==========================================================================
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+html,body {
+    height: 100%;
+}
+
+.off-canvas-wrap,
+.off-canvas-wrap {
+    height: 100%; 
+
+    .inner-wrap {
+        height: 100%; 
+    }
+}
+
+
+
+.primary-offcanvas {
+
+}
+
+
+// PANEL
+// ==========================================================================
+
+.primary-offcanvas__panel {
+    @extend .islet;
+    border-bottom: 1px solid white(.1);
+}
+
+
+// CLOSE
+// ==========================================================================
+
+.primary-offcanvas .primary-offcanvas__close {
+    position: static;
+    padding: rem-calc(10px);
+    border-bottom: 1px solid white(.1);
+    background: none;
+    text-align: right;
+    color: #CCC;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+        color: #aaa;
+    }
+
+    .toggle__text {
+        @extend .vh;
+    }
+}

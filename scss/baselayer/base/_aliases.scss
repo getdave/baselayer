@@ -4,4 +4,4 @@
 // Description: aliases any legacy Tanlinell framework variables
 // ==========================================================================
 
-$baseLineHeight: $base-line-height;
+$baseLineHeight: #{(strip-unit($base-line-height)/100)} + em;

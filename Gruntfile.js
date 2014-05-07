@@ -27,7 +27,10 @@ module.exports = function(grunt) {
 
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['sass','pixrem']
+        tasks: [
+          'sass',
+          //'pixrem' // required for IE only
+        ]
       },
 
       js: {

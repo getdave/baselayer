@@ -49,11 +49,6 @@
 
 
 
-
-
-
-
-
 // ==========================================================================
 // MODIFIER: BANNER
 // navigation displayed for larger viewports
@@ -93,11 +88,9 @@
 // ==========================================================================
 
 .nav-primary--offcanvas {
-    //@extend %bl-nav-menu;
-    //@extend %bl-nav-menu--stacked;
+    @extend %bl-nav-menu;
+    @extend %bl-nav-menu--stacked;
 }
-
-
 
 // TOGGLE
 // ==========================================================================
@@ -114,13 +107,3 @@
     }
 }
 
-// CLOSE
-// ==========================================================================
-
-.nav-primary--offcanvas .nav-primary__close {
-    position: static;
-
-    .toggle__text {
-        @extend .vh;
-    }
-}
