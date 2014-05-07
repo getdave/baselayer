@@ -6,15 +6,15 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     config: {
-        distDir: './dist',
-        cssSrc: './sass',
-        cssDist: './dist/css',
-        jsSrc: './js',
-        jsDist: './dist/js',
-        docsSrc: './docs',
-        docsDist: './dist/docs',
-        //packageBanner: grunt.file.read('banner.txt'),
-        fwFilename: '<%= pkg.name %>',
+      distDir: './dist',
+      cssSrc: './sass',
+      cssDist: './dist/css',
+      jsSrc: './js',
+      jsDist: './dist/js',
+      docsSrc: './docs',
+      docsDist: './dist/docs',
+      //packageBanner: grunt.file.read('banner.txt'),
+      fwFilename: '<%= pkg.name %>',
     },
 
 
@@ -28,34 +28,39 @@ module.exports = function(grunt) {
       sass: {
         files: 'scss/**/*.scss',
         tasks: [
-          'sass',
+        'sass',
           //'pixrem' // required for IE only
-        ]
-      },
+          ]
+        },
 
-      js: {
-        files: ['js/baselayer.js','js/site.js'],
-        tasks: ['uglify']
-      },
+        js: {
+          files: ['js/baselayer.js','js/site.js'],
+          tasks: ['uglify']
+        },
 
-      templates: {
+        templates: {
           files: ['<%= jekyll.templates.options.src %>/**/*.html'],
           tasks: ['copy:templates', 'jekyll:templates']
+        },
+
+        docs: {
+          files: ['<%= jekyll.docs.options.src %>/**/*.html'],
+          tasks: ['copy:docs', 'jekyll:docs']
+        },
       },
-    },
-    sass: {
-      options: {
-        includePaths: [
+      sass: {
+        options: {
+          includePaths: [
           'bower_components/foundation/scss',
           'scss/baselayer'
-        ]
-      },
-      dist: {
-        options: {
-          outputStyle: 'expanded'
+          ]
         },
-        files: {
-          'css/site.css': 'scss/site.scss',
+        dist: {
+          options: {
+            outputStyle: 'expanded'
+          },
+          files: {
+            'css/site.css': 'scss/site.scss',
           //'css/site-ie.css': 'scss/site-ie.scss'
         }
       }
@@ -71,19 +76,19 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        
+
       },
       dist: {
         files: {
           'js/conditional/superfish.min.js': [
-            'bower_components/superfish/dist/js/hoverIntent.js',
-            'bower_components/superfish/dist/js/superfish.js'
+          'bower_components/superfish/dist/js/hoverIntent.js',
+          'bower_components/superfish/dist/js/superfish.js'
           ],
 
           'js/vendor/modernizr.min.js': ['bower_components/modernizr/modernizr.js'],
           'js/vendor/foundation.min.js': [
-            'bower_components/fastclick/lib/fastclick.js',
-            'bower_components/foundation/js/foundation/foundation.js',
+          'bower_components/fastclick/lib/fastclick.js',
+          'bower_components/foundation/js/foundation/foundation.js',
 
             // Include all or...
             //'bower_components/foundation/js/foundation/*.js'
@@ -105,13 +110,13 @@ module.exports = function(grunt) {
             //'bower_components/foundation/js/foundation/foundation.equalizer.js',
             //'bower_components/foundation/js/foundation/foundation.orbit.js',
             //'bower_components/foundation/js/foundation/foundation.tab.js'
-          ],
-          'js/baselayer.min.js': ['js/baselayer.js'],
-        }
+            ],
+            'js/baselayer.min.js': ['js/baselayer.js'],
+          }
+        },
       },
-    },
-    jekyll: {
-      options: {
+      jekyll: {
+        options: {
         //bundleExec: true,
 
       },
@@ -119,6 +124,12 @@ module.exports = function(grunt) {
         options: {
           src : 'templates/src',
           dest: 'templates/dest'
+        }
+      },
+      docs: {
+        options: {
+          src : 'docs/src',
+          dest: 'docs/dest'
         }
       },
     },
@@ -133,34 +144,52 @@ module.exports = function(grunt) {
           port: 9000,
           base: '<%= jekyll.templates.options.dest %>'
         }
+      },
+      docs: {
+        options: {
+          port: 9000,
+          base: '<%= jekyll.docs.options.dest %>'
+        }
       }
     },
 
 
     copy: {
-          options: {
-              flatten: false
-          },
-          templates: { // copy all assets into templates source dir
-              src: [
-                  'css/*.css',
-                  'js/**/*.js',
-                  'images/**/*',
-                  'fonts/**/*',
-              ],
-              dest: '<%= jekyll.templates.options.src %>/assets/'
-          }
+      options: {
+        flatten: false
       },
+      templates: { // copy all assets into templates source dir
+        src: [
+        'css/*.css',
+        'js/**/*.js',
+        'images/**/*',
+        'fonts/**/*',
+        ],
+        dest: '<%= jekyll.templates.options.src %>/assets/'
+      },
+      docs: {
+        src: '<%= copy.templates.src %>',
+        dest: '<%= jekyll.docs.options.src %>/assets/'
+      }
+    },
+    
   });
 
 
-  grunt.registerTask('build', ['sass','pixrem','uglify']);
-  grunt.registerTask('default', ['build','watch']);
+grunt.registerTask('build', ['sass','pixrem','uglify']);
+grunt.registerTask('default', ['build','watch']);
 
-  grunt.registerTask('templates', [
-      'copy:templates',
-      'jekyll:templates',
-      'connect:templates',
-      'default'
+grunt.registerTask('templates', [
+  'copy:templates',
+  'jekyll:templates',
+  'connect:templates',
+  'default'
+  ]);
+
+grunt.registerTask('docs', [
+  'copy:docs',
+  'jekyll:docs',
+  'connect:docs',
+  'default'
   ]);
 }

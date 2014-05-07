@@ -368,7 +368,7 @@ select {
     .large-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; } }
 
-button, .button {
+button, .button, .btn {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
@@ -397,35 +397,35 @@ button, .button {
   border-color: #007295;
   color: #fff;
   transition: background-color 300ms ease-out; }
-  button:hover, button:focus, .button:hover, .button:focus {
+  button:hover, button:focus, .button:hover, .btn:hover, .button:focus, .btn:focus {
     background-color: #007295; }
-  button:hover, button:focus, .button:hover, .button:focus {
+  button:hover, button:focus, .button:hover, .btn:hover, .button:focus, .btn:focus {
     color: #fff; }
-  button.secondary, .button.secondary {
+  button.secondary, .button.secondary, .secondary.btn {
     background-color: #e7e7e7;
     border-color: #b9b9b9;
     color: #333; }
-    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .secondary.btn:hover, .button.secondary:focus, .secondary.btn:focus {
       background-color: #b9b9b9; }
-    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .secondary.btn:hover, .button.secondary:focus, .secondary.btn:focus {
       color: #333; }
-  button.success, .button.success {
+  button.success, .button.success, .success.btn {
     background-color: #43AC6A;
     border-color: #368a54;
     color: #fff; }
-    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+    button.success:hover, button.success:focus, .button.success:hover, .success.btn:hover, .button.success:focus, .success.btn:focus {
       background-color: #368a54; }
-    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+    button.success:hover, button.success:focus, .button.success:hover, .success.btn:hover, .button.success:focus, .success.btn:focus {
       color: #fff; }
-  button.alert, .button.alert {
+  button.alert, .button.alert, .alert.btn {
     background-color: #f04124;
     border-color: #cf280e;
     color: #fff; }
-    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+    button.alert:hover, button.alert:focus, .button.alert:hover, .alert.btn:hover, .button.alert:focus, .alert.btn:focus {
       background-color: #cf280e; }
-    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+    button.alert:hover, button.alert:focus, .button.alert:hover, .alert.btn:hover, .button.alert:focus, .alert.btn:focus {
       color: #fff; }
-  button.large, .button.large {
+  button.large, .button.large, .large.btn {
     padding-top: 18px;
     padding-top: 1.125rem;
     padding-right: 36px;
@@ -436,7 +436,7 @@ button, .button {
     padding-left: 2.25rem;
     font-size: 20px;
     font-size: 1.25rem; }
-  button.small, .button.small {
+  button.small, .button.small, .small.btn {
     padding-top: 14px;
     padding-top: 0.875rem;
     padding-right: 28px;
@@ -447,7 +447,7 @@ button, .button {
     padding-left: 1.75rem;
     font-size: 13px;
     font-size: 0.8125rem; }
-  button.tiny, .button.tiny {
+  button.tiny, .button.tiny, .tiny.btn {
     padding-top: 10px;
     padding-top: 0.625rem;
     padding-right: 20px;
@@ -458,77 +458,77 @@ button, .button {
     padding-left: 1.25rem;
     font-size: 11px;
     font-size: 0.6875rem; }
-  button.expand, .button.expand {
+  button.expand, .button.expand, .expand.btn {
     padding-right: 0;
     padding-left: 0;
     width: 100%; }
-  button.left-align, .button.left-align {
+  button.left-align, .button.left-align, .left-align.btn {
     text-align: left;
     text-indent: 12px;
     text-indent: 0.75rem; }
-  button.right-align, .button.right-align {
+  button.right-align, .button.right-align, .right-align.btn {
     text-align: right;
     padding-right: 12px;
     padding-right: 0.75rem; }
-  button.radius, .button.radius {
+  button.radius, .button.radius, .radius.btn {
     border-radius: 3px; }
-  button.round, .button.round {
+  button.round, .button.round, .round.btn {
     border-radius: 1000px; }
-  button.disabled, button[disabled], .button.disabled, .button[disabled] {
+  button.disabled, button[disabled], .button.disabled, .disabled.btn, .button[disabled], [disabled].btn {
     background-color: #008CBA;
     border-color: #007295;
     color: #fff;
     cursor: default;
     opacity: 0.7;
     box-shadow: none; }
-    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .disabled.btn:hover, .button.disabled:focus, .disabled.btn:focus, .button[disabled]:hover, [disabled].btn:hover, .button[disabled]:focus, [disabled].btn:focus {
       background-color: #007295; }
-    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .disabled.btn:hover, .button.disabled:focus, .disabled.btn:focus, .button[disabled]:hover, [disabled].btn:hover, .button[disabled]:focus, [disabled].btn:focus {
       color: #fff; }
-    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .disabled.btn:hover, .button.disabled:focus, .disabled.btn:focus, .button[disabled]:hover, [disabled].btn:hover, .button[disabled]:focus, [disabled].btn:focus {
       background-color: #008CBA; }
-    button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
+    button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .disabled.secondary.btn, .button[disabled].secondary, [disabled].secondary.btn {
       background-color: #e7e7e7;
       border-color: #b9b9b9;
       color: #333;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
-      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .disabled.secondary.btn:hover, .button.disabled.secondary:focus, .disabled.secondary.btn:focus, .button[disabled].secondary:hover, [disabled].secondary.btn:hover, .button[disabled].secondary:focus, [disabled].secondary.btn:focus {
         background-color: #b9b9b9; }
-      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .disabled.secondary.btn:hover, .button.disabled.secondary:focus, .disabled.secondary.btn:focus, .button[disabled].secondary:hover, [disabled].secondary.btn:hover, .button[disabled].secondary:focus, [disabled].secondary.btn:focus {
         color: #333; }
-      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .disabled.secondary.btn:hover, .button.disabled.secondary:focus, .disabled.secondary.btn:focus, .button[disabled].secondary:hover, [disabled].secondary.btn:hover, .button[disabled].secondary:focus, [disabled].secondary.btn:focus {
         background-color: #e7e7e7; }
-    button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
+    button.disabled.success, button[disabled].success, .button.disabled.success, .disabled.success.btn, .button[disabled].success, [disabled].success.btn {
       background-color: #43AC6A;
       border-color: #368a54;
       color: #fff;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
-      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .disabled.success.btn:hover, .button.disabled.success:focus, .disabled.success.btn:focus, .button[disabled].success:hover, [disabled].success.btn:hover, .button[disabled].success:focus, [disabled].success.btn:focus {
         background-color: #368a54; }
-      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .disabled.success.btn:hover, .button.disabled.success:focus, .disabled.success.btn:focus, .button[disabled].success:hover, [disabled].success.btn:hover, .button[disabled].success:focus, [disabled].success.btn:focus {
         color: #fff; }
-      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .disabled.success.btn:hover, .button.disabled.success:focus, .disabled.success.btn:focus, .button[disabled].success:hover, [disabled].success.btn:hover, .button[disabled].success:focus, [disabled].success.btn:focus {
         background-color: #43AC6A; }
-    button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
+    button.disabled.alert, button[disabled].alert, .button.disabled.alert, .disabled.alert.btn, .button[disabled].alert, [disabled].alert.btn {
       background-color: #f04124;
       border-color: #cf280e;
       color: #fff;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
-      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .disabled.alert.btn:hover, .button.disabled.alert:focus, .disabled.alert.btn:focus, .button[disabled].alert:hover, [disabled].alert.btn:hover, .button[disabled].alert:focus, [disabled].alert.btn:focus {
         background-color: #cf280e; }
-      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .disabled.alert.btn:hover, .button.disabled.alert:focus, .disabled.alert.btn:focus, .button[disabled].alert:hover, [disabled].alert.btn:hover, .button[disabled].alert:focus, [disabled].alert.btn:focus {
         color: #fff; }
-      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .disabled.alert.btn:hover, .button.disabled.alert:focus, .disabled.alert.btn:focus, .button[disabled].alert:hover, [disabled].alert.btn:hover, .button[disabled].alert:focus, [disabled].alert.btn:focus {
         background-color: #f04124; }
 
 @media only screen and (min-width:40.063em) {
-  button, .button {
+  button, .button, .btn {
     display: inline-block; } }
 
 .button-group {
@@ -544,97 +544,97 @@ button, .button {
   .button-group li {
     margin: 0;
     float: left; }
-    .button-group li > button, .button-group li .button {
+    .button-group li > button, .button-group li .button, .button-group li .btn {
       border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group li:first-child button, .button-group li:first-child .button {
+    .button-group li:first-child button, .button-group li:first-child .button, .button-group li:first-child .btn {
       border-left: 0; }
     .button-group li:first-child {
       margin-left: 0; }
-  .button-group.radius > * > button, .button-group.radius > * .button {
+  .button-group.radius > * > button, .button-group.radius > * .button, .button-group.radius > * .btn {
     border-left: 1px solid;
     border-color: rgba(255, 255, 255, 0.5); }
-  .button-group.radius > *:first-child button, .button-group.radius > *:first-child .button {
+  .button-group.radius > *:first-child button, .button-group.radius > *:first-child .button, .button-group.radius > *:first-child .btn {
     border-left: 0; }
-  .button-group.radius > *:first-child, .button-group.radius > *:first-child > a, .button-group.radius > *:first-child > button, .button-group.radius > *:first-child > .button {
+  .button-group.radius > *:first-child, .button-group.radius > *:first-child > a, .button-group.radius > *:first-child > button, .button-group.radius > *:first-child > .button, .button-group.radius > *:first-child > .btn {
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px; }
-  .button-group.radius > *:last-child, .button-group.radius > *:last-child > a, .button-group.radius > *:last-child > button, .button-group.radius > *:last-child > .button {
+  .button-group.radius > *:last-child, .button-group.radius > *:last-child > a, .button-group.radius > *:last-child > button, .button-group.radius > *:last-child > .button, .button-group.radius > *:last-child > .btn {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px; }
-  .button-group.round > * > button, .button-group.round > * .button {
+  .button-group.round > * > button, .button-group.round > * .button, .button-group.round > * .btn {
     border-left: 1px solid;
     border-color: rgba(255, 255, 255, 0.5); }
-  .button-group.round > *:first-child button, .button-group.round > *:first-child .button {
+  .button-group.round > *:first-child button, .button-group.round > *:first-child .button, .button-group.round > *:first-child .btn {
     border-left: 0; }
-  .button-group.round > *:first-child, .button-group.round > *:first-child > a, .button-group.round > *:first-child > button, .button-group.round > *:first-child > .button {
+  .button-group.round > *:first-child, .button-group.round > *:first-child > a, .button-group.round > *:first-child > button, .button-group.round > *:first-child > .button, .button-group.round > *:first-child > .btn {
     border-bottom-left-radius: 1000px;
     border-top-left-radius: 1000px; }
-  .button-group.round > *:last-child, .button-group.round > *:last-child > a, .button-group.round > *:last-child > button, .button-group.round > *:last-child > .button {
+  .button-group.round > *:last-child, .button-group.round > *:last-child > a, .button-group.round > *:last-child > button, .button-group.round > *:last-child > .button, .button-group.round > *:last-child > .btn {
     border-bottom-right-radius: 1000px;
     border-top-right-radius: 1000px; }
   .button-group.even-2 li {
     width: 50%; }
-    .button-group.even-2 li > button, .button-group.even-2 li .button {
+    .button-group.even-2 li > button, .button-group.even-2 li .button, .button-group.even-2 li .btn {
       border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-2 li:first-child button, .button-group.even-2 li:first-child .button {
+    .button-group.even-2 li:first-child button, .button-group.even-2 li:first-child .button, .button-group.even-2 li:first-child .btn {
       border-left: 0; }
-    .button-group.even-2 li button, .button-group.even-2 li .button {
+    .button-group.even-2 li button, .button-group.even-2 li .button, .button-group.even-2 li .btn {
       width: 100%; }
   .button-group.even-3 li {
     width: 33.33333%; }
-    .button-group.even-3 li > button, .button-group.even-3 li .button {
+    .button-group.even-3 li > button, .button-group.even-3 li .button, .button-group.even-3 li .btn {
       border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-3 li:first-child button, .button-group.even-3 li:first-child .button {
+    .button-group.even-3 li:first-child button, .button-group.even-3 li:first-child .button, .button-group.even-3 li:first-child .btn {
       border-left: 0; }
-    .button-group.even-3 li button, .button-group.even-3 li .button {
+    .button-group.even-3 li button, .button-group.even-3 li .button, .button-group.even-3 li .btn {
       width: 100%; }
   .button-group.even-4 li {
     width: 25%; }
-    .button-group.even-4 li > button, .button-group.even-4 li .button {
+    .button-group.even-4 li > button, .button-group.even-4 li .button, .button-group.even-4 li .btn {
       border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-4 li:first-child button, .button-group.even-4 li:first-child .button {
+    .button-group.even-4 li:first-child button, .button-group.even-4 li:first-child .button, .button-group.even-4 li:first-child .btn {
       border-left: 0; }
-    .button-group.even-4 li button, .button-group.even-4 li .button {
+    .button-group.even-4 li button, .button-group.even-4 li .button, .button-group.even-4 li .btn {
       width: 100%; }
   .button-group.even-5 li {
     width: 20%; }
-    .button-group.even-5 li > button, .button-group.even-5 li .button {
+    .button-group.even-5 li > button, .button-group.even-5 li .button, .button-group.even-5 li .btn {
       border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-5 li:first-child button, .button-group.even-5 li:first-child .button {
+    .button-group.even-5 li:first-child button, .button-group.even-5 li:first-child .button, .button-group.even-5 li:first-child .btn {
       border-left: 0; }
-    .button-group.even-5 li button, .button-group.even-5 li .button {
+    .button-group.even-5 li button, .button-group.even-5 li .button, .button-group.even-5 li .btn {
       width: 100%; }
   .button-group.even-6 li {
     width: 16.66667%; }
-    .button-group.even-6 li > button, .button-group.even-6 li .button {
+    .button-group.even-6 li > button, .button-group.even-6 li .button, .button-group.even-6 li .btn {
       border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-6 li:first-child button, .button-group.even-6 li:first-child .button {
+    .button-group.even-6 li:first-child button, .button-group.even-6 li:first-child .button, .button-group.even-6 li:first-child .btn {
       border-left: 0; }
-    .button-group.even-6 li button, .button-group.even-6 li .button {
+    .button-group.even-6 li button, .button-group.even-6 li .button, .button-group.even-6 li .btn {
       width: 100%; }
   .button-group.even-7 li {
     width: 14.28571%; }
-    .button-group.even-7 li > button, .button-group.even-7 li .button {
+    .button-group.even-7 li > button, .button-group.even-7 li .button, .button-group.even-7 li .btn {
       border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-7 li:first-child button, .button-group.even-7 li:first-child .button {
+    .button-group.even-7 li:first-child button, .button-group.even-7 li:first-child .button, .button-group.even-7 li:first-child .btn {
       border-left: 0; }
-    .button-group.even-7 li button, .button-group.even-7 li .button {
+    .button-group.even-7 li button, .button-group.even-7 li .button, .button-group.even-7 li .btn {
       width: 100%; }
   .button-group.even-8 li {
     width: 12.5%; }
-    .button-group.even-8 li > button, .button-group.even-8 li .button {
+    .button-group.even-8 li > button, .button-group.even-8 li .button, .button-group.even-8 li .btn {
       border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-8 li:first-child button, .button-group.even-8 li:first-child .button {
+    .button-group.even-8 li:first-child button, .button-group.even-8 li:first-child .button, .button-group.even-8 li:first-child .btn {
       border-left: 0; }
-    .button-group.even-8 li button, .button-group.even-8 li .button {
+    .button-group.even-8 li button, .button-group.even-8 li .button, .button-group.even-8 li .btn {
       width: 100%; }
 
 .button-bar {
@@ -958,7 +958,7 @@ select::-ms-expand {
   line-height: 2.3125rem; }
 
 /* Adjust padding, alignment and radius if pre/post element is a button */
-.postfix.button {
+.postfix.button, .postfix.btn {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -968,7 +968,7 @@ select::-ms-expand {
   line-height: 2.125rem;
   border: none; }
 
-.prefix.button {
+.prefix.button, .prefix.btn {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
@@ -978,22 +978,22 @@ select::-ms-expand {
   line-height: 2.125rem;
   border: none; }
 
-.prefix.button.radius {
+.prefix.button.radius, .prefix.radius.btn {
   border-radius: 0;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px; }
 
-.postfix.button.radius {
+.postfix.button.radius, .postfix.radius.btn {
   border-radius: 0;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px; }
 
-.prefix.button.round {
+.prefix.button.round, .prefix.round.btn {
   border-radius: 0;
   border-bottom-left-radius: 1000px;
   border-top-left-radius: 1000px; }
 
-.postfix.button.round {
+.postfix.button.round, .postfix.round.btn {
   border-radius: 0;
   border-bottom-right-radius: 1000px;
   border-top-right-radius: 1000px; }
@@ -2089,11 +2089,11 @@ ul.pagination {
       list-style: none;
       border-top-color: white; }
 
-.dropdown.button, button.dropdown {
+.dropdown.button, .dropdown.btn, button.dropdown {
   position: relative;
   padding-right: 57px;
   padding-right: 3.5625rem; }
-  .dropdown.button:before, button.dropdown:before {
+  .dropdown.button:before, .dropdown.btn:before, button.dropdown:before {
     position: absolute;
     content: "";
     width: 0;
@@ -2102,66 +2102,66 @@ ul.pagination {
     border-style: solid;
     border-color: #fff transparent transparent transparent;
     top: 50%; }
-  .dropdown.button:before, button.dropdown:before {
+  .dropdown.button:before, .dropdown.btn:before, button.dropdown:before {
     border-width: 6px;
     border-width: 0.375rem;
     right: 22px;
     right: 1.40625rem;
     margin-top: -2px;
     margin-top: -0.15625rem; }
-  .dropdown.button:before, button.dropdown:before {
+  .dropdown.button:before, .dropdown.btn:before, button.dropdown:before {
     border-color: #fff transparent transparent transparent; }
-  .dropdown.button.tiny, button.dropdown.tiny {
+  .dropdown.button.tiny, .dropdown.tiny.btn, button.dropdown.tiny {
     padding-right: 42px;
     padding-right: 2.625rem; }
-    .dropdown.button.tiny:before, button.dropdown.tiny:before {
+    .dropdown.button.tiny:before, .dropdown.tiny.btn:before, button.dropdown.tiny:before {
       border-width: 6px;
       border-width: 0.375rem;
       right: 18px;
       right: 1.125rem;
       margin-top: -2px;
       margin-top: -0.125rem; }
-    .dropdown.button.tiny:before, button.dropdown.tiny:before {
+    .dropdown.button.tiny:before, .dropdown.tiny.btn:before, button.dropdown.tiny:before {
       border-color: #fff transparent transparent transparent; }
-  .dropdown.button.small, button.dropdown.small {
+  .dropdown.button.small, .dropdown.small.btn, button.dropdown.small {
     padding-right: 49px;
     padding-right: 3.0625rem; }
-    .dropdown.button.small:before, button.dropdown.small:before {
+    .dropdown.button.small:before, .dropdown.small.btn:before, button.dropdown.small:before {
       border-width: 7px;
       border-width: 0.4375rem;
       right: 21px;
       right: 1.3125rem;
       margin-top: -2px;
       margin-top: -0.15625rem; }
-    .dropdown.button.small:before, button.dropdown.small:before {
+    .dropdown.button.small:before, .dropdown.small.btn:before, button.dropdown.small:before {
       border-color: #fff transparent transparent transparent; }
-  .dropdown.button.large, button.dropdown.large {
+  .dropdown.button.large, .dropdown.large.btn, button.dropdown.large {
     padding-right: 58px;
     padding-right: 3.625rem; }
-    .dropdown.button.large:before, button.dropdown.large:before {
+    .dropdown.button.large:before, .dropdown.large.btn:before, button.dropdown.large:before {
       border-width: 5px;
       border-width: 0.3125rem;
       right: 27px;
       right: 1.71875rem;
       margin-top: -2px;
       margin-top: -0.15625rem; }
-    .dropdown.button.large:before, button.dropdown.large:before {
+    .dropdown.button.large:before, .dropdown.large.btn:before, button.dropdown.large:before {
       border-color: #fff transparent transparent transparent; }
-  .dropdown.button.secondary:before, button.dropdown.secondary:before {
+  .dropdown.button.secondary:before, .dropdown.secondary.btn:before, button.dropdown.secondary:before {
     border-color: #333 transparent transparent transparent; }
 
-.split.button {
+.split.button, .split.btn {
   position: relative;
   padding-right: 81px;
   padding-right: 5.0625rem; }
-  .split.button span {
+  .split.button span, .split.button .split.btn {
     display: block;
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
     border-left: solid 1px; }
-    .split.button span:before {
+    .split.button span:before, .split.button .split.btn {
       position: absolute;
       content: "";
       width: 0;
@@ -2170,78 +2170,78 @@ ul.pagination {
       border-style: inset;
       top: 50%;
       left: 50%; }
-    .split.button span:active {
+    .split.button span:active, .split.button .split.btn {
       background-color: rgba(0, 0, 0, 0.1); }
-  .split.button span {
+  .split.button span, .split.button .split.btn {
     border-left-color: rgba(255, 255, 255, 0.5); }
-  .split.button span {
+  .split.button span, .split.button .split.btn {
     width: 49px;
     width: 3.09375rem; }
-    .split.button span:before {
+    .split.button span:before, .split.button .split.btn {
       border-top-style: solid;
       border-width: 6px;
       border-width: 0.375rem;
       top: 48%;
       margin-left: -6px;
       margin-left: -0.375rem; }
-  .split.button span:before {
+  .split.button span:before, .split.button .split.btn {
     border-color: #fff transparent transparent transparent; }
-  .split.button.secondary span {
+  .split.button.secondary span, .split.button.secondary .split.secondary.btn {
     border-left-color: rgba(255, 255, 255, 0.5); }
-  .split.button.secondary span:before {
+  .split.button.secondary span:before, .split.button.secondary .split.secondary.btn {
     border-color: #fff transparent transparent transparent; }
-  .split.button.alert span {
+  .split.button.alert span, .split.button.alert .split.alert.btn {
     border-left-color: rgba(255, 255, 255, 0.5); }
-  .split.button.success span {
+  .split.button.success span, .split.button.success .split.success.btn {
     border-left-color: rgba(255, 255, 255, 0.5); }
-  .split.button.tiny {
+  .split.button.tiny, .split.tiny.btn {
     padding-right: 60px;
     padding-right: 3.75rem; }
-    .split.button.tiny span {
+    .split.button.tiny span, .split.button.tiny .split.tiny.btn {
       width: 36px;
       width: 2.25rem; }
-      .split.button.tiny span:before {
+      .split.button.tiny span:before, .split.button.tiny .split.tiny.btn {
         border-top-style: solid;
         border-width: 6px;
         border-width: 0.375rem;
         top: 48%;
         margin-left: -6px;
         margin-left: -0.375rem; }
-  .split.button.small {
+  .split.button.small, .split.small.btn {
     padding-right: 70px;
     padding-right: 4.375rem; }
-    .split.button.small span {
+    .split.button.small span, .split.button.small .split.small.btn {
       width: 42px;
       width: 2.625rem; }
-      .split.button.small span:before {
+      .split.button.small span:before, .split.button.small .split.small.btn {
         border-top-style: solid;
         border-width: 7px;
         border-width: 0.4375rem;
         top: 48%;
         margin-left: -6px;
         margin-left: -0.375rem; }
-  .split.button.large {
+  .split.button.large, .split.large.btn {
     padding-right: 88px;
     padding-right: 5.5rem; }
-    .split.button.large span {
+    .split.button.large span, .split.button.large .split.large.btn {
       width: 55px;
       width: 3.4375rem; }
-      .split.button.large span:before {
+      .split.button.large span:before, .split.button.large .split.large.btn {
         border-top-style: solid;
         border-width: 5px;
         border-width: 0.3125rem;
         top: 48%;
         margin-left: -6px;
         margin-left: -0.375rem; }
-  .split.button.expand {
+  .split.button.expand, .split.expand.btn {
     padding-left: 32px;
     padding-left: 2rem; }
-  .split.button.secondary span:before {
+  .split.button.secondary span:before, .split.button.secondary .split.secondary.btn {
     border-color: #333 transparent transparent transparent; }
-  .split.button.radius span {
+  .split.button.radius span, .split.button.radius .split.radius.btn {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px; }
-  .split.button.round span {
+  .split.button.round span, .split.button.round .split.round.btn {
     border-bottom-right-radius: 1000px;
     border-top-right-radius: 1000px; }
 
@@ -2532,7 +2532,7 @@ a {
   text-decoration: none;
   line-height: inherit; }
   a:hover, a:focus {
-    color: #00334d; }
+    color: #0077b3; }
   a img {
     border: none; }
 
@@ -2870,7 +2870,7 @@ meta.foundation-mq-topbar {
     padding-bottom: 0.35rem;
     font-size: 12px;
     font-size: 0.75rem; }
-  .top-bar .button, .top-bar button {
+  .top-bar .button, .top-bar .btn, .top-bar button {
     padding-top: 7px;
     padding-top: 0.45rem;
     padding-bottom: 5px;
@@ -2971,7 +2971,7 @@ meta.foundation-mq-topbar {
     font-weight: normal;
     text-transform: none;
     background: #333; }
-    .top-bar-section ul li > a.button {
+    .top-bar-section ul li > a.button, .top-bar-section ul li > a.btn {
       font-size: 13px;
       font-size: 0.8125rem;
       padding-right: 15px;
@@ -2979,33 +2979,33 @@ meta.foundation-mq-topbar {
       background-color: #008CBA;
       border-color: #007295;
       color: #fff; }
-      .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
+      .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.btn:hover, .top-bar-section ul li > a.button:focus, .top-bar-section ul li > a.btn:focus {
         background-color: #007295; }
-      .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
+      .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.btn:hover, .top-bar-section ul li > a.button:focus, .top-bar-section ul li > a.btn:focus {
         color: #fff; }
-    .top-bar-section ul li > a.button.secondary {
+    .top-bar-section ul li > a.button.secondary, .top-bar-section ul li > a.secondary.btn {
       background-color: #e7e7e7;
       border-color: #b9b9b9;
       color: #333; }
-      .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
+      .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.secondary.btn:hover, .top-bar-section ul li > a.button.secondary:focus, .top-bar-section ul li > a.secondary.btn:focus {
         background-color: #b9b9b9; }
-      .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
+      .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.secondary.btn:hover, .top-bar-section ul li > a.button.secondary:focus, .top-bar-section ul li > a.secondary.btn:focus {
         color: #333; }
-    .top-bar-section ul li > a.button.success {
+    .top-bar-section ul li > a.button.success, .top-bar-section ul li > a.success.btn {
       background-color: #43AC6A;
       border-color: #368a54;
       color: #fff; }
-      .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
+      .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.success.btn:hover, .top-bar-section ul li > a.button.success:focus, .top-bar-section ul li > a.success.btn:focus {
         background-color: #368a54; }
-      .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
+      .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.success.btn:hover, .top-bar-section ul li > a.button.success:focus, .top-bar-section ul li > a.success.btn:focus {
         color: #fff; }
-    .top-bar-section ul li > a.button.alert {
+    .top-bar-section ul li > a.button.alert, .top-bar-section ul li > a.alert.btn {
       background-color: #f04124;
       border-color: #cf280e;
       color: #fff; }
-      .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
+      .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.alert.btn:hover, .top-bar-section ul li > a.button.alert:focus, .top-bar-section ul li > a.alert.btn:focus {
         background-color: #cf280e; }
-      .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
+      .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.alert.btn:hover, .top-bar-section ul li > a.button.alert:focus, .top-bar-section ul li > a.alert.btn:focus {
         color: #fff; }
   .top-bar-section ul li > button {
     font-size: 13px;
@@ -3109,7 +3109,7 @@ meta.foundation-mq-topbar {
           display: block; }
       .top-bar-section .dropdown li.has-form {
         padding: 8px 15px; }
-      .top-bar-section .dropdown li .button, .top-bar-section .dropdown li button {
+      .top-bar-section .dropdown li .button, .top-bar-section .dropdown li .btn, .top-bar-section .dropdown li button {
         top: auto; }
     .top-bar-section .dropdown label {
       padding: 8px 15px 2px;
@@ -3139,7 +3139,7 @@ meta.foundation-mq-topbar {
       float: left; }
     .top-bar .name h1 a {
       width: auto; }
-    .top-bar input, .top-bar .button, .top-bar button {
+    .top-bar input, .top-bar .button, .top-bar .btn, .top-bar button {
       font-size: 14px;
       font-size: 0.875rem;
       position: relative;
@@ -3731,6 +3731,7 @@ th.hide-for-touch {
 
 .touch th.show-for-touch {
   display: table-cell !important; }
+
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
@@ -4468,6 +4469,33 @@ ADDED BY afontgarde.js:
   padding-left: 0.9375rem;
   padding-right: 15px;
   padding-right: 0.9375rem; }
+
+.scrollable {
+  position: relative;
+  overflow: hidden; }
+  .scrollable:after {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 50px;
+    height: 100%;
+    border-radius: 10px 0 0 10px/50% 0 0 50%;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
+    content: ''; }
+
+.scrollable > div {
+  overflow-x: auto; }
+
+.scrollable > div::-webkit-scrollbar {
+  height: 12px; }
+
+.scrollable > div::-webkit-scrollbar-track {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15) inset;
+  background: #f0f0f0; }
+
+.scrollable > div::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: #ccc; }
 
 
 .nav-primary {
