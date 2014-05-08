@@ -36,7 +36,7 @@ module.exports = function (grunt) {
       },
 
       js: {
-        files: ['js/baselayer.js', 'js/site.js'],
+        files: ['js/src/baselayer.js', 'js/src/site.js'],
         tasks: ['uglify']
       },
 
@@ -125,13 +125,13 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'js/conditional/superfish.min.js': [
+          'js/dist/vendor/superfish.min.js': [
             'bower_components/superfish/dist/js/hoverIntent.js',
             'bower_components/superfish/dist/js/superfish.js'
           ],
 
-          'js/vendor/modernizr.min.js': ['bower_components/modernizr/modernizr.js'],
-          'js/vendor/foundation.min.js': [
+          'js/dist/vendor/modernizr.min.js': ['bower_components/modernizr/modernizr.js'],
+          'js/dist/vendor/foundation.min.js': [
             'bower_components/fastclick/lib/fastclick.js',
             'bower_components/foundation/js/foundation/foundation.js',
 
@@ -156,7 +156,8 @@ module.exports = function (grunt) {
             //'bower_components/foundation/js/foundation/foundation.orbit.js',
             //'bower_components/foundation/js/foundation/foundation.tab.js'
           ],
-          'js/baselayer.min.js': ['js/baselayer.js'],
+          'js/dist/baselayer.min.js': ['js/src/baselayer.js'],
+          'js/dist/site.min.js': ['js/src/site.js'],
         }
       },
     },
@@ -242,6 +243,8 @@ module.exports = function (grunt) {
   // Templates - build example Templates static site
   grunt.registerTask('templates', [
     'clean:templates',
+    'css',
+    'uglify',
     'copy:templates',
     'jekyll:templates',
     'connect:templates',
@@ -251,6 +254,8 @@ module.exports = function (grunt) {
   // Docs - build Component Documentation static site
   grunt.registerTask('docs', [
     'clean:docs',
+    'css',
+    'uglify',
     'copy:docs',
     'jekyll:docs',
     'connect:docs',

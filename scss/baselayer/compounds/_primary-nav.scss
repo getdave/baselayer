@@ -110,8 +110,8 @@
 // ==========================================================================
 
 .nav-primary--offcanvas {
-    @extend .bl-nav-menu;
-    @extend .bl-nav-menu--stacked;
+    @include bl-nav-menu;
+    @include bl-nav-menu--stacked;
 }
 
 
