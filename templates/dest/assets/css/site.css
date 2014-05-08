@@ -3795,6 +3795,10 @@ table {
 td, th {
   padding: 0; }
 
+.required {
+  color: #f00;
+  border: 0 !important; }
+
 .clear {
   clear: both; }
 
@@ -4112,13 +4116,11 @@ ADDED BY afontgarde.js:
   list-style: none;
   margin: 0;
   padding: 0;
-  zoom: 1; }
-  .bl-nav-menu:before, .nav-primary:before {
-    content: "";
+  *zoom: 1; }
+  .bl-nav-menu:before, .nav-primary:before, .bl-nav-menu:after, .nav-primary:after {
+    content: " ";
     display: table; }
   .bl-nav-menu:after, .nav-primary:after {
-    content: "";
-    display: table;
     clear: both; }
   .bl-nav-menu a, .bl-nav-menu .nav-primary {
     display: block;
@@ -4165,24 +4167,20 @@ ADDED BY afontgarde.js:
   list-style: none;
   margin: 0;
   padding: 0;
-  zoom: 1; }
-  .item-list:before {
-    content: "";
+  *zoom: 1; }
+  .item-list:before, .item-list:after {
+    content: " ";
     display: table; }
   .item-list:after {
-    content: "";
-    display: table;
     clear: both; }
   .item-list > li, .item-list .list-item {
     margin-bottom: 1.875rem;
     padding-bottom: 1.875rem;
-    zoom: 1; }
-    .item-list > li:before, .item-list .list-item:before {
-      content: "";
+    *zoom: 1; }
+    .item-list > li:before, .item-list > li:after, .item-list .list-item:before, .item-list .list-item:after {
+      content: " ";
       display: table; }
     .item-list > li:after, .item-list .list-item:after {
-      content: "";
-      display: table;
       clear: both; }
 
 .item-list--contracted > li, .item-list--contracted .list-item {
@@ -4280,6 +4278,17 @@ ADDED BY afontgarde.js:
 .img-ratio--16-9 {
   padding-bottom: 56.25%; }
 
+.address {
+  margin-bottom: 1.875rem;
+  line-height: 1.5; }
+
+.address__line {
+  display: block;
+  clear: both; }
+
+.address__block {
+  margin-bottom: 0.9375rem; }
+
 
 .nav-primary {
   background-color: #D8D8D8; }
@@ -4293,13 +4302,11 @@ ADDED BY afontgarde.js:
   list-style: none;
   margin: 0;
   padding: 0;
-  zoom: 1; }
-  .nav-primary--banner:before {
-    content: "";
+  *zoom: 1; }
+  .nav-primary--banner:before, .nav-primary--banner:after {
+    content: " ";
     display: table; }
   .nav-primary--banner:after {
-    content: "";
-    display: table;
     clear: both; }
   .nav-primary--banner a {
     display: block;
@@ -4355,13 +4362,11 @@ ADDED BY afontgarde.js:
   list-style: none;
   margin: 0;
   padding: 0;
-  zoom: 1; }
-  .nav-primary--offcanvas:before {
-    content: "";
+  *zoom: 1; }
+  .nav-primary--offcanvas:before, .nav-primary--offcanvas:after {
+    content: " ";
     display: table; }
   .nav-primary--offcanvas:after {
-    content: "";
-    display: table;
     clear: both; }
   .nav-primary--offcanvas a {
     display: block;
@@ -4489,13 +4494,11 @@ html, body {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 62.5rem;
-  zoom: 1; }
-  .column-container:before {
-    content: "";
+  *zoom: 1; }
+  .column-container:before, .column-container:after {
+    content: " ";
     display: table; }
   .column-container:after {
-    content: "";
-    display: table;
     clear: both; }
 
 .main, .sub {

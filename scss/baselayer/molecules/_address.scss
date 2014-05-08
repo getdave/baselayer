@@ -1,0 +1,25 @@
+// ==========================================================================
+// ADDRESS
+//
+// Description: create simple formatting for standard addresses
+// ==========================================================================
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.address {
+    margin-bottom: $spacing-unit;
+	line-height: 1.5;
+}
+
+.address__line {
+    display: block;
+    clear: both;
+}
+
+.address__block {
+	margin-bottom: $half-spacing-unit;
+}
+
+

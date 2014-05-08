@@ -11,9 +11,7 @@
 
 	<nav class="menu-primary--offcanvas primary-offcanvas__panel">
 		<ul class="nav-primary--offcanvas">
-			{% assign pages_list = site.pages %}
-			{% assign group = 'navigation' %}
-			{% include pages_list.html %}
+		{% include primary-nav-items.html %}
 		</ul>
 	</nav>
 </aside>

@@ -150,7 +150,7 @@ module.exports = function (grunt) {
             //'bower_components/foundation/js/foundation/*.js'
 
             // Selectively include
-            //'bower_components/foundation/js/foundation/foundation.abide.js',
+            'bower_components/foundation/js/foundation/foundation.abide.js',
             //'bower_components/foundation/js/foundation/foundation.clearing.js',
             //'bower_components/foundation/js/foundation/foundation.interchange.js',
             //'bower_components/foundation/js/foundation/foundation.magellan.js',
