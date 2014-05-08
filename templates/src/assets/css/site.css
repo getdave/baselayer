@@ -4555,6 +4555,8 @@ html, body {
   background-position: 0 0;
   background-image: url(../images/site-logo.png);
   background-size: 100%; }
+  .lt-ie9 .site-logo {
+    text-indent: 0 !important; }
   .site-logo:hover, .site-logo:focus {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
     -moz-opacity: 0.8;
@@ -4641,7 +4643,12 @@ html, body {
       background: #008CBA; }
 
 *, *:before, *:after {
-  *behavior: url(/boxsizing.htc); }
+  *behavior: url(/assets/boxsizing.htc); }
+
+.lt-ie9 .row, .lt-ie9 .column-container {
+  width: 960px; }
+  .lt-ie9 .row .row, .lt-ie9 .column-container .row {
+    width: auto; }
 
 .row--ib {
   letter-spacing: -0.3125rem; }

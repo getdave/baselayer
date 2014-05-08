@@ -1,11 +1,37 @@
+// ==========================================================================
+// SITE CSS
+//
+// Description: example of a typical master SASS file setup when using
+// Baselayer and Foundation. Note that this setup relies heavily on various
+// Grunt tasks define in the Gruntfile.js
+// ==========================================================================
+
+
+// ==========================================================================
+// LIBRARIES & SETTINGS
+//
+// include required libraries and settings files
+// ==========================================================================
+
+// BOURBON - note we're using Bourbon 3.2 because Bourbon 4.0 requires features of Sass which libsass doesn't implement (yet!)
+@import "bower_components/bourbon/dist/bourbon";
+
+// FOUNDATION SETTINGS - include before  baselayer's settings because baselayer relies on some variables
 @import "foundation-settings";
+
+// BASELAYER SETTINGS - include before foundation components
 @import "baselayer-settings";
 
 
-// Import entire Framework (not recommended!)
-//@import "foundation";
 
-// Or selectively include components
+// ==========================================================================
+// FOUNDATION COMPONENTS
+//
+// include Foundation framework. To minimise bloat only include those
+// components which you will require for your site
+// ==========================================================================
+
+// Selectively include components (recommended)
 @import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
@@ -43,5 +69,15 @@
    "foundation/components/offcanvas",
    "foundation/components/visibility";
 
+// Import entire Framework (not recommended!)
+//@import "foundation";
 
+
+// ==========================================================================
+// BASELAYER COMPONENTS
+// include Baselayer framework. To minimise bloat only include those
+// components which you will require for your site
+// ==========================================================================
+
+// Import entire Framework (not recommended!)
 @import "baselayer";

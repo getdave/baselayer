@@ -1,6 +1,40 @@
+// ==========================================================================
+// FIXES
+//
+// Description: minor tweaks to Foundation and Baselayer to make it more
+// compatibile and useful
+// ==========================================================================
+
+
+
+// ==========================================================================
+// OLDIE
+// fixes for poor oldie (he has no friends)
+// ==========================================================================
+
+// BOX SIZING
+// ensure oldie can cope with Foundations reliance on border-box
+// ==========================================================================
 *, *:before, *:after {
-    *behavior: url(/boxsizing.htc);
+    *behavior: url(/assets/boxsizing.htc);
 }
+
+
+// FIX WIDTH
+// force a fixed (as opposed to fluid) width in oldie
+// ==========================================================================
+.lt-ie9 {
+	.row,
+	.column-container {
+		width: 960px;
+
+		.row {
+			width: auto;
+		}
+	}
+}
+
+
 
 // ==========================================================================
 // GRID

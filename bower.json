@@ -3,6 +3,7 @@
   "dependencies": {
     "foundation": "zurb/bower-foundation",
     "bourbon": "~3.2",
-    "superfish": "~1.7.4"
+    "superfish": "~1.7.4",
+    "selectivizr": "~1.0.2"
   }
 }

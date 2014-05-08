@@ -7501,6 +7501,10 @@ body {
   background-size: 100%;
 }
 
+.lt-ie9 .site-logo {
+  text-indent: 0 !important;
+}
+
 .site-logo:hover,
 .site-logo:focus {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
@@ -7622,7 +7626,17 @@ body {
 *,
 *:before,
 *:after {
-  *behavior: url(/boxsizing.htc);
+  *behavior: url(/assets/boxsizing.htc);
+}
+
+.lt-ie9 .row,
+.lt-ie9 .column-container {
+  width: 960px;
+}
+
+.lt-ie9 .row .row,
+.lt-ie9 .column-container .row {
+  width: auto;
 }
 
 .row--ib {

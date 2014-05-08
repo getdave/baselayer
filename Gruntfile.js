@@ -121,16 +121,27 @@ module.exports = function (grunt) {
     // Uglify - process all JS
     uglify: {
       options: {
-
+        mangle: false,
+        compress: false,
+        beautify: true
       },
       dist: {
         files: {
+          // Conditional - JS to be conditionally included via YepNope
           'js/dist/vendor/superfish.min.js': [
             'bower_components/superfish/dist/js/hoverIntent.js',
             'bower_components/superfish/dist/js/superfish.js'
           ],
 
+          // Selective - device/browser specific files
+          'js/dist/vendor/selectivizr.min.js': [
+            'bower_components/selectivizr/selectivizr.js',
+          ],
+
           'js/dist/vendor/modernizr.min.js': ['bower_components/modernizr/modernizr.js'],
+
+
+          // General - all JS served before </body>
           'js/dist/vendor/foundation.min.js': [
             'bower_components/fastclick/lib/fastclick.js',
             'bower_components/foundation/js/foundation/foundation.js',
@@ -156,7 +167,8 @@ module.exports = function (grunt) {
             //'bower_components/foundation/js/foundation/foundation.orbit.js',
             //'bower_components/foundation/js/foundation/foundation.tab.js'
           ],
-          'js/dist/baselayer.min.js': ['js/src/baselayer.js'],
+
+          'js/dist/.min.js': ['js/src/baselayer.js'],
           'js/dist/site.min.js': ['js/src/site.js'],
         }
       },
@@ -190,6 +202,7 @@ module.exports = function (grunt) {
       },
       templates: { // copy all assets into templates source dir
         src: [
+          'boxsizing.htc',
           'css/*.css',
           'js/**/*.js',
           'images/**/*',
