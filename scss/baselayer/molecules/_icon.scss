@@ -39,8 +39,7 @@
 
 // COLOUR MODIFIERS
 // ==========================================================================
-.icon--gray,
-.icon--grey {
+.icon--faded {
     color: #bdc3c7;
 }
 
@@ -68,8 +67,13 @@
 // ==========================================================================
 .icon--inline {
     @include inline-block;
-    vertical-align: text-bottom;
+    vertical-align: middle;
     margin-right: 0.2em;
+}
+
+.icon-text {
+    @include inline-block;
+    vertical-align: middle;
 }
 
 

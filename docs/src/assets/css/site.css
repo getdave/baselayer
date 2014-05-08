@@ -3830,7 +3830,7 @@ td, th {
     width: 0;
     height: 150%; }
 
-.toggle__text--hidden, .toggle--menu .toggle__text {
+.vh, .social-icons-list--no-text .social-icons-list__name, .primary-offcanvas__toggle .toggle__text, .primary-offcanvas .primary-offcanvas__close .toggle__text, .v-hidden, .screen-reader-text, .assistive-text {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -3999,7 +3999,7 @@ td, th {
   .no-generatedcontent .icon, .no-generatedcontent .toggle i, .toggle .no-generatedcontent i, .no-generatedcontent %toggle i {
     display: none; }
 
-.icon--gray, .icon--grey {
+.icon--faded {
   color: #bdc3c7; }
 
 .icon--small {
@@ -4029,8 +4029,16 @@ td, th {
   zoom: 1;
   *display: inline;
   *vertical-align: auto;
-  vertical-align: text-bottom;
+  vertical-align: middle;
   margin-right: 0.2em; }
+
+.icon-text {
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  vertical-align: middle; }
 
 .icon-fallback-text .icon, .icon-fallback-text .toggle i, .toggle .icon-fallback-text i, .icon-fallback-text %toggle i {
   display: none; }
