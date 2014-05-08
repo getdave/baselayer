@@ -33,9 +33,8 @@
 // base rules for main and sub columns
 // ==========================================================================
 
-.main,
-.sub {
-    @include grid-column(12);
+.column {
+    @extend .columns;
     margin-bottom: $double-spacing-unit;
 }
 
@@ -48,12 +47,14 @@
 // ==========================================================================
 
 .layout-2c-r .main,
-.layout-default {
+.layout-default .main {
+    @extend .column;
     @extend .large-9;
 }
 
 .layout-2c-r .sub,
 .layout-default .sub {
+    @extend .column;
     @extend .large-3;
 }
 
@@ -64,11 +65,13 @@
 
 .layout-2c-l {
 	.main {
+        @extend .column;
         @extend .large-9;
         float: right;
 	}
 
     .sub {
+        @extend .column;
         @extend .large-3;
     }
 }
@@ -79,6 +82,7 @@
 .layout-1c {
     .main,
     .sub {
+        @extend .column;
         // inherits from base rules for .main and .sub
     }
 }
