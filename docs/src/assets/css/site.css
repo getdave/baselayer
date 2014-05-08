@@ -4107,30 +4107,30 @@ ADDED BY afontgarde.js:
 .icon-cross:before, .toggle--close i:before, .toggle--closeable.toggle--active i:before {
   content: "\e608"; }
 
-.nav-primary, .nav-primary--banner, .nav-primary--offcanvas {
+.bl-nav-menu {
   position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
   zoom: 1; }
-  .nav-primary:before, .nav-primary--banner:before, .nav-primary--offcanvas:before {
+  .bl-nav-menu:before {
     content: "";
     display: table; }
-  .nav-primary:after, .nav-primary--banner:after, .nav-primary--offcanvas:after {
+  .bl-nav-menu:after {
     content: "";
     display: table;
     clear: both; }
-  .nav-primary a, .nav-primary--banner a, .nav-primary--offcanvas a {
+  .bl-nav-menu a {
     display: block;
     padding: 0.625rem 1.25rem;
     text-decoration: none; }
-  .nav-primary > li, .nav-primary--banner > li, .nav-primary--offcanvas > li {
+  .bl-nav-menu > li {
     position: relative; }
 
-.nav-primary--banner li, .nav-primary--offcanvas li {
+.bl-nav-menu--stacked li {
   clear: both;
   float: none; }
-.nav-primary--banner a, .nav-primary--offcanvas a {
+.bl-nav-menu--stacked a {
   text-align: left; }
 
 .bl-nav-menu--inline a {

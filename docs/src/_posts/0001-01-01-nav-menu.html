@@ -1,0 +1,30 @@
+---
+layout: pattern
+summary: "Base classes for creating simple 'nav-like' lists. Ideal for simple nav menus or for forming the basis of more complex navigation componenets."
+---
+
+<div class="panel">
+	<ul class="bl-nav-menu bl-nav-menu--stacked">
+		{% for i in (1..4) %}
+		<li class="">
+			<a href="#">Stacked Link {{i}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+
+<br><br><br>
+
+<div class="panel">
+	<ul class="bl-nav-menu bl-nav-menu--inline">
+		{% for i in (1..4) %}
+		<li class="">
+			<a href="#">Inline Link {{i}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+
+
+
+

@@ -73,19 +73,16 @@
 // ==========================================================================
 
 // BASE
-.bl-nav-menu,
-%bl-nav-menu {
+.bl-nav-menu {
 	@include bl-nav-menu;
 }
 
 // STACKED
-.bl-nav-menu--stacked,
-%bl-nav-menu--stacked {
+.bl-nav-menu--stacked {
 	@include bl-nav-menu--stacked;
 }
 
 // INLINE
-.bl-nav-menu--inline,
-%bl-nav-menu--inline {
+.bl-nav-menu--inline {
 	@include bl-nav-menu--inline;
 }

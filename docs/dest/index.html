@@ -8,7 +8,7 @@
     </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Pattern Primer</title>
+    <title>Baselayer Component Documentation</title>
 
     <meta name="viewport" content="width=device-width" initial-scale="1" />
 
@@ -71,7 +71,7 @@
 	<body>
 
 		  <header class="row">
-	<h1 class="page-title">Baselayer Documentation</h1>
+	<h1 class="page-title">Baselayer Component Documentation</h1>
 </header>
 
 <div class="row landmark--major">
@@ -86,23 +86,31 @@
   
   <dd><a href="#pattern-3">Complex Link</a></dd>
   
-  <dd><a href="#pattern-4">Icon</a></dd>
+  <dd><a href="#pattern-4">Grid</a></dd>
   
-  <dd><a href="#pattern-5">Images</a></dd>
+  <dd><a href="#pattern-5">Headings</a></dd>
   
-  <dd><a href="#pattern-6">Island</a></dd>
+  <dd><a href="#pattern-6">Icon</a></dd>
   
-  <dd><a href="#pattern-7">Landmark</a></dd>
+  <dd><a href="#pattern-7">Images</a></dd>
   
-  <dd><a href="#pattern-8">Scrollable</a></dd>
+  <dd><a href="#pattern-8">Island</a></dd>
   
-  <dd><a href="#pattern-9">Social Icons</a></dd>
+  <dd><a href="#pattern-9">Item List</a></dd>
   
-  <dd><a href="#pattern-10">Social Share Bar</a></dd>
+  <dd><a href="#pattern-10">Landmark</a></dd>
   
-  <dd><a href="#pattern-11">Text</a></dd>
+  <dd><a href="#pattern-11">Nav Menu</a></dd>
   
-  <dd><a href="#pattern-12">Toggle</a></dd>
+  <dd><a href="#pattern-12">Scrollable</a></dd>
+  
+  <dd><a href="#pattern-13">Social Icons</a></dd>
+  
+  <dd><a href="#pattern-14">Social Share Bar</a></dd>
+  
+  <dd><a href="#pattern-15">Text</a></dd>
+  
+  <dd><a href="#pattern-16">Toggle</a></dd>
   
 </dl>
 	
@@ -287,6 +295,106 @@
 	</div>
 	
 	<div id="pattern-4" class="pattern">
+		<h2 class="pattern-title h4">Grid</h2>
+		
+		<p><p>Baselayer makes use of <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation 5&#39;s mobile-first grid</a>. It also extend this however, to include an <code>inline-block</code> grid type. Simply apply the <code>.row--ib</code> modifier to the standard Foundation <code>.row</code> element and your nested grid items will switch to using inline block affording the ability to vertically align.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="row row--ib">
+	<div class="columns small-4 text-center">
+		<img src="http://www.placehold.it/160x160&text=Aligned" alt="" class="img-polaroid">
+	</div>
+
+	<div class="columns small-4 text-center">
+		<img src="http://www.placehold.it/100x100&text=Aligned" alt="" class="img-polaroid">
+	</div>
+
+	<div class="columns small-4 text-center">
+		<img src="http://www.placehold.it/200x200&text=Aligned" alt="" class="img-polaroid">
+	</div>
+</div>
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;row row--ib&quot;&gt;
+	&lt;div class=&quot;columns small-4 text-center&quot;&gt;
+		&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Aligned&quot; alt=&quot;&quot; class=&quot;img-polaroid&quot;&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;columns small-4 text-center&quot;&gt;
+		&lt;img src=&quot;http://www.placehold.it/100x100&amp;text=Aligned&quot; alt=&quot;&quot; class=&quot;img-polaroid&quot;&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;columns small-4 text-center&quot;&gt;
+		&lt;img src=&quot;http://www.placehold.it/200x200&amp;text=Aligned&quot; alt=&quot;&quot; class=&quot;img-polaroid&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</textarea>
+			<p><a href="/patterns/grid.html">Grid</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-5" class="pattern">
+		<h2 class="pattern-title h4">Headings</h2>
+		
+		<p><p>Standard typography for Headings. Extends Foundation to provide <code>.hN</code> style classes to provide greater flexibility.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<br><br><br>
+
+<h1 class="h6">Heading 1 - ".h6"</h1>
+<h2 class="h5">Heading 2 - ".h5"</h2>
+<h3 class="h4">Heading 3 - ".h4"</h3>
+<h4 class="h3">Heading 4 - ".h3"</h4>
+<h5 class="h2">Heading 5 - ".h2"</h5>
+<h6 class="h1">Heading 6 - ".h1"</h6>
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;h1 class=&quot;h6&quot;&gt;Heading 1 - &quot;.h6&quot;&lt;/h1&gt;
+&lt;h2 class=&quot;h5&quot;&gt;Heading 2 - &quot;.h5&quot;&lt;/h2&gt;
+&lt;h3 class=&quot;h4&quot;&gt;Heading 3 - &quot;.h4&quot;&lt;/h3&gt;
+&lt;h4 class=&quot;h3&quot;&gt;Heading 4 - &quot;.h3&quot;&lt;/h4&gt;
+&lt;h5 class=&quot;h2&quot;&gt;Heading 5 - &quot;.h2&quot;&lt;/h5&gt;
+&lt;h6 class=&quot;h1&quot;&gt;Heading 6 - &quot;.h1&quot;&lt;/h6&gt;
+
+
+
+
+</textarea>
+			<p><a href="/patterns/headings.html">Headings</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-6" class="pattern">
 		<h2 class="pattern-title h4">Icon</h2>
 		
 		<p><p>Standard sizing rules, presentation and layout for @fontface based Icons. Also see <a href="https://github.com/filamentgroup/a-font-garde/">A Font Garde</a> which us used to provide fallbacks.</p>
@@ -381,7 +489,7 @@
 		</div>
 	</div>
 	
-	<div id="pattern-5" class="pattern">
+	<div id="pattern-7" class="pattern">
 		<h2 class="pattern-title h4">Images</h2>
 		
 		<p><p>Baselayer provides predefined rules for common image styling. Mix and match as necessary to achieve the required effect.</p>
@@ -418,7 +526,7 @@
 		</div>
 	</div>
 	
-	<div id="pattern-6" class="pattern">
+	<div id="pattern-8" class="pattern">
 		<h2 class="pattern-title h4">Island</h2>
 		
 		
@@ -458,7 +566,96 @@
 		</div>
 	</div>
 	
-	<div id="pattern-7" class="pattern">
+	<div id="pattern-9" class="pattern">
+		<h2 class="pattern-title h4">Item List</h2>
+		
+		<p><p>Creates a neatly spaced, stacked list of &#39;entries&#39;. Typically used &#39;Entry-like&#39; content listings such as for Blog archive layouts. Comes with <code>.item-list--contracted</code> and <code>.item-list--expanded</code> modifiers.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<ul class="item-list">
+	
+	<li class="list-item">
+		<div class="panel mbn">
+			<h3>Item 1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+		</div>
+	</li>
+	
+	<li class="list-item">
+		<div class="panel mbn">
+			<h3>Item 2</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+		</div>
+	</li>
+	
+	<li class="list-item">
+		<div class="panel mbn">
+			<h3>Item 3</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+		</div>
+	</li>
+	
+	<li class="list-item">
+		<div class="panel mbn">
+			<h3>Item 4</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+		</div>
+	</li>
+	
+</ul>
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;ul class=&quot;item-list&quot;&gt;
+	
+	&lt;li class=&quot;list-item&quot;&gt;
+		&lt;div class=&quot;panel mbn&quot;&gt;
+			&lt;h3&gt;Item 1&lt;/h3&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+	
+	&lt;li class=&quot;list-item&quot;&gt;
+		&lt;div class=&quot;panel mbn&quot;&gt;
+			&lt;h3&gt;Item 2&lt;/h3&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+	
+	&lt;li class=&quot;list-item&quot;&gt;
+		&lt;div class=&quot;panel mbn&quot;&gt;
+			&lt;h3&gt;Item 3&lt;/h3&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+	
+	&lt;li class=&quot;list-item&quot;&gt;
+		&lt;div class=&quot;panel mbn&quot;&gt;
+			&lt;h3&gt;Item 4&lt;/h3&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+	
+&lt;/ul&gt;
+
+
+
+
+</textarea>
+			<p><a href="/patterns/item-list.html">Item List</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-10" class="pattern">
 		<h2 class="pattern-title h4">Landmark</h2>
 		
 		
@@ -530,7 +727,124 @@
 		</div>
 	</div>
 	
-	<div id="pattern-8" class="pattern">
+	<div id="pattern-11" class="pattern">
+		<h2 class="pattern-title h4">Nav Menu</h2>
+		
+		<p><p>Base classes for creating simple &#39;nav-like&#39; lists. Ideal for simple nav menus or for forming the basis of more complex navigation componenets.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="panel">
+	<ul class="bl-nav-menu bl-nav-menu--stacked">
+		
+		<li class="">
+			<a href="#">Stacked Link 1</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Stacked Link 2</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Stacked Link 3</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Stacked Link 4</a>
+		</li>
+		
+	</ul>
+</div>
+
+<br><br><br>
+
+<div class="panel">
+	<ul class="bl-nav-menu bl-nav-menu--inline">
+		
+		<li class="">
+			<a href="#">Inline Link 1</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Inline Link 2</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Inline Link 3</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Inline Link 4</a>
+		</li>
+		
+	</ul>
+</div>
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;panel&quot;&gt;
+	&lt;ul class=&quot;bl-nav-menu bl-nav-menu--stacked&quot;&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Stacked Link 1&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Stacked Link 2&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Stacked Link 3&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Stacked Link 4&lt;/a&gt;
+		&lt;/li&gt;
+		
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;panel&quot;&gt;
+	&lt;ul class=&quot;bl-nav-menu bl-nav-menu--inline&quot;&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Inline Link 1&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Inline Link 2&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Inline Link 3&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Inline Link 4&lt;/a&gt;
+		&lt;/li&gt;
+		
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+
+
+
+</textarea>
+			<p><a href="/patterns/nav-menu.html">Nav Menu</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-12" class="pattern">
 		<h2 class="pattern-title h4">Scrollable</h2>
 		
 		<p><p>Scrollable allows HTML content that does not wrap well to be scrolled horiztonally using build-in browser scrolling. Typically used to make HTML <code>&lt;table&gt;</code> elements work in a Responsive context.</p>
@@ -645,7 +959,7 @@
 		</div>
 	</div>
 	
-	<div id="pattern-9" class="pattern">
+	<div id="pattern-13" class="pattern">
 		<h2 class="pattern-title h4">Social Icons</h2>
 		
 		
@@ -731,7 +1045,7 @@
 		</div>
 	</div>
 	
-	<div id="pattern-10" class="pattern">
+	<div id="pattern-14" class="pattern">
 		<h2 class="pattern-title h4">Social Share Bar</h2>
 		
 		
@@ -793,7 +1107,7 @@
 		</div>
 	</div>
 	
-	<div id="pattern-11" class="pattern">
+	<div id="pattern-15" class="pattern">
 		<h2 class="pattern-title h4">Text</h2>
 		
 		
@@ -901,7 +1215,7 @@
 		</div>
 	</div>
 	
-	<div id="pattern-12" class="pattern">
+	<div id="pattern-16" class="pattern">
 		<h2 class="pattern-title h4">Toggle</h2>
 		
 		<p><p>Create a simple Toggle switches using the built in icon font (matching Icon glyphs must be included). When ommitting the <code>close</code> or <code>menu</code> classes you must provided your own icon.</p>

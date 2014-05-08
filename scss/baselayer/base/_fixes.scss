@@ -2,6 +2,10 @@
     *behavior: url(/boxsizing.htc);
 }
 
+// ==========================================================================
+// GRID
+// extends Foundation's Grid to create an "inline-block" style grid
+// ==========================================================================
 
 .row--ib {
 	letter-spacing: rem-calc(-5px);
