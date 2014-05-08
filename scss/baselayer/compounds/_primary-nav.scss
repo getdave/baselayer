@@ -24,7 +24,7 @@
 // ==========================================================================
 
 .nav-primary {
-    @extend %bl-nav-menu;
+    @extend .bl-nav-menu;
     background-color: $primary-nav-bg;
 
 	// Global anchors
@@ -59,8 +59,8 @@
 // ==========================================================================
 
 .nav-primary--banner {
-    @extend %bl-nav-menu;
-    @extend %bl-nav-menu--stacked;
+    @include bl-nav-menu;
+    @include bl-nav-menu--stacked;
 
     // Throw into "inline" layout on larger viewports
     @media #{$medium-up} {
@@ -110,8 +110,8 @@
 // ==========================================================================
 
 .nav-primary--offcanvas {
-    @extend %bl-nav-menu;
-    @extend %bl-nav-menu--stacked;
+    @extend .bl-nav-menu;
+    @extend .bl-nav-menu--stacked;
 }
 
 
