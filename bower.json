@@ -1,5 +1,5 @@
 {
-  "name": "foundation-libsass-template",
+  "name": "baselayer",
   "dependencies": {
     "foundation": "zurb/bower-foundation",
     "bourbon": "~3.2",

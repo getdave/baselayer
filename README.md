@@ -1,6 +1,6 @@
-# Foundation Starter Kit
+# Baselayer - built on Zurb Foundation
 
-A set of useful extensions, tweeks and enhancements to Zurb Foundation 5 framework. Includes custom components. 
+Baselayer is a set of useful extensions, tweeks and enhancements to the popular Zurb Foundation 5 framework. Baselayer is not a UI library and is not aimed at people looking for a "Plug & Play" solution.
 
 ## Requirements
 
@@ -10,13 +10,10 @@ You'll need to have the following items installed before continuing.
   * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
   * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
 
-While you're working on your project, run:
 
-`grunt`
+## SASS
 
-And you're set!
-
-## Directory Structure
+### Directory Structure
 
   * `scss/_settings.scss`: Foundation configuration settings go in here
   * `scss/app.scss`: Application styles go here
