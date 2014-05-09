@@ -6,15 +6,15 @@ group: "navigation"
 
 <main class="main">
 	<h1 class="vh">Blog Archive</h1>
-	<ul class="article-list item-list">
+	<ul class="article-list item-list item-list--divided">
 		{% for i in (1..10) %}
 		<li class="article-item list-item">
-			<article class="archive-post">
-				<div class="archive-post__author media--circle">
-					<img src="http://www.placehold.it/120x120" alt="">
+			<article class="archive-post media-block media-block--medium">
+				<div class="archive-post__author media-block__img small-only-text-center">
+					<img class="landmark--minor img-circle" src="http://www.placehold.it/120x120" alt="">
 				</div>
 
-				<div class="archive-post__body">
+				<div class="archive-post__body media-block__content">
 					<header class="archive-post__header">
 						<h2 class="archive-post__title">
 							<a href="blog-single.html">Blog Article Title of variable length so this text is long enough to test it's limitations</a>
@@ -22,9 +22,9 @@ group: "navigation"
 					</header>
 
 					{% include byline.html %}
-
+					
 					<figure class="archive-post__featured-media">
-						<img src="http://www.placehold.it/540x304" alt="">
+						<img class="img-polaroid img-thumb" src="http://www.placehold.it/540x304" alt="">
 					</figure>
 
 					<div class="archive-post__excerpt">
@@ -33,9 +33,9 @@ group: "navigation"
 						</p>
 					</div>
 
-					<p>
-						<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
-					</p>
+					
+					<a href="blog-single.html" class="btn small">Continue Reading &gt;</a>
+					
 				</div>
 			</article>
 		</li>

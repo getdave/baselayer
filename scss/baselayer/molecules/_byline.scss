@@ -15,9 +15,14 @@
 
 .byline {
 	@extend .subheader;
+	margin-left: -1em;
 	font-size: 0.9em;
 
 	> * {
 		font-size: 1em;
 	}
+}
+
+.byline__section {
+	margin-left: 1em;
 }

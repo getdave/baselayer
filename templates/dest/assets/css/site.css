@@ -4227,6 +4227,8 @@ ADDED BY afontgarde.js:
 
 .item-list--divided > li, .item-list--divided .list-item {
   border-bottom: 1px solid #ddd; }
+  .item-list--divided > li:last-child, .item-list--divided .list-item:last-child {
+    border-bottom: 0; }
 
 .complex-link, .complex-link:hover, .complex-link:focus {
   text-decoration: none; }
@@ -4234,9 +4236,13 @@ ADDED BY afontgarde.js:
     text-decoration: underline; }
 
 .byline {
+  margin-left: -1em;
   font-size: 0.9em; }
   .byline > * {
     font-size: 1em; }
+
+.byline__section {
+  margin-left: 1em; }
 
 .block-list {
   list-style: none;
@@ -4374,6 +4380,26 @@ ADDED BY afontgarde.js:
 
 .inline-definitions--v-spaced .inline-definitions__term, .inline-definitions--v-spaced .inline-definitions__desc, .inline-definitions--v-spaced dt, .inline-definitions--v-spaced dd {
   margin-bottom: 0.9375rem; }
+
+.media-block, .media-block .media-block__content {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1; }
+
+@media only screen {
+  .media-block--small .media-block__img {
+    float: left;
+    margin-right: 1.875rem; } }
+
+@media only screen and (min-width:40.063em) {
+  .media-block--medium .media-block__img {
+    float: left;
+    margin-right: 1.875rem; } }
+
+@media only screen and (min-width:64.063em) {
+  .media-block--large .media-block__img {
+    float: left;
+    margin-right: 1.875rem; } }
 
 
 .nav-primary {

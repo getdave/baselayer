@@ -7372,6 +7372,11 @@ ADDED BY afontgarde.js:
   border-bottom: 1px solid #ddd;
 }
 
+.item-list--divided > li:last-child,
+.item-list--divided .list-item:last-child {
+  border-bottom: 0;
+}
+
 .complex-link,
 .complex-link:hover,
 .complex-link:focus {
@@ -7388,11 +7393,16 @@ ADDED BY afontgarde.js:
 }
 
 .byline {
+  margin-left: -1em;
   font-size: 0.9em;
 }
 
 .byline > * {
   font-size: 1em;
+}
+
+.byline__section {
+  margin-left: 1em;
 }
 
 .block-list {
@@ -7589,6 +7599,25 @@ a.block-list__link--padded {
 .inline-definitions--v-spaced dd {
   margin-bottom: 15px;
   margin-bottom: 0.9375rem;
+}
+
+.media-block,
+.media-block .media-block__content {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+
+.media-block--small .media-block__img {
+  float: left;
+  margin-right: 30px;
+  margin-right: 1.875rem;
+}
+
+.media-block--medium .media-block__img {
+  float: left;
+  margin-right: 30px;
+  margin-right: 1.875rem;
 }
 
 .nav-primary {

@@ -62,6 +62,10 @@
 	> li,
 	.list-item {
 		border-bottom: 1px solid $hr-border-color;
+
+		&:last-child {
+			border-bottom: 0;
+		}
 	}
 }
 

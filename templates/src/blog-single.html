@@ -1,5 +1,5 @@
 ---
-layout: 2c-l
+layout: 2c-r
 title: Blog Single
 ---
 
@@ -9,8 +9,8 @@ title: Blog Single
 		{% include byline.html %}
 	</header>
 
-	<figure class="th landmark">
-		<img src="http://www.placehold.it/800x450" alt="">
+	<figure class="">
+		<img class="img-thumb img-polaroid" src="http://www.placehold.it/800x450" alt="">
 	</figure>
 	
 		
@@ -63,6 +63,10 @@ title: Blog Single
 </main>
 
 <div class="sub">
+	<div class="panel">
+		{% include search.html %}
+	</div>
+
 	{% include blog-panel-categories.html %}
 
 	{% include blog-panel-archives.html %}

@@ -1,0 +1,82 @@
+// ==========================================================================
+//
+// MEDIA BLOCK
+//
+// Description: Baselayer's take on the classic media object is an image to 
+// the left, with descriptive content to the right. The content area on the 
+// right can actually contain any type of content.
+//
+// Baselayer provides extensions to scope application of media element to
+// specific Medium query ranges
+//
+// ==========================================================================
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.media-block,
+.media-block .media-block__content {
+	overflow:hidden;
+	*overflow:visible;
+	zoom:1;
+}
+
+
+// ==========================================================================
+// MODIFIER: SMALL VIEWPORTS
+// ==========================================================================
+
+@media #{$small-up} {
+	.media-block--small .media-block__img {
+		float: left;
+		margin-right: $spacing-unit;
+	}
+}
+
+@media #{$small-only} {
+	.media-block--small-only .media-block__img {
+		float: left;
+		margin-right: $spacing-unit;
+	}
+}
+
+
+// ==========================================================================
+// MODIFIER: MEDIUM VIEWPORTS
+// ==========================================================================
+
+@media #{$medium-up} {
+	.media-block--medium .media-block__img {
+		float: left;
+		margin-right: $spacing-unit;
+	}
+}
+
+@media #{$medium-only} {
+	.media-block--medium-only .media-block__img {
+		float: left;
+		margin-right: $spacing-unit;
+	}
+}
+
+
+// ==========================================================================
+// MODIFIER: LARGE VIEWPORTS
+// ==========================================================================
+
+
+@media #{$large-up} {
+	.media-block--large .media-block__img {
+		float: left;
+		margin-right: $spacing-unit;
+	}
+}
+
+@media #{$large-only} {
+	.media-block--large-only .media-block__img {
+		float: left;
+		margin-right: $spacing-unit;
+	}
+}
