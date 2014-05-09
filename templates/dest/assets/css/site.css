@@ -1880,7 +1880,35 @@ label.error {
     margin-left: 1.375rem;
     display: block; }
     .inline-list > li > * {
-      display: block; }
+      display: inline; }
+
+.label {
+  font-weight: normal;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  margin-bottom: inherit;
+  padding: 0.25rem 0.5rem 0.375rem;
+  font-size: 0.6875rem;
+  background-color: #008CBA;
+  color: #fff; }
+  .label.radius {
+    border-radius: 3px; }
+  .label.round {
+    border-radius: 1000px; }
+  .label.alert {
+    background-color: #f04124;
+    color: #fff; }
+  .label.success {
+    background-color: #43AC6A;
+    color: #fff; }
+  .label.secondary {
+    background-color: #e7e7e7;
+    color: #333; }
 
 ul.pagination {
   display: block;
@@ -3958,6 +3986,9 @@ td, th {
 
 
 
+.h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+  color: #6f6f6f; }
+
 .h-heavy {
   font-weight: bold; }
 
@@ -4194,6 +4225,9 @@ ADDED BY afontgarde.js:
   margin-bottom: 3.75rem;
   padding-bottom: 3.75rem; }
 
+.item-list--divided > li, .item-list--divided .list-item {
+  border-bottom: 1px solid #ddd; }
+
 .complex-link, .complex-link:hover, .complex-link:focus {
   text-decoration: none; }
   .complex-link .complex-link__target, .complex-link .link-target, .complex-link:hover .complex-link__target, .complex-link:hover .link-target, .complex-link:focus .complex-link__target, .complex-link:focus .link-target {
@@ -4201,6 +4235,8 @@ ADDED BY afontgarde.js:
 
 .byline {
   font-size: 0.9em; }
+  .byline > * {
+    font-size: 1em; }
 
 .block-list {
   list-style: none;
@@ -4312,6 +4348,33 @@ ADDED BY afontgarde.js:
 .caret--dark {
   border-top-color: #000; }
 
+.inline-definitions {
+  margin-bottom: 0; }
+  .inline-definitions dt, .inline-definitions dd {
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    vertical-align: baseline;
+    margin-bottom: 0; }
+  .inline-definitions .inline-definitions__term, .inline-definitions dt {
+    font-weight: bold;
+    color: #222;
+    margin-right: 0.3em; }
+  .inline-definitions .inline-definitions__desc, .inline-definitions dd {
+    margin-right: 1em; }
+
+.inline-definitions--desc-priority .inline-definitions__term, .inline-definitions--desc-priority dt {
+  font-weight: normal;
+  color: inherit; }
+.inline-definitions--desc-priority .inline-definitions__desc, .inline-definitions--desc-priority dd {
+  font-weight: bold;
+  color: #222; }
+
+.inline-definitions--v-spaced .inline-definitions__term, .inline-definitions--v-spaced .inline-definitions__desc, .inline-definitions--v-spaced dt, .inline-definitions--v-spaced dd {
+  margin-bottom: 0.9375rem; }
+
 
 .nav-primary {
   background-color: #D8D8D8; }
@@ -4416,7 +4479,7 @@ ADDED BY afontgarde.js:
     margin-left: 1.375rem;
     display: block; }
     .social-icons-list > li > * {
-      display: block; }
+      display: inline; }
 
 .social-icons-list > .social-icons-list__item {
   display: inline-block;
