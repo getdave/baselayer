@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html class="no-js patterns">
+	<head>
+    <script>
+    // Super fast method of adding "js" class
+    // http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Baselayer Component Documentation</title>
+
+    <meta name="viewport" content="width=device-width" initial-scale="1" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/site.css">
+
+    <!-- Modernizr -->
+    <script src="/assets/js/vendor/modernizr.min.js"></script>
+
+  <!-- .pattern class CSS -->
+  <style>
+
+    body {
+      padding: 3em 0;
+    }
+
+    .pattern {
+        clear: both;
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 3em;
+        padding-bottom: 3em;
+    }
+
+    .pattern-title {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 0.2em;
+        margin-bottom: 1em;
+    }
+
+    .pattern .display {
+        width: 65%;
+        float: left;
+    }
+    .pattern .source {
+        width: 30%;
+        float: right;
+    }
+    .pattern .source textarea {
+        width: 90%;
+        max-width: none;
+    }
+
+    .back-link {
+      margin-top: 6em;
+    }
+
+  </style>
+
+  <script>
+    // Do not integrate this code into the CMS.
+    var tanlinellSiteDetails = {
+      templateDirectoryUri: ""
+    };
+  </script>
+
+</head>
+
+
+	<body>
+
+		  <header class="row">
+	<h1 class="page-title">Baselayer Component Documentation</h1>
+</header>
+
+<div class="row landmark--major">
+	<p>Baselayer is a small set of CSS/JS extensions built on top of Zurb's Foundation 5 framework. The patterns below describe the additional components that are made available.</p>
+
+<dl class="sub-nav">
+  <dt>Skip to:</dt>
+  
+  <dd><a href="#pattern-1">Address</a></dd>
+  
+  <dd><a href="#pattern-2">Block List</a></dd>
+  
+  <dd><a href="#pattern-3">Byline</a></dd>
+  
+  <dd><a href="#pattern-4">Caret</a></dd>
+  
+  <dd><a href="#pattern-5">Complex Link</a></dd>
+  
+  <dd><a href="#pattern-6">Grid</a></dd>
+  
+  <dd><a href="#pattern-7">Headings</a></dd>
+  
+  <dd><a href="#pattern-8">Icon</a></dd>
+  
+  <dd><a href="#pattern-9">Images</a></dd>
+  
+  <dd><a href="#pattern-10">Inline Definitions</a></dd>
+  
+  <dd><a href="#pattern-11">Island</a></dd>
+  
+  <dd><a href="#pattern-12">Item List</a></dd>
+  
+  <dd><a href="#pattern-13">Landmark</a></dd>
+  
+  <dd><a href="#pattern-14">Nav Menu</a></dd>
+  
+  <dd><a href="#pattern-15">Scrollable</a></dd>
+  
+  <dd><a href="#pattern-16">Social Icons</a></dd>
+  
+  <dd><a href="#pattern-17">Social Share Bar</a></dd>
+  
+  <dd><a href="#pattern-18">Text</a></dd>
+  
+  <dd><a href="#pattern-19">Toggle</a></dd>
+  
+</dl>
+	
+	
+	
+
+	
+
+
+</div>
+
+
+
+<div class="row">
+<div class="patterns">
+	
+	<div id="pattern-1" class="pattern">
+		<h2 class="pattern-title h4">Address</h2>
+		
+		<p><p>Standardised Address component based around requirements of Schema microdata markup.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="address panel" itemscope="" itemtype="http://schema.org/Person">
+    <strong class="address__line" itemprop="name">Company X</strong> 
+    <div class="address__block" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+        <span class="address__line" itemprop="streetAddress">
+            20341 Whitworth Institute 405 N. Whitworth
+        </span>
+        <span class="address__line" itemprop="addressLocality">
+            Seattle
+        </span>
+        <span class="address__line" itemprop="addressRegion">WA</span>
+        <span class="address__line" itemprop="postalCode">98052</span>
+    </div>
+    
+    <span class="address__line" itemprop="telephone">
+        <abbr class="address__abbr" title="Telephone">t:</abbr> 07380 376 398
+    </span>
+    <a class="address__line" href="mailto:jane-doe@xyz.edu" target="_blank" itemprop="email">
+        <abbr class="address__abbr" title="Email">e:</abbr>
+        jane-doe@xyz.edu
+    </a>
+</div>
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;address panel&quot; itemscope=&quot;&quot; itemtype=&quot;http://schema.org/Person&quot;&gt;
+    &lt;strong class=&quot;address__line&quot; itemprop=&quot;name&quot;&gt;Company X&lt;/strong&gt; 
+    &lt;div class=&quot;address__block&quot; itemprop=&quot;address&quot; itemscope=&quot;&quot; itemtype=&quot;http://schema.org/PostalAddress&quot;&gt;
+        &lt;span class=&quot;address__line&quot; itemprop=&quot;streetAddress&quot;&gt;
+            20341 Whitworth Institute 405 N. Whitworth
+        &lt;/span&gt;
+        &lt;span class=&quot;address__line&quot; itemprop=&quot;addressLocality&quot;&gt;
+            Seattle
+        &lt;/span&gt;
+        &lt;span class=&quot;address__line&quot; itemprop=&quot;addressRegion&quot;&gt;WA&lt;/span&gt;
+        &lt;span class=&quot;address__line&quot; itemprop=&quot;postalCode&quot;&gt;98052&lt;/span&gt;
+    &lt;/div&gt;
+    
+    &lt;span class=&quot;address__line&quot; itemprop=&quot;telephone&quot;&gt;
+        &lt;abbr class=&quot;address__abbr&quot; title=&quot;Telephone&quot;&gt;t:&lt;/abbr&gt; 07380 376 398
+    &lt;/span&gt;
+    &lt;a class=&quot;address__line&quot; href=&quot;mailto:jane-doe@xyz.edu&quot; target=&quot;_blank&quot; itemprop=&quot;email&quot;&gt;
+        &lt;abbr class=&quot;address__abbr&quot; title=&quot;Email&quot;&gt;e:&lt;/abbr&gt;
+        jane-doe@xyz.edu
+    &lt;/a&gt;
+&lt;/div&gt;
+
+</textarea>
+			<p><a href="/patterns/address.html">Address</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-2" class="pattern">
+		<h2 class="pattern-title h4">Block List</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<ul class="block-list">
+    
+    <li>
+        <a href="#">Block Link 1</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link 2</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link 3</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link 4</a>
+    </li>
+    
+</ul>
+
+<br><br>
+
+<ul class="block-list block-list--padded">
+    
+    <li>
+        <a href="#">Block Link Padded</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link Padded</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link Padded</a>
+    </li>
+    
+    <li>
+        <a href="#">Block Link Padded</a>
+    </li>
+    
+</ul>
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;ul class=&quot;block-list&quot;&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link 1&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link 2&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link 3&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link 4&lt;/a&gt;
+    &lt;/li&gt;
+    
+&lt;/ul&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;ul class=&quot;block-list block-list--padded&quot;&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link Padded&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link Padded&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link Padded&lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Block Link Padded&lt;/a&gt;
+    &lt;/li&gt;
+    
+&lt;/ul&gt;
+
+</textarea>
+			<p><a href="/patterns/block-list.html">Block List</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-3" class="pattern">
+		<h2 class="pattern-title h4">Byline</h2>
+		
+		<p><p>Bylines are used to display meta information and come with a de-emphasised style. Typically used on entry-like content (eg: Blog posts)</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<footer class="byline">
+	<span class="byline__section">Posted in <a href="#">Category X</a></span>
+	<span class="byline__section">on 19/02/14</span>
+	<span class="byline__section">by <a href="#">Mr Chips</a></span>
+</footer>
+
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;footer class=&quot;byline&quot;&gt;
+	&lt;span class=&quot;byline__section&quot;&gt;Posted in &lt;a href=&quot;#&quot;&gt;Category X&lt;/a&gt;&lt;/span&gt;
+	&lt;span class=&quot;byline__section&quot;&gt;on 19/02/14&lt;/span&gt;
+	&lt;span class=&quot;byline__section&quot;&gt;by &lt;a href=&quot;#&quot;&gt;Mr Chips&lt;/a&gt;&lt;/span&gt;
+&lt;/footer&gt;
+
+
+
+
+
+</textarea>
+			<p><a href="/patterns/byline.html">Byline</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-4" class="pattern">
+		<h2 class="pattern-title h4">Caret</h2>
+		
+		<p><p>Standardised Address component based around requirements of Schema microdata markup.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<ul class="bl-nav-menu bl-nav-menu--inline">
+    
+    <li class="">
+        <a href="#">
+            Item 1
+            <b class="caret"></b>
+        </a>
+    </li>
+    
+    <li class="">
+        <a href="#">
+            Item 2
+            <b class="caret"></b>
+        </a>
+    </li>
+    
+    <li class="">
+        <a href="#">
+            Item 3
+            <b class="caret"></b>
+        </a>
+    </li>
+    
+</ul>
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;ul class=&quot;bl-nav-menu bl-nav-menu--inline&quot;&gt;
+    
+    &lt;li class=&quot;&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;
+            Item 1
+            &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li class=&quot;&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;
+            Item 2
+            &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    
+    &lt;li class=&quot;&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;
+            Item 3
+            &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    
+&lt;/ul&gt;
+
+</textarea>
+			<p><a href="/patterns/caret.html">Caret</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-5" class="pattern">
+		<h2 class="pattern-title h4">Complex Link</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<a href="#" class="complex-link">
+   <i class="icon icon--inline icon-twitter"></i>
+   <span class="complex-link__target">Log in with Twitter</span>
+</a>
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;a href=&quot;#&quot; class=&quot;complex-link&quot;&gt;
+   &lt;i class=&quot;icon icon--inline icon-twitter&quot;&gt;&lt;/i&gt;
+   &lt;span class=&quot;complex-link__target&quot;&gt;Log in with Twitter&lt;/span&gt;
+&lt;/a&gt;
+
+
+</textarea>
+			<p><a href="/patterns/complex-link.html">Complex Link</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-6" class="pattern">
+		<h2 class="pattern-title h4">Grid</h2>
+		
+		<p><p>Baselayer makes use of <a href="http://foundation.zurb.com/docs/components/grid.html">Foundation 5&#39;s mobile-first grid</a>. It also extend this however, to include an <code>inline-block</code> grid type. Simply apply the <code>.row--ib</code> modifier to the standard Foundation <code>.row</code> element and your nested grid items will switch to using inline block affording the ability to vertically align.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="row row--ib">
+	<div class="columns small-4 text-center">
+		<img src="http://www.placehold.it/160x160&text=Aligned" alt="" class="img-polaroid">
+	</div>
+
+	<div class="columns small-4 text-center">
+		<img src="http://www.placehold.it/100x100&text=Aligned" alt="" class="img-polaroid">
+	</div>
+
+	<div class="columns small-4 text-center">
+		<img src="http://www.placehold.it/200x200&text=Aligned" alt="" class="img-polaroid">
+	</div>
+</div>
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;row row--ib&quot;&gt;
+	&lt;div class=&quot;columns small-4 text-center&quot;&gt;
+		&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Aligned&quot; alt=&quot;&quot; class=&quot;img-polaroid&quot;&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;columns small-4 text-center&quot;&gt;
+		&lt;img src=&quot;http://www.placehold.it/100x100&amp;text=Aligned&quot; alt=&quot;&quot; class=&quot;img-polaroid&quot;&gt;
+	&lt;/div&gt;
+
+	&lt;div class=&quot;columns small-4 text-center&quot;&gt;
+		&lt;img src=&quot;http://www.placehold.it/200x200&amp;text=Aligned&quot; alt=&quot;&quot; class=&quot;img-polaroid&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</textarea>
+			<p><a href="/patterns/grid.html">Grid</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-7" class="pattern">
+		<h2 class="pattern-title h4">Headings</h2>
+		
+		<p><p>Standard typography for Headings. Extends Foundation to provide <code>.hN</code> style classes to provide greater flexibility.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<br><br><br>
+
+<h1 class="h6">Heading 1 - ".h6"</h1>
+<h2 class="h5">Heading 2 - ".h5"</h2>
+<h3 class="h4">Heading 3 - ".h4"</h3>
+<h4 class="h3">Heading 4 - ".h3"</h4>
+<h5 class="h2">Heading 5 - ".h2"</h5>
+<h6 class="h1">Heading 6 - ".h1"</h6>
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;h1 class=&quot;h6&quot;&gt;Heading 1 - &quot;.h6&quot;&lt;/h1&gt;
+&lt;h2 class=&quot;h5&quot;&gt;Heading 2 - &quot;.h5&quot;&lt;/h2&gt;
+&lt;h3 class=&quot;h4&quot;&gt;Heading 3 - &quot;.h4&quot;&lt;/h3&gt;
+&lt;h4 class=&quot;h3&quot;&gt;Heading 4 - &quot;.h3&quot;&lt;/h4&gt;
+&lt;h5 class=&quot;h2&quot;&gt;Heading 5 - &quot;.h2&quot;&lt;/h5&gt;
+&lt;h6 class=&quot;h1&quot;&gt;Heading 6 - &quot;.h1&quot;&lt;/h6&gt;
+
+
+
+
+</textarea>
+			<p><a href="/patterns/headings.html">Headings</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-8" class="pattern">
+		<h2 class="pattern-title h4">Icon</h2>
+		
+		<p><p>Standard sizing rules, presentation and layout for @fontface based Icons. Also see <a href="https://github.com/filamentgroup/a-font-garde/">A Font Garde</a> which us used to provide fallbacks.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<span class="icon-fallback-text">
+    <i class="icon icon-linkedin" aria-hidden="true"></i>
+	<span class="text">Standard Icon</span>
+</span>
+
+<br><br>
+
+<span class="icon-fallback-text">
+    <i class="icon icon--small icon-linkedin" aria-hidden="true"></i>
+	<span class="text">Small Icon</span>
+</span>
+
+<br><br>
+
+<span class="icon-fallback-text">
+    <i class="icon icon--large icon-linkedin" aria-hidden="true"></i>
+	<span class="text">Large Icon</span>
+</span>
+
+<br><br>
+
+<span class="icon-fallback-text">
+    <i class="icon icon--huge icon--inline icon-linkedin" aria-hidden="true"></i>
+	<span class="text">Huge Icon</span>
+</span>
+
+<br><br>
+
+<span class="icon-fallback-text">
+    <i class="icon icon--large icon--inline icon-linkedin" aria-hidden="true"></i>
+	<span class="icon-text text">Inline Icon</span>
+</span>
+
+<br><br>
+
+<span class="icon-fallback-text">
+    <i class="icon icon--large icon--faded icon--inline icon-linkedin" aria-hidden="true"></i>
+	<span class="icon-text text">Faded Icon</span>
+</span>
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;text&quot;&gt;Standard Icon&lt;/span&gt;
+&lt;/span&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon--small icon-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;text&quot;&gt;Small Icon&lt;/span&gt;
+&lt;/span&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon--large icon-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;text&quot;&gt;Large Icon&lt;/span&gt;
+&lt;/span&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon--huge icon--inline icon-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;text&quot;&gt;Huge Icon&lt;/span&gt;
+&lt;/span&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon--large icon--inline icon-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;icon-text text&quot;&gt;Inline Icon&lt;/span&gt;
+&lt;/span&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon--large icon--faded icon--inline icon-linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;icon-text text&quot;&gt;Faded Icon&lt;/span&gt;
+&lt;/span&gt;</textarea>
+			<p><a href="/patterns/icon.html">Icon</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-9" class="pattern">
+		<h2 class="pattern-title h4">Images</h2>
+		
+		<p><p>Baselayer provides predefined rules for common image styling. Mix and match as necessary to achieve the required effect.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<img src="http://www.placehold.it/160x160&text=Rounded" alt="" class="img-rounded">
+<br><br>
+<img src="http://www.placehold.it/160x160&text=Radius" alt="" class="img-radius">
+<br><br>
+<img src="http://www.placehold.it/160x160&text=Polaroid" alt="" class="img-polaroid">
+<br><br>
+<img src="http://www.placehold.it/160x160&text=Combo!" alt="" class="img-rounded img-polaroid">
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Rounded&quot; alt=&quot;&quot; class=&quot;img-rounded&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Radius&quot; alt=&quot;&quot; class=&quot;img-radius&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Polaroid&quot; alt=&quot;&quot; class=&quot;img-polaroid&quot;&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src=&quot;http://www.placehold.it/160x160&amp;text=Combo!&quot; alt=&quot;&quot; class=&quot;img-rounded img-polaroid&quot;&gt;
+
+
+</textarea>
+			<p><a href="/patterns/images.html">Images</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-10" class="pattern">
+		<h2 class="pattern-title h4">Inline Definitions</h2>
+		
+		<p><p>Standard component to create inline lists of term/description content. Modifiers available to place emphasis on term or desc.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<dl class="inline-definitions">
+    <dt>Role Type:</dt>
+    <dd>Permenant</dd>
+
+    <dt>Salary:</dt>
+    <dd>£1,000/month</dd>
+
+    <dt>Closing date:</dt>
+    <dd>29/10/2014</dd>
+</dl>
+
+<br><br>
+
+<dl class="inline-definitions inline-definitions--desc-priority">
+    <dt>Role Type:</dt>
+    <dd>Permenant</dd>
+
+    <dt>Salary:</dt>
+    <dd>£1,000/month</dd>
+
+    <dt>Closing date:</dt>
+    <dd>29/10/2014</dd>
+</dl>
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;dl class=&quot;inline-definitions&quot;&gt;
+    &lt;dt&gt;Role Type:&lt;/dt&gt;
+    &lt;dd&gt;Permenant&lt;/dd&gt;
+
+    &lt;dt&gt;Salary:&lt;/dt&gt;
+    &lt;dd&gt;£1,000/month&lt;/dd&gt;
+
+    &lt;dt&gt;Closing date:&lt;/dt&gt;
+    &lt;dd&gt;29/10/2014&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;dl class=&quot;inline-definitions inline-definitions--desc-priority&quot;&gt;
+    &lt;dt&gt;Role Type:&lt;/dt&gt;
+    &lt;dd&gt;Permenant&lt;/dd&gt;
+
+    &lt;dt&gt;Salary:&lt;/dt&gt;
+    &lt;dd&gt;£1,000/month&lt;/dd&gt;
+
+    &lt;dt&gt;Closing date:&lt;/dt&gt;
+    &lt;dd&gt;29/10/2014&lt;/dd&gt;
+&lt;/dl&gt;
+
+
+</textarea>
+			<p><a href="/patterns/inline-definitions.html">Inline Definitions</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-11" class="pattern">
+		<h2 class="pattern-title h4">Island</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="island" style="background-color: #eee">
+    Islands are simple, boxed off content. Islands come unstyled. We've added a background colour here for illustrative purposes only.
+</div>
+<br><br>
+<div class="islet" style="background-color: #eee">
+    There's also a smaller version called Islet which has a smaller amount of padding. Islets also come unstyled. We've added a background colour here for illustrative purposes only.
+</div>
+
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;island&quot; style=&quot;background-color: #eee&quot;&gt;
+    Islands are simple, boxed off content. Islands come unstyled. We&#39;ve added a background colour here for illustrative purposes only.
+&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class=&quot;islet&quot; style=&quot;background-color: #eee&quot;&gt;
+    There&#39;s also a smaller version called Islet which has a smaller amount of padding. Islets also come unstyled. We&#39;ve added a background colour here for illustrative purposes only.
+&lt;/div&gt;
+
+
+
+
+
+</textarea>
+			<p><a href="/patterns/island.html">Island</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-12" class="pattern">
+		<h2 class="pattern-title h4">Item List</h2>
+		
+		<p><p>Creates a neatly spaced, stacked list of &#39;entries&#39;. Typically used &#39;Entry-like&#39; content listings such as for Blog archive layouts. Comes with <code>.item-list--contracted</code> and <code>.item-list--expanded</code> modifiers.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<ul class="item-list">
+	
+	<li class="list-item">
+		<div class="panel mbn">
+			<h3>Item 1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+		</div>
+	</li>
+	
+	<li class="list-item">
+		<div class="panel mbn">
+			<h3>Item 2</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+		</div>
+	</li>
+	
+	<li class="list-item">
+		<div class="panel mbn">
+			<h3>Item 3</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+		</div>
+	</li>
+	
+	<li class="list-item">
+		<div class="panel mbn">
+			<h3>Item 4</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+		</div>
+	</li>
+	
+</ul>
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;ul class=&quot;item-list&quot;&gt;
+	
+	&lt;li class=&quot;list-item&quot;&gt;
+		&lt;div class=&quot;panel mbn&quot;&gt;
+			&lt;h3&gt;Item 1&lt;/h3&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+	
+	&lt;li class=&quot;list-item&quot;&gt;
+		&lt;div class=&quot;panel mbn&quot;&gt;
+			&lt;h3&gt;Item 2&lt;/h3&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+	
+	&lt;li class=&quot;list-item&quot;&gt;
+		&lt;div class=&quot;panel mbn&quot;&gt;
+			&lt;h3&gt;Item 3&lt;/h3&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+	
+	&lt;li class=&quot;list-item&quot;&gt;
+		&lt;div class=&quot;panel mbn&quot;&gt;
+			&lt;h3&gt;Item 4&lt;/h3&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+	
+&lt;/ul&gt;
+
+
+
+
+</textarea>
+			<p><a href="/patterns/item-list.html">Item List</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-13" class="pattern">
+		<h2 class="pattern-title h4">Landmark</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="landmark">
+    <div class="panel mbn">
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a default landmark
+    </div>
+</div>
+
+<div class="landmark landmark--giant">
+    <div class="panel mbn">
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a giant landmark
+    </div>
+</div>
+
+<div class="landmark landmark--major">
+    <div class="panel mbn">
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a major landmark
+    </div>
+</div>
+
+<div class="landmark landmark--minor">
+    <div class="panel mbn">
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a minor landmark
+    </div>
+</div>
+
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;landmark&quot;&gt;
+    &lt;div class=&quot;panel mbn&quot;&gt;
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a default landmark
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;landmark landmark--giant&quot;&gt;
+    &lt;div class=&quot;panel mbn&quot;&gt;
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a giant landmark
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;landmark landmark--major&quot;&gt;
+    &lt;div class=&quot;panel mbn&quot;&gt;
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a major landmark
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;landmark landmark--minor&quot;&gt;
+    &lt;div class=&quot;panel mbn&quot;&gt;
+        Divide up your page using landmarks to space our your content (applies a bottom margin). This one is a minor landmark
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+</textarea>
+			<p><a href="/patterns/landmark.html">Landmark</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-14" class="pattern">
+		<h2 class="pattern-title h4">Nav Menu</h2>
+		
+		<p><p>Base classes for creating simple &#39;nav-like&#39; lists. Ideal for simple nav menus or for forming the basis of more complex navigation componenets.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="panel">
+	<ul class="bl-nav-menu bl-nav-menu--stacked">
+		
+		<li class="">
+			<a href="#">Stacked Link 1</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Stacked Link 2</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Stacked Link 3</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Stacked Link 4</a>
+		</li>
+		
+	</ul>
+</div>
+
+<br><br><br>
+
+<div class="panel">
+	<ul class="bl-nav-menu bl-nav-menu--inline">
+		
+		<li class="">
+			<a href="#">Inline Link 1</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Inline Link 2</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Inline Link 3</a>
+		</li>
+		
+		<li class="">
+			<a href="#">Inline Link 4</a>
+		</li>
+		
+	</ul>
+</div>
+
+
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;panel&quot;&gt;
+	&lt;ul class=&quot;bl-nav-menu bl-nav-menu--stacked&quot;&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Stacked Link 1&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Stacked Link 2&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Stacked Link 3&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Stacked Link 4&lt;/a&gt;
+		&lt;/li&gt;
+		
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;panel&quot;&gt;
+	&lt;ul class=&quot;bl-nav-menu bl-nav-menu--inline&quot;&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Inline Link 1&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Inline Link 2&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Inline Link 3&lt;/a&gt;
+		&lt;/li&gt;
+		
+		&lt;li class=&quot;&quot;&gt;
+			&lt;a href=&quot;#&quot;&gt;Inline Link 4&lt;/a&gt;
+		&lt;/li&gt;
+		
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+
+
+
+</textarea>
+			<p><a href="/patterns/nav-menu.html">Nav Menu</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-15" class="pattern">
+		<h2 class="pattern-title h4">Scrollable</h2>
+		
+		<p><p>Scrollable allows HTML content that does not wrap well to be scrolled horiztonally using build-in browser scrolling. Typically used to make HTML <code>&lt;table&gt;</code> elements work in a Responsive context.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="scrollable">
+	<div>
+		<table>
+		  <thead>
+		    <tr>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		      <th>Table Header</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Content Goes Here</td>
+		      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		    </tr>
+		    <tr>
+		      <td>Content Goes Here</td>
+		      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		    </tr>
+		    <tr>
+		      <td>Content Goes Here</td>
+		      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		      <td>Content Goes Here</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</div>
+
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;scrollable&quot;&gt;
+	&lt;div&gt;
+		&lt;table&gt;
+		  &lt;thead&gt;
+		    &lt;tr&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		      &lt;th&gt;Table Header&lt;/th&gt;
+		    &lt;/tr&gt;
+		  &lt;/thead&gt;
+		  &lt;tbody&gt;
+		    &lt;tr&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;This is longer content Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		    &lt;/tr&gt;
+		    &lt;tr&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		    &lt;/tr&gt;
+		    &lt;tr&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		      &lt;td&gt;Content Goes Here&lt;/td&gt;
+		    &lt;/tr&gt;
+		  &lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+</textarea>
+			<p><a href="/patterns/scrollable.html">Scrollable</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-16" class="pattern">
+		<h2 class="pattern-title h4">Social Icons</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<span class="icon-fallback-text">
+    <i class="icon icon-twitter social-icon social-icon--twitter" aria-hidden="true"></i>
+    <span class="text">Twitter</span>
+</span>
+
+
+
+<br><br>
+
+
+<span class="icon-fallback-text">
+    <i class="icon icon-linkedin social-icon social-icon--linkedin" aria-hidden="true"></i>
+	<span class="text">LinkedIn</span>
+</span>
+
+
+
+
+
+<br><br>
+
+<span class="icon-fallback-text">
+    <i class="icon icon-google-plus social-icon social-icon--google-plus" aria-hidden="true"></i>
+    <span class="text">Google Plus</span>
+</span>
+
+
+
+<br><br>
+
+
+
+<span class="icon-fallback-text">
+    <i class="icon icon-youtube social-icon social-icon--youtube" aria-hidden="true"></i>
+    <span class="text">YouTube</span>
+</span>
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon-twitter social-icon social-icon--twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;text&quot;&gt;Twitter&lt;/span&gt;
+&lt;/span&gt;
+
+
+
+&lt;br&gt;&lt;br&gt;
+
+
+&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon-linkedin social-icon social-icon--linkedin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;text&quot;&gt;LinkedIn&lt;/span&gt;
+&lt;/span&gt;
+
+
+
+
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon-google-plus social-icon social-icon--google-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;text&quot;&gt;Google Plus&lt;/span&gt;
+&lt;/span&gt;
+
+
+
+&lt;br&gt;&lt;br&gt;
+
+
+
+&lt;span class=&quot;icon-fallback-text&quot;&gt;
+    &lt;i class=&quot;icon icon-youtube social-icon social-icon--youtube&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;text&quot;&gt;YouTube&lt;/span&gt;
+&lt;/span&gt;</textarea>
+			<p><a href="/patterns/social-icons.html">Social Icons</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-17" class="pattern">
+		<h2 class="pattern-title h4">Social Share Bar</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<aside class="social-share-bar">
+	<h4 class="social-share-bar__heading">Share this article</h4>
+	<div class="social-share-bar__body">
+		<ul class="social-widgets inline-list mbn">
+		    <li>
+		        <a class="social-widget social-widget--facebook-like socialite facebook-like" href="http://www.facebook.com/sharer.php" data-send="false" data-show-faces="false" data-font="arial" data-count="false" data-layout="button_count">
+		            <span class="social-widget__text">Like on Facebook</span>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a class="social-widget social-widget--twitter-share twitter-share socialite" href="https://twitter.com/intent/user?screen_name=motocrossvice" data-count="none">
+		            <span class="social-widget__text">Share on Twitter</span>
+		        </a>
+		    </li>
+
+		    <li>
+		        <a href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>" class="social-widget social-widget--googleplus-one socialite googleplus-one" data-size="medium" rel="nofollow" target="_blank">
+		            <span class="social-widget__text">Share on Google+</span>
+		        </a>
+		    </li>
+		</ul>
+	</div>
+</aside>
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;aside class=&quot;social-share-bar&quot;&gt;
+	&lt;h4 class=&quot;social-share-bar__heading&quot;&gt;Share this article&lt;/h4&gt;
+	&lt;div class=&quot;social-share-bar__body&quot;&gt;
+		&lt;ul class=&quot;social-widgets inline-list mbn&quot;&gt;
+		    &lt;li&gt;
+		        &lt;a class=&quot;social-widget social-widget--facebook-like socialite facebook-like&quot; href=&quot;http://www.facebook.com/sharer.php&quot; data-send=&quot;false&quot; data-show-faces=&quot;false&quot; data-font=&quot;arial&quot; data-count=&quot;false&quot; data-layout=&quot;button_count&quot;&gt;
+		            &lt;span class=&quot;social-widget__text&quot;&gt;Like on Facebook&lt;/span&gt;
+		        &lt;/a&gt;
+		    &lt;/li&gt;
+
+		    &lt;li&gt;
+		        &lt;a class=&quot;social-widget social-widget--twitter-share twitter-share socialite&quot; href=&quot;https://twitter.com/intent/user?screen_name=motocrossvice&quot; data-count=&quot;none&quot;&gt;
+		            &lt;span class=&quot;social-widget__text&quot;&gt;Share on Twitter&lt;/span&gt;
+		        &lt;/a&gt;
+		    &lt;/li&gt;
+
+		    &lt;li&gt;
+		        &lt;a href=&quot;https://plus.google.com/share?url=&lt;?php echo get_permalink(); ?&gt;&quot; class=&quot;social-widget social-widget--googleplus-one socialite googleplus-one&quot; data-size=&quot;medium&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;
+		            &lt;span class=&quot;social-widget__text&quot;&gt;Share on Google+&lt;/span&gt;
+		        &lt;/a&gt;
+		    &lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/aside&gt;</textarea>
+			<p><a href="/patterns/social-share-bar.html">Social Share Bar</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-18" class="pattern">
+		<h2 class="pattern-title h4">Text</h2>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<div class="text-module">
+	<h1>Header Level 1 testing to force line wrapping</h1>
+		       
+	<p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.</p>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	</p>
+
+
+
+	<h2>Header Level 2 testing to force line wrapping</h2>
+		       
+	<p><em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	</p>
+
+	<h3>Header Level 3 testing to force line wrapping</h3>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	</p>
+
+	<p><em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+	<h4>Header Level 4 testing to force line wrapping</h4>
+
+	<p><em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	</p>
+
+	<h5>Header Level 5 testing to force line wrapping</h5>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	</p>
+
+	<h6>Header Level 6 testing to force line wrapping</h6>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio.
+	</p>
+</div>
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;div class=&quot;text-module&quot;&gt;
+	&lt;h1&gt;Header Level 1 testing to force line wrapping&lt;/h1&gt;
+		       
+	&lt;p class=&quot;lead&quot;&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam.&lt;/p&gt;
+
+	&lt;p&gt;
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	&lt;/p&gt;
+
+
+
+	&lt;h2&gt;Header Level 2 testing to force line wrapping&lt;/h2&gt;
+		       
+	&lt;p&gt;&lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis. Ut felis.&lt;/p&gt;
+
+	&lt;p&gt;
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	&lt;/p&gt;
+
+	&lt;h3&gt;Header Level 3 testing to force line wrapping&lt;/h3&gt;
+
+	&lt;p&gt;
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	&lt;/p&gt;
+
+	&lt;p&gt;&lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis. Ut felis.&lt;/p&gt;
+
+	&lt;h4&gt;Header Level 4 testing to force line wrapping&lt;/h4&gt;
+
+	&lt;p&gt;&lt;em&gt;Aenean ultricies mi vitae est.&lt;/em&gt; Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. &lt;a href=&quot;#&quot;&gt;Donec non enim&lt;/a&gt; in turpis pulvinar facilisis. Ut felis.&lt;/p&gt;
+
+	&lt;p&gt;
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	&lt;/p&gt;
+
+	&lt;h5&gt;Header Level 5 testing to force line wrapping&lt;/h5&gt;
+
+	&lt;p&gt;
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio sit sapiente quas modi quis delectus labore impedit quos quam nesciunt expedita ipsa sunt!
+	&lt;/p&gt;
+
+	&lt;h6&gt;Header Level 6 testing to force line wrapping&lt;/h6&gt;
+
+	&lt;p&gt;
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, ad, dolorem pariatur deserunt amet dolore odio.
+	&lt;/p&gt;
+&lt;/div&gt;</textarea>
+			<p><a href="/patterns/text.html">Text</a></p>
+		</div>
+	</div>
+	
+	<div id="pattern-19" class="pattern">
+		<h2 class="pattern-title h4">Toggle</h2>
+		
+		<p><p>Create a simple Toggle switches using the built in icon font (matching Icon glyphs must be included). When ommitting the <code>close</code> or <code>menu</code> classes you must provided your own icon.</p>
+</p>
+		
+		
+		<div class="display">
+			<h5>Example</h5>
+			<a href="#" class="toggle toggle--menu">
+	<i class="toggle__icon" aria-hidden="true"></i>
+	<span class="toggle__text">Toggle Text</span> 
+</a>
+
+<br><br>
+
+<a href="#" class="toggle toggle--close">
+	<i class="toggle__icon" aria-hidden="true"></i>
+	<span class="toggle__text">Close</span> 
+</a>
+
+
+		</div>
+		
+		<div class="source">
+			<h5>Source</h5>
+			<textarea rows="6" cols="30">&lt;a href=&quot;#&quot; class=&quot;toggle toggle--menu&quot;&gt;
+	&lt;i class=&quot;toggle__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;toggle__text&quot;&gt;Toggle Text&lt;/span&gt; 
+&lt;/a&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;a href=&quot;#&quot; class=&quot;toggle toggle--close&quot;&gt;
+	&lt;i class=&quot;toggle__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;toggle__text&quot;&gt;Close&lt;/span&gt; 
+&lt;/a&gt;
+
+</textarea>
+			<p><a href="/patterns/toggle.html">Toggle</a></p>
+		</div>
+	</div>
+	
+</div>
+</div>
+
+
+	
+
+
+		
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script src="assets/js/vendor/foundation.min.js"></script>
+		<script src="assets/js/baselayer.min.js"></script>
+		<script src="assets/js/site.js"></script>
+		
+	</body>
+</html>
