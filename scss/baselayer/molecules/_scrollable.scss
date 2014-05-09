@@ -55,3 +55,43 @@
 .scrollable thead th {
 	white-space: nowrap;
 }
+
+/* 
+@include keyframes(pulse) {
+	0% {
+		box-shadow: white(.8) 0 0 0 0; 
+	}
+
+	50% {
+		box-shadow: white(0) 0 0 0 140px;
+	}
+
+	100% {
+		box-shadow: white(0) 0 0 0 140px;
+	}
+}
+
+@include keyframes(lift) {
+	0% {
+		@include transform(translateY(0));
+	}
+
+	50% {
+		@include transform(translateY(-6px));
+	}
+
+	100% {
+		@include transform(translateY(0));
+	}
+}
+
+.animate--pulse {
+	.no-touch & {
+		
+
+		&:hover,
+		&:focus {
+	 		@include animation(pulse 2s linear, lift 1.5s ease 0.1s);
+		}
+	}
+} */
