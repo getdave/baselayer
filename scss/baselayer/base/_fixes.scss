@@ -41,6 +41,12 @@
 // extends Foundation's Grid to create an "inline-block" style grid
 // ==========================================================================
 
+ul.row,
+ol.row,
+dl.row {
+	list-style: none;
+}
+
 .row--ib {
 	letter-spacing: rem-calc(-5px);
 
