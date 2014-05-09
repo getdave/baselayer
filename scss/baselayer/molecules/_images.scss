@@ -56,6 +56,11 @@
     margin-bottom: $spacing-unit;
 }
 
+.img-thumb--small,
+%img-thumb--small {
+    margin-bottom: $half-spacing-unit;
+}
+
 // ==========================================================================
 // RATIO
 // base on Uncle Dave's 'ole padded box technique

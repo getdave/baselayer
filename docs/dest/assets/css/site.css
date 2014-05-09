@@ -4310,6 +4310,9 @@ ADDED BY afontgarde.js:
 .img-thumb {
   margin-bottom: 1.875rem; }
 
+.img-thumb--small {
+  margin-bottom: 0.9375rem; }
+
 .img-ratio {
   height: 0;
   overflow: hidden; }
@@ -4389,17 +4392,56 @@ ADDED BY afontgarde.js:
 @media only screen {
   .media-block--small .media-block__img {
     float: left;
-    margin-right: 1.875rem; } }
+    margin-right: 1.875rem; }
+  .media-block--small .media-block__img--alt {
+    float: right;
+    margin-left: 1.875rem;
+    margin-right: 0; } }
+
+@media only screen and (max-width: 40em) {
+  .media-block--small-only .media-block__img {
+    float: left;
+    margin-right: 1.875rem; }
+  .media-block--small-only .media-block__img--alt {
+    float: right;
+    margin-left: 1.875rem;
+    margin-right: 0; } }
 
 @media only screen and (min-width:40.063em) {
   .media-block--medium .media-block__img {
     float: left;
-    margin-right: 1.875rem; } }
+    margin-right: 1.875rem; }
+  .media-block--medium .media-block__img--alt {
+    float: right;
+    margin-left: 1.875rem;
+    margin-right: 0; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+  .media-block--medium-only .media-block__img {
+    float: left;
+    margin-right: 1.875rem; }
+  .media-block--medium-only .media-block__img--alt {
+    float: right;
+    margin-left: 1.875rem;
+    margin-right: 0; } }
 
 @media only screen and (min-width:64.063em) {
   .media-block--large .media-block__img {
     float: left;
-    margin-right: 1.875rem; } }
+    margin-right: 1.875rem; }
+  .media-block--large .media-block__img--alt {
+    float: right;
+    margin-left: 1.875rem;
+    margin-right: 0; } }
+
+@media only screen and (min-width:64.063em) and (max-width:90em) {
+  .media-block--large-only .media-block__img {
+    float: left;
+    margin-right: 1.875rem; }
+  .media-block--large-only .media-block__img--alt {
+    float: right;
+    margin-left: 1.875rem;
+    margin-right: 0; } }
 
 
 .nav-primary {

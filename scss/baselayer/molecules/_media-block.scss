@@ -23,22 +23,43 @@
 	zoom:1;
 }
 
+@mixin media-block__img {
+	float: left;
+	margin-right: $spacing-unit;
+}
+
+@mixin media-block__img--alt {
+	float: right;
+	margin-left: $spacing-unit;
+	margin-right: 0;
+}
+
 
 // ==========================================================================
 // MODIFIER: SMALL VIEWPORTS
 // ==========================================================================
 
 @media #{$small-up} {
-	.media-block--small .media-block__img {
-		float: left;
-		margin-right: $spacing-unit;
+	.media-block--small {
+		.media-block__img {
+			@include media-block__img;
+		}
+
+		.media-block__img--alt {
+			@include media-block__img--alt;
+		}
 	}
 }
 
 @media #{$small-only} {
-	.media-block--small-only .media-block__img {
-		float: left;
-		margin-right: $spacing-unit;
+	.media-block--small-only {
+		.media-block__img {
+			@include media-block__img;
+		}
+
+		.media-block__img--alt {
+			@include media-block__img--alt;
+		}
 	}
 }
 
@@ -48,16 +69,26 @@
 // ==========================================================================
 
 @media #{$medium-up} {
-	.media-block--medium .media-block__img {
-		float: left;
-		margin-right: $spacing-unit;
+	.media-block--medium {
+		.media-block__img {
+			@include media-block__img;
+		}
+
+		.media-block__img--alt {
+			@include media-block__img--alt;
+		}
 	}
 }
 
 @media #{$medium-only} {
-	.media-block--medium-only .media-block__img {
-		float: left;
-		margin-right: $spacing-unit;
+	.media-block--medium-only {
+		.media-block__img {
+			@include media-block__img;
+		}
+
+		.media-block__img--alt {
+			@include media-block__img--alt;
+		}
 	}
 }
 
@@ -68,15 +99,25 @@
 
 
 @media #{$large-up} {
-	.media-block--large .media-block__img {
-		float: left;
-		margin-right: $spacing-unit;
+	.media-block--large {
+		.media-block__img {
+			@include media-block__img;
+		}
+
+		.media-block__img--alt {
+			@include media-block__img--alt;
+		}
 	}
 }
 
 @media #{$large-only} {
-	.media-block--large-only .media-block__img {
-		float: left;
-		margin-right: $spacing-unit;
+	.media-block--large-only {
+		.media-block__img {
+			@include media-block__img;
+		}
+
+		.media-block__img--alt {
+			@include media-block__img--alt;
+		}
 	}
 }
