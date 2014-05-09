@@ -30,6 +30,7 @@
 @import "molecules/_caret.scss";
 @import "molecules/_inline-definitions.scss";
 @import "molecules/_media-block.scss";
+@import "molecules/_sidelined.scss";
 
 // COMPOUNDS
 @import "compounds/_primary-nav.scss";
@@ -39,6 +40,7 @@
 @import "compounds/_site-credit.scss";
 @import "compounds/_site-logo.scss";
 @import "compounds/_page-title.scss";
+@import "compounds/_hero.scss";
 
 // ADAPTERS
 @import "adapters/wordpress/_pagination.scss";

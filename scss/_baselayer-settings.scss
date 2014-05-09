@@ -8,12 +8,8 @@
 @import "_baselayer-mixins.scss";
 
 // ==========================================================================
-// HACKS & OVERIDES
+// HACKS 
 // ==========================================================================
-
-// This is a flag which is set to "true" by master-ie.scss
-// This allows us to target specifically IE within Sass files
-$is-oldie: 						false !default;
 
 // Highlights any potential markup/accessibility problems
 $debug-mode:					false !default;
@@ -131,3 +127,7 @@ $zindex-tier-6:           		6000 !default;
 // ==========================================================================
 
 $inline-list-children-display: inline;
+
+$row-width: rem-calc(1200);
+
+$include-xl-html-grid-classes: true;

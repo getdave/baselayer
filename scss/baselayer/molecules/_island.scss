@@ -16,11 +16,13 @@
 
 // ISLAND
 // ==========================================================================
-.island {
+.island,
+%island {
     padding: rem-calc(30px);
 }
 
 .island > :last-child,
+%island > :last-child,
 .islet > :last-child {
     margin-bottom: 0;
 }

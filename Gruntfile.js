@@ -42,12 +42,12 @@ module.exports = function (grunt) {
 
       templates: {
         files: ['<%= jekyll.templates.options.src %>/**/*.html'],
-        tasks: ['copy:templates', 'jekyll:templates']
+        tasks: ['clean:templates','copy:templates', 'jekyll:templates']
       },
 
       docs: {
         files: ['<%= jekyll.docs.options.src %>/**/*.html'],
-        tasks: ['copy:docs', 'jekyll:docs']
+        tasks: ['clean:docs','copy:docs', 'jekyll:docs']
       },
     },
 
@@ -151,12 +151,12 @@ module.exports = function (grunt) {
 
             // Selectively include
             'bower_components/foundation/js/foundation/foundation.abide.js',
+            'bower_components/foundation/js/foundation/foundation.accordion.js',
             //'bower_components/foundation/js/foundation/foundation.clearing.js',
             //'bower_components/foundation/js/foundation/foundation.interchange.js',
             //'bower_components/foundation/js/foundation/foundation.magellan.js',
             //'bower_components/foundation/js/foundation/foundation.reveal.js',
             //'bower_components/foundation/js/foundation/foundation.tooltip.js',
-            //'bower_components/foundation/js/foundation/foundation.accordion.js',
             //'bower_components/foundation/js/foundation/foundation.dropdown.js',
             //'bower_components/foundation/js/foundation/foundation.joyride.js',
             'bower_components/foundation/js/foundation/foundation.offcanvas.js',
@@ -255,7 +255,6 @@ module.exports = function (grunt) {
 
   // Templates - build example Templates static site
   grunt.registerTask('templates', [
-    'clean:templates',
     'css',
     'uglify',
     'copy:templates',
@@ -266,7 +265,6 @@ module.exports = function (grunt) {
 
   // Docs - build Component Documentation static site
   grunt.registerTask('docs', [
-    'clean:docs',
     'css',
     'uglify',
     'copy:docs',

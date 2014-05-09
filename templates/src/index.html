@@ -1,15 +1,42 @@
 ---
 layout: 1c
 title: Home
+site-content-classes: "ptn"
 group: "navigation"
 ---
+
+{% include hero.html %}
 
 <div class="column-container">
 	<main class="main">
 
-		<h1>Welcome!</h1>
+		<h2 class="sidelined">Primary Services</h2>
+		
+	
+		<p class="lead small-text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, id, sed optio ducimus.</p>
+		
+		
+		<ul class="row">
+			{% for i in (1..4) %}
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, id, sed optio ducimus ratione harum vero pariatur nostrum sapiente dolorum error quam molestias dicta minima quisquam porro hic consectetur in.</p>
+			<li class="landmark--minor columns medium-6 large-3">
+
+				<article class="text-center">
+					<a href="team-single.html">
+				    	<img src="http://www.placehold.it/240x240" alt="" class="img-thumb--small img-circle">
+				    </a>
+
+			    	<header>
+			        	<h2 class="h3">Service Area {{i}}</h2>
+					</header>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, doloremque, odit veniam corporis nemo error ullam inventore.</p>
+
+			        <a href="#" class="btn">Find out more</a>
+
+				</article>
+			</li>
+			{% endfor %}
+		</ul>
 
 	</main>
 </div>

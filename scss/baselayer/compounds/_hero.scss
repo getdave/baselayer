@@ -1,0 +1,82 @@
+// ==========================================================================
+// HERO
+//
+// Description: creates basic featured Hero banner with provision for scaling 
+// full width background image and standard positioning of banner content
+// ==========================================================================
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.hero {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	@media #{$large-up} {
+    	height: 0;
+    	overflow: hidden;
+    	@include transition(padding-bottom ease 1s);
+	}
+}
+
+
+// HERO CONTENT
+// ==========================================================================
+.hero__content {
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+
+	@media #{$medium-up} {
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+}
+
+
+// HERO PANEL
+// ==========================================================================
+.hero__panel {
+	@extend %island;
+	background-color: #fefefe;
+	background-color: white(.9);
+}
+
+.hero__panel--dark {
+	@extend %island;
+	background-color: #222;
+	background-color: black(.9);
+	color: #fff;
+}
+
+
+
+// ==========================================================================
+// MODIFIER: RATIO 16:9
+// ==========================================================================
+
+.hero--16-9 {
+	@media #{$large-up} {
+		padding-bottom: 56.25%;
+	}
+}
+
+// ==========================================================================
+// MODIFIER: CONSTRAINED
+// ensures banner ratio does not get stupidly large/tall
+// ==========================================================================
+
+.hero--constrained {
+	@media #{$xlarge-up} {
+		padding-bottom: 46.25%;
+	}
+
+	@media #{$xxlarge-up} {
+		padding-bottom: 36.25%;
+	}
+}
+
+
+

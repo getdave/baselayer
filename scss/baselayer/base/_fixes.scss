@@ -41,6 +41,16 @@
 // extends Foundation's Grid to create an "inline-block" style grid
 // ==========================================================================
 
+
+.row,
+.column-container {
+	width: 95%;
+	
+	.row {
+		width: auto;
+	}
+}
+
 ul.row,
 ol.row,
 dl.row {

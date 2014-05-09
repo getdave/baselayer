@@ -94,6 +94,8 @@ img {
 
 .clearfix,
 .island,
+.hero__panel,
+.hero__panel--dark,
 .islet,
 .primary-offcanvas__panel {
   *zoom: 1;
@@ -101,10 +103,14 @@ img {
 
 .clearfix:before,
 .island:before,
+.hero__panel:before,
+.hero__panel--dark:before,
 .islet:before,
 .primary-offcanvas__panel:before,
 .clearfix:after,
 .island:after,
+.hero__panel:after,
+.hero__panel--dark:after,
 .islet:after,
 .primary-offcanvas__panel:after {
   content: " ";
@@ -113,6 +119,8 @@ img {
 
 .clearfix:after,
 .island:after,
+.hero__panel:after,
+.hero__panel--dark:after,
 .islet:after,
 .primary-offcanvas__panel:after {
   clear: both;
@@ -139,6 +147,56 @@ textarea {
 
 select {
   width: 100%;
+}
+
+.accordion {
+  *zoom: 1;
+  margin-bottom: 0;
+}
+
+.accordion:before,
+.accordion:after {
+  content: " ";
+  display: table;
+}
+
+.accordion:after {
+  clear: both;
+}
+
+.accordion dd {
+  display: block;
+  margin-bottom: 0 !important;
+}
+
+.accordion dd.active > a {
+  background: #e8e8e8;
+}
+
+.accordion dd > a {
+  background: #efefef;
+  color: #222;
+  padding: 16px;
+  padding: 1rem;
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.accordion dd > a:hover {
+  background: #e3e3e3;
+}
+
+.accordion .content {
+  display: none;
+  padding: 15px;
+  padding: 0.9375rem;
+}
+
+.accordion .content.active {
+  display: block;
+  background: #fff;
 }
 
 [class*="block-grid-"] {
@@ -2149,8 +2207,8 @@ label.error {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 1000px;
-  max-width: 62.5rem;
+  max-width: 1200px;
+  max-width: 75rem;
   *zoom: 1;
 }
 
@@ -5230,8 +5288,8 @@ meta.foundation-mq-topbar {
 }
 
 .contain-to-grid .top-bar {
-  max-width: 1000px;
-  max-width: 62.5rem;
+  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   margin-bottom: 0;
 }
@@ -7006,6 +7064,10 @@ th {
   font-weight: bold;
 }
 
+.h-light {
+  color: #fff;
+}
+
 .landmark {
   margin-bottom: 30px;
   margin-bottom: 1.875rem;
@@ -7026,20 +7088,19 @@ th {
   margin-bottom: 5.625rem;
 }
 
-.island,
-.islet,
-.primary-offcanvas__panel {
+.hero__panel,
+.hero__panel--dark {
   display: block;
 }
 
-.island {
+.hero__panel,
+.hero__panel--dark {
   padding: 30px;
   padding: 1.875rem;
 }
 
-.island > :last-child,
-.islet > :last-child,
-.islet > .primary-offcanvas__panel {
+.hero__panel > :last-child,
+.hero__panel--dark > :last-child {
   margin-bottom: 0;
 }
 
@@ -7468,6 +7529,7 @@ a.block-list__link--padded {
 }
 
 .scrollable table {
+  width: 100%;
   margin-bottom: 0;
 }
 
@@ -7650,6 +7712,38 @@ a.block-list__link--padded {
   margin-left: 30px;
   margin-left: 1.875rem;
   margin-right: 0;
+}
+
+.sidelined {
+  text-align: center;
+}
+
+.sidelined {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+}
+
+.sidelined:before,
+.sidelined:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 50%;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #ddd;
+}
+
+.sidelined:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.sidelined:after {
+  left: 0.5em;
+  margin-right: -50%;
 }
 
 .nav-primary {
@@ -7946,8 +8040,8 @@ body {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 1000px;
-  max-width: 62.5rem;
+  max-width: 1200px;
+  max-width: 75rem;
   *zoom: 1;
 }
 
@@ -8053,6 +8147,33 @@ body {
 .page-title {
   line-height: 1.2;
   margin-top: 0;
+}
+
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.hero__content {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.hero__content {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.hero__panel {
+  background-color: #fefefe;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hero__panel--dark {
+  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
 }
 
 /* <div class="pagination">
@@ -8166,6 +8287,16 @@ body {
 
 .lt-ie9 .row .row,
 .lt-ie9 .column-container .row {
+  width: auto;
+}
+
+.row,
+.column-container {
+  width: 95%;
+}
+
+.row .row,
+.column-container .row {
   width: auto;
 }
 
