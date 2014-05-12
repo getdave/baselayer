@@ -235,7 +235,7 @@ module.exports = function (grunt) {
   });
 
   // Default - build and then start watching
-  grunt.registerTask('default', ['build', 'watch']);
+  grunt.registerTask('default', ['css', 'uglify', 'watch']);
 
 
   // Master Build task - prepare for deployment
