@@ -4350,6 +4350,33 @@ td, th {
 .mll, .mhl, .mal {
   margin-left: 20px !important; }
 
+*, *:before, *:after {
+  *behavior: url(/assets/boxsizing.htc); }
+
+.lt-ie9 .row, .lt-ie9 .column-container {
+  width: 960px; }
+  .lt-ie9 .row .row, .lt-ie9 .column-container .row {
+    width: auto; }
+
+.row, .column-container {
+  width: 95%; }
+  .row .row, .column-container .row {
+    width: auto; }
+
+ul.row, ol.row, dl.row {
+  list-style: none; }
+
+.row--ib {
+  letter-spacing: -0.3125rem; }
+  .row--ib .columns, .row--ib .column, .row--ib .layout-2c-r .main, .layout-2c-r .row--ib .main, .row--ib .layout-default .main, .layout-default .row--ib .main, .row--ib .layout-2c-r .sub, .layout-2c-r .row--ib .sub, .row--ib .layout-default .sub, .layout-default .row--ib .sub, .row--ib .layout-2c-l .main, .layout-2c-l .row--ib .main, .row--ib .layout-2c-l .sub, .layout-2c-l .row--ib .sub, .row--ib .layout-1c .main, .layout-1c .row--ib .main, .row--ib .layout-1c .sub, .layout-1c .row--ib .sub {
+    float: none !important;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    letter-spacing: normal; }
+
 
 
 
@@ -5272,30 +5299,3 @@ html, body {
     border-radius: 3px; }
     .pagination .current:hover, .pagination .current:focus {
       background: #008CBA; }
-
-*, *:before, *:after {
-  *behavior: url(/assets/boxsizing.htc); }
-
-.lt-ie9 .row, .lt-ie9 .column-container {
-  width: 960px; }
-  .lt-ie9 .row .row, .lt-ie9 .column-container .row {
-    width: auto; }
-
-.row, .column-container {
-  width: 95%; }
-  .row .row, .column-container .row {
-    width: auto; }
-
-ul.row, ol.row, dl.row {
-  list-style: none; }
-
-.row--ib {
-  letter-spacing: -0.3125rem; }
-  .row--ib .columns, .row--ib .column, .row--ib .layout-2c-r .main, .layout-2c-r .row--ib .main, .row--ib .layout-default .main, .layout-default .row--ib .main, .row--ib .layout-2c-r .sub, .layout-2c-r .row--ib .sub, .row--ib .layout-default .sub, .layout-default .row--ib .sub, .row--ib .layout-2c-l .main, .layout-2c-l .row--ib .main, .row--ib .layout-2c-l .sub, .layout-2c-l .row--ib .sub, .row--ib .layout-1c .main, .layout-1c .row--ib .main, .row--ib .layout-1c .sub, .layout-1c .row--ib .sub {
-    float: none !important;
-    display: inline-block;
-    vertical-align: middle;
-    zoom: 1;
-    *display: inline;
-    *vertical-align: auto;
-    letter-spacing: normal; }

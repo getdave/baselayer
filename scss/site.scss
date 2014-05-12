@@ -20,7 +20,7 @@
 @import "foundation-settings";
 
 // BASELAYER SETTINGS - include before foundation components
-@import "baselayer-settings";
+@import "baselayer/baselayer-settings";
 
 
 
@@ -79,5 +79,39 @@
 // components which you will require for your site
 // ==========================================================================
 
-// Import entire Framework (not recommended!)
+// Import Baselayer's "Base"
 @import "baselayer";
+
+// Selectively include Baselayer components
+@import
+   // MOLECULES
+   "molecules/_headings.scss",
+   "molecules/_landmark.scss",
+   "molecules/_island.scss",
+   "molecules/_icon.scss",
+   "molecules/_nav-menu.scss",
+   "molecules/_toggle.scss",
+   "molecules/_item-list.scss",
+   "molecules/_complex-link.scss",
+   "molecules/_byline.scss",
+   "molecules/_block-list.scss",
+   "molecules/_scrollable.scss",
+   "molecules/_images.scss",
+   "molecules/_address.scss",
+   "molecules/_caret.scss",
+   "molecules/_inline-definitions.scss",
+   "molecules/_media-block.scss",
+   "molecules/_sidelined.scss",
+
+   // COMPOUNDS
+   "compounds/_primary-nav.scss",
+   "compounds/_social-icons-list",
+   "compounds/_primary-offcanvas.scss",
+   "compounds/_page-layouts.scss",
+   "compounds/_site-credit.scss",
+   "compounds/_site-logo.scss",
+   "compounds/_page-title.scss",
+   "compounds/_hero.scss",
+
+   // ADAPTERS
+   "adapters/wordpress/_pagination.scss";
