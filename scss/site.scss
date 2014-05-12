@@ -17,7 +17,7 @@
 @import "bower_components/bourbon/dist/bourbon";
 
 // FOUNDATION SETTINGS - include before  baselayer's settings because baselayer relies on some variables
-@import "foundation-settings";
+@import "foundation/functions";
 
 // BASELAYER SETTINGS - include before foundation components
 @import "baselayer/baselayer-settings";
